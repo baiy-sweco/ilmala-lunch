@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ilmala Lunch Board</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+:root{
+  --board:#1f2e2a;
+  --board-dark:#182420;
+  --chalk:#f2efe6;
+  --chalk-dim:#c9c2ae;
+  --mustard:#e8a93a;
+  --lingon:#a8465a;
+  --sage:#8ba07f;
+  --line: rgba(242,239,230,0.14);
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(232,169,58,0.10), transparent 60%),
+    radial-gradient(900px 500px at 100% 0%, rgba(168,70,90,0.10), transparent 55%),
+    var(--board);
+  color:var(--chalk);
+  font-family:'Source Serif 4', Georgia, serif;
+  min-height:100vh;
+  padding:0 0 60px;
+}
+
+.langbar{
+  max-width:760px;
+  margin:0 auto;
+  padding:16px 20px 0;
+  display:flex;
+  justify-content:flex-end;
+  gap:6px;
+}
+.langbtn{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  letter-spacing:.04em;
+  background:transparent;
+  color:var(--chalk-dim);
+  border:1px solid var(--line);
+  border-radius:5px;
+  padding:5px 10px;
+  cursor:pointer;
+  transition:all .15s ease;
+}
+.langbtn:hover{color:var(--chalk);border-color:var(--mustard);}
+.langbtn.active{
+  background:var(--chalk);
+  color:var(--board);
+  border-color:var(--chalk);
+  font-weight:600;
+}
+
+.ticket-wrap{max-width:760px;margin:0 auto;padding:14px 20px 10px;}
+.ticket{
+  background:var(--board-dark);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:26px 28px 22px;
+  position:relative;
+  overflow:hidden;
+}
+.ticket::before,.ticket::after{
+  content:"";position:absolute;bottom:-11px;width:22px;height:22px;border-radius:50%;
+  background:var(--board);border:1px solid var(--line);
+}
+.ticket::before{left:-11px;}
+.ticket::after{right:-11px;}
+.ticket-row{
+  display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px;
+  border-bottom:1px dashed var(--line);padding-bottom:16px;margin-bottom:14px;
+}
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--mustard);margin:0 0 6px;
+}
+h1{
+  font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(28px,6vw,42px);
+  letter-spacing:.01em;margin:0;line-height:1.08;color:var(--chalk);
+}
+h1 span{color:var(--lingon);}
+.date-block{text-align:right;font-family:'IBM Plex Mono',monospace;color:var(--chalk-dim);font-size:13px;line-height:1.5;}
+.date-big{font-size:22px;color:var(--chalk);font-weight:600;}
+.subline{font-size:14px;color:var(--chalk-dim);margin:0;}
+.stale-warning{
+  font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--mustard);
+  margin:10px 0 0;padding-top:10px;border-top:1px dashed var(--line);display:none;
+}
+
+.filters{max-width:760px;margin:22px auto 6px;padding:0 20px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.filters .label{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--chalk-dim);margin-right:4px;width:100%;
+}
+.chip{
+  font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.02em;background:transparent;
+  color:var(--chalk);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;
+  transition:all .15s ease;user-select:none;white-space:nowrap;
+}
+.chip:hover{border-color:var(--mustard);}
+.chip.active{background:var(--mustard);border-color:var(--mustard);color:#211705;font-weight:600;}
+.chip.reset.active{background:var(--chalk);border-color:var(--chalk);color:var(--board);}
+.chip[data-tag="Veg"].active{background:var(--sage);border-color:var(--sage);color:#12200f;}
+.chip[data-tag="G"].active{background:var(--lingon);border-color:var(--lingon);color:var(--chalk);}
+.filter-note{
+  max-width:760px;margin:10px auto 0;padding:0 22px;font-family:'IBM Plex Mono',monospace;
+  font-size:12px;color:var(--chalk-dim);min-height:16px;
+}
+
+main{max-width:760px;margin:26px auto 0;padding:0 20px;}
+.resto{margin-bottom:34px;border-top:2px solid var(--mustard);padding-top:16px;}
+.resto-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 18px;margin-bottom:4px;}
+.resto-name{font-family:'Oswald',sans-serif;font-weight:600;font-size:22px;letter-spacing:.01em;color:var(--chalk);}
+.resto-sub{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--chalk-dim);}
+.resto-meta{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--chalk-dim);margin-bottom:14px;}
+.resto-meta a{color:var(--mustard);text-decoration:none;border-bottom:1px dotted var(--mustard);}
+
+.closed-note,.unavailable-note{
+  font-family:'Source Serif 4',serif;font-style:italic;color:var(--chalk-dim);
+  border:1px dashed var(--line);border-radius:4px;padding:14px 16px;font-size:15px;
+}
+
+.section-label{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--mustard);margin:16px 0 8px;
+}
+.dish{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);}
+.dish:last-child{border-bottom:none;}
+.dish.hidden{display:none;}
+.dish-main{flex:1;min-width:0;}
+.dish-name{font-size:15.5px;line-height:1.4;color:var(--chalk);}
+.tags{margin-top:5px;display:flex;flex-wrap:wrap;gap:5px;}
+.tag{
+  font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.03em;border:1px solid var(--line);
+  border-radius:3px;padding:2px 6px;color:var(--chalk-dim);
+}
+.tag.veg{border-color:var(--sage);color:var(--sage);}
+.tag.gf{border-color:var(--lingon);color:var(--lingon);}
+.price{font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--chalk);white-space:nowrap;padding-top:1px;}
+
+.empty-state{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--chalk-dim);padding:14px 0;display:none;}
+
+.loading,.load-error{
+  max-width:760px;margin:40px auto;padding:0 20px;font-family:'IBM Plex Mono',monospace;
+  color:var(--chalk-dim);font-size:14px;
+}
+
+footer{
+  max-width:760px;margin:30px auto 0;padding:18px 20px 0;border-top:1px solid var(--line);
+  font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--chalk-dim);line-height:1.7;
+}
+
+@media (max-width:480px){
+  .ticket{padding:20px 18px 18px;}
+  .date-block{text-align:left;}
+  .ticket-row{flex-direction:column;align-items:flex-start;}
+  .langbar{justify-content:flex-start;flex-wrap:wrap;}
+}
+</style>
+</head>
+<body>
+
+<div class="langbar" id="langbar"></div>
+
+<div class="ticket-wrap">
+  <div class="ticket">
+    <div class="ticket-row">
+      <div>
+        <p class="eyebrow" id="eyebrow">—</p>
+        <h1 id="heading">—</h1>
+      </div>
+      <div class="date-block">
+        <div class="date-big" id="todayLabel">—</div>
+        <div>Helsinki, Ilmala</div>
+      </div>
+    </div>
+    <p class="subline" id="subline">—</p>
+    <p class="stale-warning" id="staleWarning"></p>
+  </div>
+</div>
+
+<div class="filters" id="filters"></div>
+<div class="filter-note" id="filterNote"></div>
+
+<div class="loading" id="loading"></div>
+<div class="load-error" id="loadError" style="display:none;"></div>
+<main id="main"></main>
+
+<footer id="footer"></footer>
+
+<script>
+/* ============ i18n (static UI chrome -- doesn't change daily) ============ */
+const LANGS = ["en","fi"];
+const LANG_NAMES = { en:"EN", fi:"FI" };
+let currentLang = "en";
+
+const TAG_ORDER = ["M","L","VL","G","KM","Veg"];
+const TAG_LABEL = {
+  en:  { M:"Dairy-free", L:"Lactose-free", VL:"Low-lactose", G:"Gluten-free", KM:"Egg-free", Veg:"Vegan/Veg" },
+  fi:  { M:"Maidoton", L:"Laktoositon", VL:"Vähälaktoosinen", G:"Gluteeniton", KM:"Kananmunaton", Veg:"Vegaaninen" }
+};
+
+const UI = {
+  en: {
+    eyebrow: "Ilmala · Pasila · Lunch Board",
+    headingPre: "What's for ", headingHi: "lunch", headingPost: "?",
+    subline: "Today's lunch menus from 3 nearby restaurants",
+    filterLabel: "Filter (tap to combine)",
+    resetChip: "All dishes",
+    filterNoteTpl: n => `Showing only dishes matching all selected tags: ${n}`,
+    emptyState: "No dishes in this category match the current filters",
+    website: "Website ↗",
+    legendTitle: "Allergen key:",
+    legend: "M dairy-free · L lactose-free · VL low-lactose · G gluten-free · KM egg-free · Veg vegan/vegetarian",
+    autoNote: "Menus are fetched and translated automatically every weekday morning by a GitHub Action. Dish names are machine-translated from Finnish (DeepL) — please double-check allergens with staff if it matters to you.",
+    hoursCafe: "Café 8:00–14:00 · Lunch 10:30–13:30",
+    hoursLunch1430: "Lunch 10:30–14:00",
+    hoursNormally: "Normally lunch 10:30–14:00",
+    closedNote: "Closed today according to the restaurant's own menu page.",
+    unavailableNote: "Could not read today's menu automatically — check the restaurant's website directly.",
+    staleNote: "This restaurant's listed date didn't exactly match today; the menu shown may be off by a day or two.",
+    groups: { porridge:"Porridge bar", main:"Main courses", side:"Side dish", soup:"Soup", dessert:"Dessert" },
+    loading: "Loading today's menus…",
+    loadError: "Couldn't load menu.json. If this is a fresh deployment, the first scheduled run hasn't happened yet — trigger the \"Update Ilmala Lunch Menu\" workflow manually from the Actions tab."
+  },
+  fi: {
+    eyebrow: "Ilmala · Pasila · Lounastaulu",
+    headingPre: "Mitä ", headingHi: "lounaaksi", headingPost: "?",
+    subline: "Kolmen lähiravintolan tämän päivän lounaslistat",
+    filterLabel: "Suodata (voit yhdistellä)",
+    resetChip: "Kaikki ruoat",
+    filterNoteTpl: n => `Näytetään vain ruoat, jotka täyttävät kaikki valitut merkinnät: ${n}`,
+    emptyState: "Tässä kategoriassa ei ole valittuja suodattimia vastaavia ruokia",
+    website: "Verkkosivu ↗",
+    legendTitle: "Allergeenimerkinnät:",
+    legend: "M maidoton · L laktoositon · VL vähälaktoosinen · G gluteeniton · KM kananmunaton · Veg vegaaninen",
+    autoNote: "Lounaslistat haetaan ja käännetään automaattisesti joka arkiaamu GitHub Actionilla. Ruokien nimet on konekäännetty suomesta (DeepL) — tarkista allergeenit henkilökunnalta, jos se on sinulle tärkeää.",
+    hoursCafe: "Kahvila 8:00–14:00 · Lounas 10:30–13:30",
+    hoursLunch1430: "Lounas 10:30–14:00",
+    hoursNormally: "Normaalisti lounas 10:30–14:00",
+    closedNote: "Ravintolan oman lounassivun mukaan suljettu tänään.",
+    unavailableNote: "Tämän päivän listaa ei saatu haettua automaattisesti — tarkista ravintolan verkkosivulta.",
+    staleNote: "Ravintolan listan päivämäärä ei täsmännyt tarkalleen tähän päivään; näytetty lista voi olla pari päivää vanha.",
+    groups: { porridge:"Puurobaari", main:"Pääruoat", side:"Lisäke", soup:"Keitto", dessert:"Jälkiruoka" },
+    loading: "Ladataan tämän päivän lounaslistoja…",
+    loadError: "menu.json ei latautunut. Jos julkaisu on tuore, ensimmäistä ajastettua ajoa ei ole vielä tapahtunut — käynnistä \"Update Ilmala Lunch Menu\" -työnkulku käsin Actions-välilehdeltä."
+  }
+};
+
+/* Static restaurant metadata -- doesn't change daily, so it stays here
+   rather than round-tripping through menu.json. */
+const RESTAURANT_META = [
+  { key:"akseli", name:"Ravintola Akseli", sub:"Ninan Keittiö · Ilmalan Aura",
+    address:"Ilmalankuja 3, 00240 Helsinki", hoursKey:"hoursCafe",
+    link:"https://www.ninankeittio.fi/helsinki-ilmala-akseli/" },
+  { key:"luft", name:"Dylan Luft", sub:"Dylan · Ilmalantori",
+    address:"Ilmalantori 4, 00240 Helsinki", hoursKey:"hoursLunch1430",
+    link:"https://www.dylan.fi/luft" },
+  { key:"lailma", name:"Dylan La Ilma", sub:"Dylan · Ilmalanrinne",
+    address:"Ilmalanrinne 1, 00240 Helsinki", hoursKey:"hoursNormally",
+    link:"https://www.dylan.fi/lailma" }
+];
+
+let selectedTags = new Set();
+let menuData = null;    // populated from menu.json
+let loadFailed = false;
+
+const tagClass = t => t === "Veg" ? "veg" : (t === "G" ? "gf" : "");
+
+function buildLangbar(){
+  const bar = document.getElementById('langbar');
+  bar.innerHTML = '';
+  LANGS.forEach(l => {
+    const b = document.createElement('button');
+    b.className = 'langbtn' + (l === currentLang ? ' active' : '');
+    b.textContent = LANG_NAMES[l];
+    b.addEventListener('click', () => { currentLang = l; document.documentElement.lang = l; renderAll(); });
+    bar.appendChild(b);
+  });
+}
+
+function buildFilters(){
+  const t = UI[currentLang];
+  const wrap = document.getElementById('filters');
+  wrap.innerHTML = `<span class="label">${t.filterLabel}</span>`;
+
+  const reset = document.createElement('button');
+  reset.className = 'chip reset' + (selectedTags.size === 0 ? ' active' : '');
+  reset.textContent = t.resetChip;
+  reset.addEventListener('click', () => { selectedTags.clear(); applyFilter(); });
+  wrap.appendChild(reset);
+
+  TAG_ORDER.forEach(tag => {
+    const chip = document.createElement('button');
+    chip.className = 'chip' + (selectedTags.has(tag) ? ' active' : '');
+    chip.dataset.tag = tag;
+    chip.textContent = `${tag} · ${TAG_LABEL[currentLang][tag]}`;
+    chip.addEventListener('click', () => {
+      if (selectedTags.has(tag)) selectedTags.delete(tag); else selectedTags.add(tag);
+      applyFilter();
+    });
+    wrap.appendChild(chip);
+  });
+}
+
+function renderHeader(){
+  const t = UI[currentLang];
+  document.getElementById('eyebrow').textContent = t.eyebrow;
+  document.getElementById('heading').innerHTML = `${t.headingPre}<span>${t.headingHi}</span>${t.headingPost}`;
+  document.getElementById('subline').textContent = t.subline;
+
+  const days = {
+    en:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+    fi:["su","ma","ti","ke","to","pe","la"]
+  };
+
+  const dateStr = menuData && menuData.date ? menuData.date : null;
+  const d = dateStr ? new Date(dateStr + "T12:00:00Z") : new Date();
+  document.getElementById('todayLabel').textContent =
+    `${d.getUTCFullYear()}.${d.getUTCMonth()+1}.${d.getUTCDate()} ${days[currentLang][d.getUTCDay()]}`;
+
+  const staleWarning = document.getElementById('staleWarning');
+  if (!menuData) {
+    staleWarning.style.display = 'none';
+  } else {
+    staleWarning.style.display = 'none'; // per-restaurant staleness is shown inline instead
+  }
+}
+
+function renderMain(){
+  const t = UI[currentLang];
+  const main = document.getElementById('main');
+  main.innerHTML = '';
+  if (!menuData) return;
+
+  RESTAURANT_META.forEach(meta => {
+    const data = (menuData.restaurants && menuData.restaurants[meta.key]) || { closed:false, unavailable:true, groups:[] };
+
+    const section = document.createElement('section');
+    section.className = 'resto';
+
+    const head = document.createElement('div');
+    head.className = 'resto-head';
+    head.innerHTML = `<span class="resto-name">${meta.name}</span><span class="resto-sub">${meta.sub}</span>`;
+    section.appendChild(head);
+
+    const metaLine = document.createElement('div');
+    metaLine.className = 'resto-meta';
+    metaLine.innerHTML = `${meta.address} · ${t[meta.hoursKey]} · <a href="${meta.link}" target="_blank" rel="noopener">${t.website}</a>`;
+    section.appendChild(metaLine);
+
+    if (data.closed) {
+      const note = document.createElement('div');
+      note.className = 'closed-note';
+      note.textContent = t.closedNote;
+      section.appendChild(note);
+      main.appendChild(section);
+      return;
+    }
+
+    if (data.unavailable || !data.groups || data.groups.length === 0) {
+      const note = document.createElement('div');
+      note.className = 'unavailable-note';
+      note.textContent = t.unavailableNote;
+      section.appendChild(note);
+      main.appendChild(section);
+      return;
+    }
+
+    if (data.note && data.note.startsWith('date_mismatch')) {
+      const stale = document.createElement('div');
+      stale.className = 'stale-warning';
+      stale.style.display = 'block';
+      stale.style.marginBottom = '10px';
+      stale.textContent = t.staleNote;
+      section.appendChild(stale);
+    }
+
+    data.groups.forEach(group => {
+      const label = document.createElement('div');
+      label.className = 'section-label';
+      label.textContent = t.groups[group.key] || group.key;
+      section.appendChild(label);
+
+      group.items.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'dish';
+        row.dataset.tags = (item.tags || []).join(',');
+
+        const mainDiv = document.createElement('div');
+        mainDiv.className = 'dish-main';
+        const name = (item.name && (item.name[currentLang] || item.name.en || item.name.fi)) || '';
+        mainDiv.innerHTML = `<div class="dish-name">${name}</div>
+          <div class="tags">${(item.tags||[]).map(tag=>`<span class="tag ${tagClass(tag)}">${tag}</span>`).join('')}</div>`;
+        row.appendChild(mainDiv);
+
+        if (item.price) {
+          const price = document.createElement('div');
+          price.className = 'price';
+          price.textContent = item.price;
+          row.appendChild(price);
+        }
+        section.appendChild(row);
+      });
+
+      const empty = document.createElement('div');
+      empty.className = 'empty-state';
+      empty.textContent = t.emptyState;
+      section.appendChild(empty);
+    });
+
+    main.appendChild(section);
+  });
+}
+
+function renderFooter(){
+  const t = UI[currentLang];
+  const footer = document.getElementById('footer');
+  const generated = menuData && menuData.generated_at_utc ? menuData.generated_at_utc : null;
+  footer.innerHTML = `
+    <div><b>${t.legendTitle}</b> ${t.legend}</div>
+    <div style="margin-top:6px;">${t.autoNote}</div>
+    ${generated ? `<div style="margin-top:6px;">Last updated (UTC): ${generated}</div>` : ''}
+  `;
+}
+
+function applyFilter(){
+  const t = UI[currentLang];
+  buildFilters();
+
+  const note = document.getElementById('filterNote');
+  if (selectedTags.size === 0) {
+    note.textContent = '';
+  } else {
+    const names = [...selectedTags].map(tag => `${tag} (${TAG_LABEL[currentLang][tag]})`).join(', ');
+    note.textContent = t.filterNoteTpl(names);
+  }
+
+  document.querySelectorAll('.resto').forEach(section => {
+    section.querySelectorAll('.section-label').forEach(label => {
+      let node = label.nextElementSibling;
+      let visibleCount = 0;
+      let emptyEl = null;
+      while (node && !node.classList.contains('section-label')) {
+        if (node.classList.contains('dish')) {
+          const tags = node.dataset.tags.split(',').filter(Boolean);
+          const show = selectedTags.size === 0 || [...selectedTags].every(tag => tags.includes(tag));
+          node.classList.toggle('hidden', !show);
+          if (show) visibleCount++;
+        }
+        if (node.classList.contains('empty-state')) { emptyEl = node; }
+        node = node.nextElementSibling;
+      }
+      if (emptyEl) emptyEl.style.display = visibleCount === 0 ? 'block' : 'none';
+    });
+  });
+}
+
+function renderAll(){
+  buildLangbar();
+  renderHeader();
+  buildFilters();
+
+  const t = UI[currentLang];
+  document.getElementById('loading').style.display = (!menuData && !loadFailed) ? 'block' : 'none';
+  document.getElementById('loading').textContent = t.loading;
+  document.getElementById('loadError').style.display = loadFailed ? 'block' : 'none';
+  document.getElementById('loadError').textContent = t.loadError;
+
+  renderMain();
+  renderFooter();
+  applyFilter();
+}
+
+async function init(){
+  renderAll();
+  try {
+    const res = await fetch('./menu.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    menuData = await res.json();
+  } catch (e) {
+    loadFailed = true;
+    console.error('Failed to load menu.json', e);
+  }
+  renderAll();
+}
+
+init();
+</script>
+</body>
+</html>

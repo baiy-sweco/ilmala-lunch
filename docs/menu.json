@@ -1,0 +1,237 @@
+{
+  "date": "2026-08-05",
+  "generated_at_utc": "2026-08-05T11:10:40+00:00",
+  "restaurants": {
+    "akseli": {
+      "closed": false,
+      "unavailable": false,
+      "note": null,
+      "groups": [
+        {
+          "key": "main",
+          "items": [
+            {
+              "name": {
+                "fi": "Pitkään haudutettua porsaankylkeä ”Burnt Ends”, paahdettua mustapippurimajoneesia ja raikasta limecoleslawta",
+                "en": "Pitkään haudutettua porsaankylkeä ”Burnt Ends”, paahdettua mustapippurimajoneesia ja raikasta limecoleslawta",
+                "es": "Pitkään haudutettua porsaankylkeä ”Burnt Ends”, paahdettua mustapippurimajoneesia ja raikasta limecoleslawta",
+                "zh-CN": "Pitkään haudutettua porsaankylkeä ”Burnt Ends”, paahdettua mustapippurimajoneesia ja raikasta limecoleslawta",
+                "zh-TW": "Pitkään haudutettua porsaankylkeä ”Burnt Ends”, paahdettua mustapippurimajoneesia ja raikasta limecoleslawta"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "M"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Paholaisen kananpoikaa vuohenjuustomurulla",
+                "en": "Paholaisen kananpoikaa vuohenjuustomurulla",
+                "es": "Paholaisen kananpoikaa vuohenjuustomurulla",
+                "zh-CN": "Paholaisen kananpoikaa vuohenjuustomurulla",
+                "zh-TW": "Paholaisen kananpoikaa vuohenjuustomurulla"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L"
+              ],
+              "price": "14,00 €"
+            }
+          ]
+        },
+        {
+          "key": "side",
+          "items": [
+            {
+              "name": {
+                "fi": "Haudutettua tattarisuurimopuuroa",
+                "en": "Haudutettua tattarisuurimopuuroa",
+                "es": "Haudutettua tattarisuurimopuuroa",
+                "zh-CN": "Haudutettua tattarisuurimopuuroa",
+                "zh-TW": "Haudutettua tattarisuurimopuuroa"
+              },
+              "tags": [
+                "M",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Sitrus paahdettuja varhaisperunoita ja chili roasted ruusukaalia",
+                "en": "Sitrus paahdettuja varhaisperunoita ja chili roasted ruusukaalia",
+                "es": "Sitrus paahdettuja varhaisperunoita ja chili roasted ruusukaalia",
+                "zh-CN": "Sitrus paahdettuja varhaisperunoita ja chili roasted ruusukaalia",
+                "zh-TW": "Sitrus paahdettuja varhaisperunoita ja chili roasted ruusukaalia"
+              },
+              "tags": [
+                "G",
+                "M",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Fritattuja kevätkääryleitä ja Sweet & Sour kastiketta",
+                "en": "Fritattuja kevätkääryleitä ja Sweet & Sour kastiketta",
+                "es": "Fritattuja kevätkääryleitä ja Sweet & Sour kastiketta",
+                "zh-CN": "Fritattuja kevätkääryleitä ja Sweet & Sour kastiketta",
+                "zh-TW": "Fritattuja kevätkääryleitä ja Sweet & Sour kastiketta"
+              },
+              "tags": [
+                "M",
+                "Veg"
+              ],
+              "price": null
+            }
+          ]
+        },
+        {
+          "key": "soup",
+          "items": [
+            {
+              "name": {
+                "fi": "Kermaista merilohikeittoa ja saaristolaisleipää",
+                "en": "Kermaista merilohikeittoa ja saaristolaisleipää",
+                "es": "Kermaista merilohikeittoa ja saaristolaisleipää",
+                "zh-CN": "Kermaista merilohikeittoa ja saaristolaisleipää",
+                "zh-TW": "Kermaista merilohikeittoa ja saaristolaisleipää"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L"
+              ],
+              "price": "12,80 €"
+            }
+          ]
+        },
+        {
+          "key": "dessert",
+          "items": [
+            {
+              "name": {
+                "fi": "Passion-mangounelmaa",
+                "en": "Passion-mangounelmaa",
+                "es": "Passion-mangounelmaa",
+                "zh-CN": "Passion-mangounelmaa",
+                "zh-TW": "Passion-mangounelmaa"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L"
+              ],
+              "price": null
+            }
+          ]
+        }
+      ]
+    },
+    "luft": {
+      "closed": false,
+      "unavailable": false,
+      "note": null,
+      "groups": [
+        {
+          "key": "main",
+          "items": [
+            {
+              "name": {
+                "fi": "\"Shanghai firecracker\" härkistä, paprikaa ja parsakaalia hot and sour-kastikkeessa",
+                "en": "\"Shanghai firecracker\" härkistä, paprikaa ja parsakaalia hot and sour-kastikkeessa",
+                "es": "\"Shanghai firecracker\" härkistä, paprikaa ja parsakaalia hot and sour-kastikkeessa",
+                "zh-CN": "\"Shanghai firecracker\" härkistä, paprikaa ja parsakaalia hot and sour-kastikkeessa",
+                "zh-TW": "\"Shanghai firecracker\" härkistä, paprikaa ja parsakaalia hot and sour-kastikkeessa"
+              },
+              "tags": [
+                "Veg"
+              ],
+              "price": "14,80 €"
+            },
+            {
+              "name": {
+                "fi": "Juustogratinoitu uunimakkara, sekä mustapippuriketsuppia",
+                "en": "Juustogratinoitu uunimakkara, sekä mustapippuriketsuppia",
+                "es": "Juustogratinoitu uunimakkara, sekä mustapippuriketsuppia",
+                "zh-CN": "Juustogratinoitu uunimakkara, sekä mustapippuriketsuppia",
+                "zh-TW": "Juustogratinoitu uunimakkara, sekä mustapippuriketsuppia"
+              },
+              "tags": [],
+              "price": "14,80 €"
+            },
+            {
+              "name": {
+                "fi": "Cajunpaahdettua lohta sitruskermaviilikastiketta",
+                "en": "Cajunpaahdettua lohta sitruskermaviilikastiketta",
+                "es": "Cajunpaahdettua lohta sitruskermaviilikastiketta",
+                "zh-CN": "Cajunpaahdettua lohta sitruskermaviilikastiketta",
+                "zh-TW": "Cajunpaahdettua lohta sitruskermaviilikastiketta"
+              },
+              "tags": [],
+              "price": "14,80 €"
+            }
+          ]
+        },
+        {
+          "key": "side",
+          "items": [
+            {
+              "name": {
+                "fi": "Perunamuusia ja tuoreita yrttejä",
+                "en": "Perunamuusia ja tuoreita yrttejä",
+                "es": "Perunamuusia ja tuoreita yrttejä",
+                "zh-CN": "Perunamuusia ja tuoreita yrttejä",
+                "zh-TW": "Perunamuusia ja tuoreita yrttejä"
+              },
+              "tags": [],
+              "price": null
+            }
+          ]
+        },
+        {
+          "key": "soup",
+          "items": [
+            {
+              "name": {
+                "fi": "Curry-kookoskanakeitto",
+                "en": "Curry-kookoskanakeitto",
+                "es": "Curry-kookoskanakeitto",
+                "zh-CN": "Curry-kookoskanakeitto",
+                "zh-TW": "Curry-kookoskanakeitto"
+              },
+              "tags": [],
+              "price": "11,50 €"
+            }
+          ]
+        },
+        {
+          "key": "dessert",
+          "items": [
+            {
+              "name": {
+                "fi": "Korvapuustirahka",
+                "en": "Korvapuustirahka",
+                "es": "Korvapuustirahka",
+                "zh-CN": "Korvapuustirahka",
+                "zh-TW": "Korvapuustirahka"
+              },
+              "tags": [],
+              "price": null
+            }
+          ]
+        }
+      ]
+    },
+    "lailma": {
+      "closed": true,
+      "unavailable": false,
+      "note": null,
+      "groups": []
+    }
+  }
+}
