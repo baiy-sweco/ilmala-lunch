@@ -60,16 +60,30 @@ RESTAURANTS = [
         "type": "dylan",
         "url": "https://www.lounaat.info/lounas/dylan-la-ilma/helsinki",
     },
+    {
+        "key": "studio10",
+        "type": "nordrest",
+        "url": "https://nordrest.fi/restaurang/yle-studio10/",
+    },
+    {
+        "key": "paattari",
+        "type": "paattari",
+        "url": "https://nordrest.fi/restaurang/ravintola-paattari/",
+    },
 ]
 
 
-def fetch_text(url):
+def fetch_soup(url):
     resp = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
     for tag in soup(["script", "style", "nav", "footer"]):
         tag.decompose()
-    return soup.get_text("\n")
+    return soup
+
+
+def fetch_text(url):
+    return fetch_soup(url).get_text("\n")
 
 
 def closest_day_section(text, today):
@@ -101,6 +115,141 @@ def closest_day_section(text, today):
 
 def is_closed_section(section_text):
     return "suljettu" in section_text.lower()
+
+
+def nordrest_day_section(text, today):
+    """nordrest.fi's Studio10 page has no per-day dates in the weekly list --
+    headers are bilingual weekday names only (e.g. 'GIOVENDí / TORSTAI'), and
+    the whole week's menu appears twice in the fetched text (duplicate markup
+    block, seemingly a responsive/mobile variant). So instead of matching a
+    date like closest_day_section(), we just look up today's Finnish weekday
+    name and take the text up to the next weekday header -- this stays
+    correct even with the duplicated block, since the next header in
+    document order is always the true end of today's section."""
+    weekday_idx = today.weekday()  # Mon=0 .. Sun=6
+    if weekday_idx > 4:
+        return None
+    fi_name = FI_WEEKDAYS[weekday_idx]
+    header_re = re.compile(r"\b(" + "|".join(FI_WEEKDAYS) + r")\b", re.IGNORECASE)
+    matches = list(header_re.finditer(text))
+    for i, m in enumerate(matches):
+        if m.group(1).lower() == fi_name.lower():
+            end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+            return text[m.end():end]
+    return None
+
+
+# Studio10's dishes carry allergen tags in a trailing parenthesis, e.g.
+# "Pasta con pancetta e panna – Kermaista pekonipastaa (L)", rather than the
+# inline standalone-token style the other restaurants use. We only treat a
+# trailing "(...)" as tags if every comma-separated token inside it is a
+# known code -- otherwise it's likely an unrelated parenthetical remark and
+# the line gets skipped rather than mis-parsed as a dish.
+NORDREST_TAG_CODES = {"M", "L", "VL", "G", "KM", "V", "VE", "VEG"}
+NORDREST_LINE_RE = re.compile(r"^(.*\S)\s*\(([^)]*)\)\s*$")
+
+
+def parse_nordrest(section_text):
+    items = []
+    for raw in section_text.split("\n"):
+        line = raw.strip()
+        if not line or _looks_like_boilerplate(line):
+            continue
+        m = NORDREST_LINE_RE.match(line)
+        if not m:
+            continue
+        desc, tag_str = m.group(1), m.group(2)
+        tokens = [t.strip().upper() for t in tag_str.split(",") if t.strip()]
+        if not tokens or not all(t in NORDREST_TAG_CODES for t in tokens):
+            continue  # trailing parens weren't allergen tags -- skip the line
+        tags = {"Veg" if t in ("V", "VE", "VEG") else t for t in tokens}
+        clean = re.sub(r"\s{2,}", " ", desc).strip(" -–")
+        if not clean:
+            continue
+        items.append({"text": clean, "tags": sorted(tags), "price": None, "porridge": False})
+    return items
+
+
+PAATTARI_HEADER_RE = re.compile(
+    r"^(" + "|".join(FI_WEEKDAYS) + r")(?:na)?\s+\d{1,2}\.\d{1,2}\.", re.IGNORECASE
+)
+PAATTARI_TAGS_ONLY_RE = re.compile(r"^\(([^)]*)\)$")
+
+
+def paattari_day_paragraphs(soup, today):
+    """Päättäri's weekly menu (nordrest.fi, Elementor-built) is a run of <p>
+    tags: a bold-underlined 'Weekday D.M.YYYY' header, then one <p> per dish
+    with the name in <strong> and the tagged description in <em>, up to the
+    next weekday header. Unlike Studio10 (another nordrest.fi restaurant),
+    name and tags don't share a text line, so this walks the DOM directly
+    instead of flattened text -- flattening would put name and tags on
+    separate lines with no reliable way to tell where one dish ends and the
+    next begins (verified by inspecting the actual markup)."""
+    weekday_idx = today.weekday()  # Mon=0 .. Sun=6
+    if weekday_idx > 4:
+        return None
+    fi_name = FI_WEEKDAYS[weekday_idx]
+
+    all_ps = soup.find_all("p")
+    header_positions = [
+        (i, PAATTARI_HEADER_RE.match(p.get_text(" ", strip=True)))
+        for i, p in enumerate(all_ps)
+    ]
+    header_positions = [(i, m) for i, m in header_positions if m]
+    if not header_positions:
+        return None
+
+    for pos, (i, m) in enumerate(header_positions):
+        if m.group(1).lower() == fi_name.lower():
+            end = header_positions[pos + 1][0] if pos + 1 < len(header_positions) else len(all_ps)
+            return all_ps[i + 1:end]
+    return None
+
+
+def _paattari_split_tags(s):
+    """Pull a trailing '(TAG, TAG)' off a description, or recognize a
+    string that's nothing but a tag group (Päättäri sometimes puts the tags
+    in their own line/element with no accompanying text). Returns
+    (remaining_text, tags_set)."""
+    s = s.strip()
+    if not s:
+        return "", set()
+    m = PAATTARI_TAGS_ONLY_RE.match(s)
+    if not m:
+        m = NORDREST_LINE_RE.match(s)
+    if m:
+        groups = m.groups()
+        desc, tag_str = (groups[0], groups[1]) if len(groups) == 2 else ("", groups[0])
+        tokens = [t.strip().upper() for t in tag_str.split(",") if t.strip()]
+        if tokens and all(t in NORDREST_TAG_CODES for t in tokens):
+            tags = {"Veg" if t in ("V", "VE", "VEG") else t for t in tokens}
+            return desc.strip(), tags
+    return s, set()
+
+
+def parse_paattari(day_paragraphs):
+    items = []
+    for p in day_paragraphs:
+        strong = p.find("strong")
+        if strong:
+            name = strong.get_text(" ", strip=True)
+            em = p.find("em")
+            desc_raw = em.get_text(" ", strip=True) if em else ""
+            text, tags = _paattari_split_tags(desc_raw)
+            if not name:
+                continue
+            full_text = f"{name} – {text}" if text else name
+            items.append({"text": full_text, "tags": sorted(tags), "price": None, "porridge": False})
+            continue
+
+        plain = p.get_text(" ", strip=True)
+        if not plain or _looks_like_boilerplate(plain):
+            continue
+        text, tags = _paattari_split_tags(plain)
+        if not text:
+            continue
+        items.append({"text": text, "tags": sorted(tags), "price": None, "porridge": False})
+    return items
 
 
 TAG_TOKEN = r"(?:VL|KM|VEG|VE|L|M|G)"
@@ -158,6 +307,8 @@ BOILERPLATE_SNIPPETS = [
     "allergeenit", "käytämme suomalaista", "tulosta lounaslista",
     "vähänlaktoosinen", "laktoositon /", "maidoton /", "gluteeniton /",
     "kananmunaton /", "vegaaninen /",
+    "pehmis & lisukkeet", "huomioimme myös muut erikoisruokavaliot",
+    "lisätietoja ruoan allergeeneistä",
 ]
 
 
@@ -193,7 +344,13 @@ def parse_dylan(section_text):
     pending_price = None
     for raw in section_text.split("\n"):
         line = raw.strip().lstrip("-* ").strip()
-        if not line or _looks_like_boilerplate(line):
+        if not line:
+            continue
+        # A line that's *only* allergen codes (e.g. a lone "g") is 1-2 chars
+        # and would otherwise be swallowed by the boilerplate length filter
+        # below -- check for it first so it survives to the tag-merging step.
+        is_tag_only_line = bool(re.fullmatch(rf"{TAG_TOKEN}(?:\s*,\s*{TAG_TOKEN})*", line, re.IGNORECASE))
+        if not is_tag_only_line and _looks_like_boilerplate(line):
             continue
         low = line.lower()
         if "buffetlounas" in low or "sisältää" in low:
@@ -206,6 +363,12 @@ def parse_dylan(section_text):
             continue
         text, tags, inline_price = extract_tags_and_price(line)
         if not text:
+            # Dylan's pages often put a dish's allergen codes on their own
+            # line(s) right after the dish name (e.g. "Curry-kookoskanakeitto"
+            # then "m" then "g") instead of inline, so a tag-only line has no
+            # text of its own -- attach it to the most recently added dish.
+            if tags and items:
+                items[-1]["tags"] = sorted(set(items[-1]["tags"]) | set(tags))
             continue
         price = inline_price or pending_price
         pending_price = None
@@ -257,15 +420,24 @@ def save_cache(cache):
 def deepl_translate(texts, target_lang, api_key):
     if not texts:
         return []
-    payload = [("auth_key", api_key), ("target_lang", target_lang), ("source_lang", "FI")]
+    # DeepL deprecated auth_key-in-form-body in Nov 2025; auth now goes in
+    # the Authorization header instead.
+    headers = {"Authorization": f"DeepL-Auth-Key {api_key}"}
+    payload = [("target_lang", target_lang), ("source_lang", "FI")]
     payload += [("text", t) for t in texts]
-    resp = requests.post("https://api-free.deepl.com/v2/translate", data=payload, timeout=TIMEOUT)
+    resp = requests.post("https://api-free.deepl.com/v2/translate", data=payload, headers=headers, timeout=TIMEOUT)
     resp.raise_for_status()
     return [t["text"] for t in resp.json()["translations"]]
 
 
 def translate_all(fi_texts, api_key, cache):
-    to_translate = [t for t in dict.fromkeys(fi_texts) if t not in cache]
+    # Re-attempt anything never cached, or cached with a null from a prior
+    # failed DeepL call -- otherwise a transient API error permanently
+    # poisons that dish's translation, since it "exists" in the cache.
+    to_translate = [
+        t for t in dict.fromkeys(fi_texts)
+        if not cache.get(t) or any(cache[t].get(k) is None for k in ("en", "es", "zh-CN"))
+    ]
     if to_translate and api_key:
         for target, cache_key in (("EN", "en"), ("ES", "es"), ("ZH", "zh-CN")):
             try:
@@ -336,7 +508,37 @@ def build_restaurant_payload_pass1(rest, today):
     """Fetch + parse only (no translation yet); keeps raw FI groups under
     _groups_raw so main() can batch-translate everything in one pass."""
     try:
+        if rest["type"] == "paattari":
+            soup = fetch_soup(rest["url"])
+            paragraphs = paattari_day_paragraphs(soup, today)
+            if paragraphs is None:
+                return {"closed": False, "unavailable": True, "note": "no_date_header_found", "_groups_raw": []}
+            items = parse_paattari(paragraphs)
+            groups = [{"key": "main", "items": items}] if items else []
+            return {
+                "closed": False,
+                "unavailable": len(groups) == 0,
+                "note": None,
+                "_groups_raw": groups,
+            }
+
         text = fetch_text(rest["url"])
+
+        if rest["type"] == "nordrest":
+            section = nordrest_day_section(text, today)
+            if section is None:
+                return {"closed": False, "unavailable": True, "note": "no_date_header_found", "_groups_raw": []}
+            if is_closed_section(section):
+                return {"closed": True, "unavailable": False, "note": None, "_groups_raw": []}
+            items = parse_nordrest(section)
+            groups = [{"key": "main", "items": items}] if items else []
+            return {
+                "closed": False,
+                "unavailable": len(groups) == 0,
+                "note": None,
+                "_groups_raw": groups,
+            }
+
         section, distance = closest_day_section(text, today)
         if section is None:
             return {"closed": False, "unavailable": True, "note": "no_date_header_found", "_groups_raw": []}

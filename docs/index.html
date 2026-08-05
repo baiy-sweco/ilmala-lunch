@@ -198,21 +198,22 @@ footer{
 
 <script>
 /* ============ i18n (static UI chrome -- doesn't change daily) ============ */
-const LANGS = ["en","fi"];
-const LANG_NAMES = { en:"EN", fi:"FI" };
+const LANGS = ["en","fi","zh-CN"];
+const LANG_NAMES = { en:"EN", fi:"FI", "zh-CN":"中文" };
 let currentLang = "en";
 
 const TAG_ORDER = ["M","L","VL","G","KM","Veg"];
 const TAG_LABEL = {
   en:  { M:"Dairy-free", L:"Lactose-free", VL:"Low-lactose", G:"Gluten-free", KM:"Egg-free", Veg:"Vegan/Veg" },
-  fi:  { M:"Maidoton", L:"Laktoositon", VL:"Vähälaktoosinen", G:"Gluteeniton", KM:"Kananmunaton", Veg:"Vegaaninen" }
+  fi:  { M:"Maidoton", L:"Laktoositon", VL:"Vähälaktoosinen", G:"Gluteeniton", KM:"Kananmunaton", Veg:"Vegaaninen" },
+  "zh-CN": { M:"无乳制品", L:"无乳糖", VL:"低乳糖", G:"无麸质", KM:"无蛋", Veg:"纯素/素食" }
 };
 
 const UI = {
   en: {
     eyebrow: "Ilmala · Pasila · Lunch Board",
     headingPre: "What's for ", headingHi: "lunch", headingPost: "?",
-    subline: "Today's lunch menus from 3 nearby restaurants",
+    subline: "Today's lunch menus from the nearby restaurants",
     filterLabel: "Filter (tap to combine)",
     resetChip: "All dishes",
     filterNoteTpl: n => `Showing only dishes matching all selected tags: ${n}`,
@@ -224,6 +225,8 @@ const UI = {
     hoursCafe: "Café 8:00–14:00 · Lunch 10:30–13:30",
     hoursLunch1430: "Lunch 10:30–14:00",
     hoursNormally: "Normally lunch 10:30–14:00",
+    hoursStudio10: "Lunch 10:45–14:00 (Mon–Fri)",
+    hoursPaattari: "Open 8:00–14:00 · Lunch 10:30–13:30",
     closedNote: "Closed today according to the restaurant's own menu page.",
     unavailableNote: "Could not read today's menu automatically — check the restaurant's website directly.",
     staleNote: "This restaurant's listed date didn't exactly match today; the menu shown may be off by a day or two.",
@@ -234,7 +237,7 @@ const UI = {
   fi: {
     eyebrow: "Ilmala · Pasila · Lounastaulu",
     headingPre: "Mitä ", headingHi: "lounaaksi", headingPost: "?",
-    subline: "Kolmen lähiravintolan tämän päivän lounaslistat",
+    subline: "Lähiravintoloiden tämän päivän lounaslistat",
     filterLabel: "Suodata (voit yhdistellä)",
     resetChip: "Kaikki ruoat",
     filterNoteTpl: n => `Näytetään vain ruoat, jotka täyttävät kaikki valitut merkinnät: ${n}`,
@@ -246,12 +249,38 @@ const UI = {
     hoursCafe: "Kahvila 8:00–14:00 · Lounas 10:30–13:30",
     hoursLunch1430: "Lounas 10:30–14:00",
     hoursNormally: "Normaalisti lounas 10:30–14:00",
+    hoursStudio10: "Lounas 10.45–14.00 (ma–pe)",
+    hoursPaattari: "Auki 8:00–14:00 · Lounas 10:30–13:30",
     closedNote: "Ravintolan oman lounassivun mukaan suljettu tänään.",
     unavailableNote: "Tämän päivän listaa ei saatu haettua automaattisesti — tarkista ravintolan verkkosivulta.",
     staleNote: "Ravintolan listan päivämäärä ei täsmännyt tarkalleen tähän päivään; näytetty lista voi olla pari päivää vanha.",
     groups: { porridge:"Puurobaari", main:"Pääruoat", side:"Lisäke", soup:"Keitto", dessert:"Jälkiruoka" },
     loading: "Ladataan tämän päivän lounaslistoja…",
     loadError: "menu.json ei latautunut. Jos julkaisu on tuore, ensimmäistä ajastettua ajoa ei ole vielä tapahtunut — käynnistä \"Update Ilmala Lunch Menu\" -työnkulku käsin Actions-välilehdeltä."
+  },
+  "zh-CN": {
+    eyebrow: "Ilmala · Pasila · 午餐列表",
+    headingPre: "今天中午吃", headingHi: "什么", headingPost: "？",
+    subline: "附近餐厅的今日午餐菜单",
+    filterLabel: "筛选（可多选组合）",
+    resetChip: "全部菜品",
+    filterNoteTpl: n => `仅显示符合所有已选标签的菜品：${n}`,
+    emptyState: "该分类下没有符合当前筛选条件的菜品",
+    website: "官网 ↗",
+    legendTitle: "过敏原标签说明：",
+    legend: "M 无乳制品 · L 无乳糖 · VL 低乳糖 · G 无麸质 · KM 无蛋 · Veg 纯素/素食",
+    autoNote: "菜单由 GitHub Action 每个工作日早上自动抓取并翻译。菜名为机器翻译（DeepL）——如果过敏原信息对你很重要，请务必向店员当面确认。",
+    hoursCafe: "咖啡厅 8:00–14:00 · 午餐 10:30–13:30",
+    hoursLunch1430: "午餐 10:30–14:00",
+    hoursNormally: "通常午餐时间 10:30–14:00",
+    hoursStudio10: "午餐 10:45–14:00（周一至周五）",
+    hoursPaattari: "营业 8:00–14:00 · 午餐 10:30–13:30",
+    closedNote: "根据餐厅自己的菜单页面，今天休息。",
+    unavailableNote: "未能自动获取今天的菜单——请直接查看餐厅官网。",
+    staleNote: "该餐厅列出的日期与今天不完全一致，显示的菜单可能有一两天的偏差。",
+    groups: { porridge:"粥", main:"主菜", side:"配菜", soup:"汤", dessert:"甜点" },
+    loading: "正在加载今日菜单…",
+    loadError: "menu.json 加载失败。如果这是刚部署的站点，可能是第一次定时任务还没运行——请到 Actions 页面手动触发 \"Update Ilmala Lunch Menu\" 工作流。"
   }
 };
 
@@ -266,7 +295,13 @@ const RESTAURANT_META = [
     link:"https://www.dylan.fi/luft" },
   { key:"lailma", name:"Dylan La Ilma", sub:"Dylan · Ilmalanrinne",
     address:"Ilmalanrinne 1, 00240 Helsinki", hoursKey:"hoursNormally",
-    link:"https://www.dylan.fi/lailma" }
+    link:"https://www.dylan.fi/lailma" },
+  { key:"studio10", name:"Ravintola Studio10", sub:"Nordrest · Yle-talo",
+    address:"Uutiskatu 8A, 00240 Helsinki", hoursKey:"hoursStudio10",
+    link:"https://nordrest.fi/restaurang/yle-studio10/" },
+  { key:"paattari", name:"Ravintola Päättäri", sub:"Nordrest · Ilmala",
+    address:"Televisiokatu 11, 00240 Helsinki", hoursKey:"hoursPaattari",
+    link:"https://nordrest.fi/restaurang/ravintola-paattari/" }
 ];
 
 let selectedTags = new Set();
@@ -319,7 +354,8 @@ function renderHeader(){
 
   const days = {
     en:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
-    fi:["su","ma","ti","ke","to","pe","la"]
+    fi:["su","ma","ti","ke","to","pe","la"],
+    "zh-CN":["周日","周一","周二","周三","周四","周五","周六"]
   };
 
   const dateStr = menuData && menuData.date ? menuData.date : null;
