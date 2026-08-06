@@ -1,6 +1,6 @@
 {
   "date": "2026-08-06",
-  "generated_at_utc": "2026-08-06T06:25:31+00:00",
+  "generated_at_utc": "2026-08-06T08:21:19+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
@@ -99,11 +99,11 @@
           "items": [
             {
               "name": {
-                "fi": "Kasaa oma Ramenkeittosi tofulla",
-                "en": "Create Your Own Ramen Bowl with Tofu",
-                "es": "Prepara tu propio plato de ramen con tofu",
-                "zh-CN": "用豆腐自制拉面",
-                "zh-TW": "用豆腐自制拉麵"
+                "fi": "Kasaa oma Ramenkeittosi soijaproteiinillä",
+                "en": "Create Your Own Ramen Dish with Soy Protein",
+                "es": "Prepara tu propio ramen con proteína de soja",
+                "zh-CN": "用大豆蛋白自制拉面",
+                "zh-TW": "用大豆蛋白自制拉麵"
               },
               "tags": [
                 "G",
