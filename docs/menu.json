@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-06",
-  "generated_at_utc": "2026-08-06T08:21:19+00:00",
+  "date": "2026-08-07",
+  "generated_at_utc": "2026-08-07T07:03:13+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
@@ -12,32 +12,13 @@
           "items": [
             {
               "name": {
-                "fi": "Crispy chickeniä ja Hot honey dippiä",
-                "en": "Crispy Chicken and Hot Honey Dip",
-                "es": "Pollo crujiente y salsa de miel picante",
-                "zh-CN": "香脆炸鸡配辣蜂蜜蘸酱",
-                "zh-TW": "香脆炸雞配辣蜂蜜蘸醬"
+                "fi": "Lounasbuffetiin kuuluu:",
+                "en": "The lunch buffet includes:",
+                "es": "El bufé del almuerzo incluye:",
+                "zh-CN": "午餐自助餐包括：",
+                "zh-TW": "午餐自助餐包括："
               },
-              "tags": [
-                "G",
-                "L",
-                "M"
-              ],
-              "price": "14,00 €"
-            },
-            {
-              "name": {
-                "fi": "Kukkakaalia, tofua, rapeita kikherneitä ja romescokastiketta",
-                "en": "Cauliflower, tofu, crispy chickpeas, and romesco sauce",
-                "es": "Coliflor, tofu, garbanzos crujientes y salsa romesco",
-                "zh-CN": "花椰菜、豆腐、酥脆鹰嘴豆和罗梅斯科酱",
-                "zh-TW": "花椰菜、豆腐、酥脆鷹嘴豆和羅梅斯科醬"
-              },
-              "tags": [
-                "G",
-                "M",
-                "Veg"
-              ],
+              "tags": [],
               "price": "14,00 €"
             }
           ]
@@ -47,49 +28,540 @@
           "items": [
             {
               "name": {
-                "fi": "Haudutettua kaurapuuroa",
-                "en": "Slow-cooked oatmeal",
-                "es": "Gachas de avena cocidas a fuego lento",
-                "zh-CN": "慢炖燕麦粥",
-                "zh-TW": "慢燉燕麥粥"
+                "fi": "Haudutettua uuniohrapuuroa",
+                "en": "Slow-Cooked Oven-Baked Barley Porridge",
+                "es": "Gachas de avena al horno",
+                "zh-CN": "慢炖烤箱燕麦粥",
+                "zh-TW": "慢燉烤箱燕麥粥"
               },
               "tags": [
-                "M",
-                "Veg"
+                "KM",
+                "L"
               ],
               "price": null
             },
             {
               "name": {
-                "fi": "Talon jätti lihabullia ruskeassa kastikkeessa, pulmu puolukkaa ja Myrttisen suolakurkkuja",
-                "en": "The house served meatballs in brown sauce, lingonberry jam, and Myrttinen pickles",
-                "es": "La casa sirvió albóndigas de carne en salsa marrón, arándanos rojos y pepinillos de Myrttinen.",
-                "zh-CN": "店里提供了棕色酱汁肉丸、越橘果酱和Myrttinen牌腌黄瓜",
-                "zh-TW": "店裡提供了棕色醬汁肉丸、越橘果醬和Myrttinen牌醃黃瓜"
+                "fi": "Fish & Chips talon tapaan mallaksella ja limellä, talon remouladea",
+                "en": "House-style fish & chips with malt beer and lemon, served with house remoulade",
+                "es": "Fish & Chips al estilo de la casa, con malaxa y lima, y salsa remoulade de la casa",
+                "zh-CN": "本店特色炸鱼薯条，配马拉萨酒和柠檬，佐以本店特制雷穆拉德酱",
+                "zh-TW": "本店特色炸魚薯條，配馬拉薩酒和檸檬，佐以本店特製雷穆拉德醬"
               },
               "tags": [
                 "G",
                 "L",
-                "M",
-                "Veg"
+                "M"
               ],
               "price": null
             },
             {
               "name": {
-                "fi": "Perunamuhennosta ( ) ja grillattua kaalia ja herneenversoja",
-                "en": "Mashed potatoes ( ) with grilled cabbage and pea shoots",
-                "es": "Puré de patatas ( ) con col a la parrilla y brotes de guisantes",
-                "zh-CN": "土豆泥（ ）配烤卷心菜和豌豆苗",
-                "zh-TW": "土豆泥（ ）配烤捲心菜和豌豆苗"
+                "fi": "Naudan hangersteakia ja säräjuureksia portviinikastikkeessa",
+                "en": "Beef hanger steak with root vegetables in a port wine sauce",
+                "es": "Filete de hangar de ternera con verduras de raíz en salsa de oporto",
+                "zh-CN": "牛腰肉排配胡萝卜，佐以波特酒酱汁",
+                "zh-TW": "牛腰肉排配胡蘿蔔，佐以波特酒醬汁"
               },
               "tags": [
                 "G",
                 "KM",
-                "L",
+                "L"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Rapeita ranskalaisia",
+                "en": "Crispy French fries",
+                "es": "Patatas fritas crujientes",
+                "zh-CN": "香脆的法式薯条",
+                "zh-TW": "香脆的法式薯條"
+              },
+              "tags": [
+                "G",
                 "M",
                 "Veg"
               ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Korean BBQ -nyhtöä ja kasviksia, seesami-kevätsipulikastiketta",
+                "en": "Korean BBQ pulled meat and vegetables, sesame-scallion sauce",
+                "es": "Carne desmenuzada al estilo barbacoa coreana y verduras, con salsa de sésamo y cebolleta",
+                "zh-CN": "韩式烧烤——撕碎的肉和蔬菜，配芝麻香葱酱",
+                "zh-TW": "韓式燒烤——撕碎的肉和蔬菜，配芝麻香蔥醬"
+              },
+              "tags": [
+                "G",
+                "M",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Key Tropical Pie hyvettä",
+                "en": "Key Tropical Pie Treat",
+                "es": "Key Tropical Pie, una delicia",
+                "zh-CN": "Key Tropical Pie 美味",
+                "zh-TW": "Key Tropical Pie 美味"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "= maidoton",
+                "en": "= dairy-free",
+                "es": "= sin leche",
+                "zh-CN": "= 无奶",
+                "zh-TW": "= 無奶"
+              },
+              "tags": [
+                "M"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "= laktoositon",
+                "en": "= lactose-free",
+                "es": "= sin lactosa",
+                "zh-CN": "= 无乳糖",
+                "zh-TW": "= 無乳糖"
+              },
+              "tags": [
+                "L"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "= vähälaktoosinen",
+                "en": "= low-lactose",
+                "es": "= bajo en lactosa",
+                "zh-CN": "= 低乳糖",
+                "zh-TW": "= 低乳糖"
+              },
+              "tags": [
+                "VL"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "= gluteeniton",
+                "en": "= gluten-free",
+                "es": "= sin gluten",
+                "zh-CN": "= 无麸质",
+                "zh-TW": "= 無麩質"
+              },
+              "tags": [
+                "G"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "K = kananmunaton",
+                "en": "K = egg-free",
+                "es": "K = sin huevo",
+                "zh-CN": "K = 不含鸡蛋",
+                "zh-TW": "K = 不含雞蛋"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "= vegaani",
+                "en": "= vegan",
+                "es": "= vegano",
+                "zh-CN": "= 纯素食",
+                "zh-TW": "= 純素食"
+              },
+              "tags": [
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Järjestä juhlat Ravintola Akselissa!",
+                "en": "Host your party at Restaurant Akseli!",
+                "es": "¡Organiza tu fiesta en el restaurante Akseli!",
+                "zh-CN": "在Akseli餐厅举办派对吧！",
+                "zh-TW": "在Akseli餐廳舉辦派對吧！"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Ravintola Akselin tila sopii erinomaisesti erilaisten tilaisuuksien järjestämiseen. Meillä voit järjestää esimerkiksi yritysjuhlat, aamiaistilaisuudet, perhejuhlat tai pikkujoulut. Saat meiltä myös juhliisi herkulliset tarjoilut. Ota yhteyttä ja pyydä tarjous!",
+                "en": "Restaurant Akseli is the perfect venue for hosting a variety of events. Here, you can host events such as corporate parties, breakfast gatherings, family celebrations, or pre-Christmas parties. We can also provide delicious catering for your event. Contact us and request a quote!",
+                "es": "El restaurante Akseli es un lugar ideal para celebrar todo tipo de eventos. Con nosotros podrás organizar, por ejemplo, fiestas de empresa, desayunos, celebraciones familiares o fiestas de Navidad. También te ofrecemos deliciosos menús para tus celebraciones. ¡Ponte en contacto con nosotros y solicita un presupuesto!",
+                "zh-CN": "Akseli餐厅的场地非常适合举办各类活动。 您可以在这里举办企业庆典、早餐会、家庭聚会或圣诞前夕派对等活动。我们还可为您提供美味的宴会餐饮服务。欢迎联系我们并索取报价！",
+                "zh-TW": "Akseli餐廳的場地非常適合舉辦各類活動。 您可以在這裡舉辦企業慶典、早餐會、家庭聚會或聖誕前夕派對等活動。我們還可為您提供美味的宴會餐飲服務。歡迎聯絡我們並索取報價！"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Ota yhteyttä",
+                "en": "Contact Us",
+                "es": "Ponte en contacto con nosotros",
+                "zh-CN": "联系我们",
+                "zh-TW": "聯絡我們"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Tutustu menuihin",
+                "en": "Check out the menus",
+                "es": "Echa un vistazo a los menús",
+                "zh-CN": "浏览菜单",
+                "zh-TW": "瀏覽選單"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Testaa uusi buffetkone!",
+                "en": "Try out the new buffet machine!",
+                "es": "¡Prueba la nueva máquina para bufé!",
+                "zh-CN": "快来试用这款新型自助餐机吧！",
+                "zh-TW": "快來試用這款新型自助餐機吧！"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Suunnittele oma catering-kokonaisuutesi",
+                "en": "Plan Your Own Catering Package",
+                "es": "Diseña tu propio paquete de catering",
+                "zh-CN": "设计您专属的餐饮套餐",
+                "zh-TW": "設計您專屬的餐飲套餐"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Rakenna oma catering-kokonaisuutesi helposti: valitse menu, lisää palvelut ja lähetä tarjouspyyntö",
+                "en": "Easily create your own catering package: choose a menu, add services, and submit a request for a quote",
+                "es": "Crea fácilmente tu propio paquete de catering: elige el menú, añade los servicios y envía una solicitud de presupuesto",
+                "zh-CN": "轻松定制您的餐饮方案：选择菜单、添加服务并提交询价请求",
+                "zh-TW": "輕鬆定製您的餐飲方案：選擇選單、新增服務並提交詢價請求"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Suunnittele catering",
+                "en": "Plan Your Catering",
+                "es": "Organiza el servicio de catering",
+                "zh-CN": "策划餐饮服务",
+                "zh-TW": "策劃餐飲服務"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Järjestä tilaisuus moderneissa kokoustiloissa",
+                "en": "Host an event in our modern meeting rooms",
+                "es": "Organiza tu evento en modernas salas de reuniones",
+                "zh-CN": "在现代化的会议场所举办活动",
+                "zh-TW": "在現代化的會議場所舉辦活動"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Ilmalan Aurassa kokouskeskuksessa on kaikille vuokrattavia kokoustiloja, joissa voi kätevästi järjestää palaverin 4-20 henkilölle. Jokainen kokoushuone on sisustettu oman näköisekseen ja jokaisesta tilasta löytyy taulutelevisio kuvansiirtoon monipuolisilla liittimillä sekä laadukas äänentoisto-/kamerajärjestelmä",
+                "en": "The Ilmala Aura Conference Center offers meeting rooms available for rent to everyone, where you can conveniently host meetings for 4–20 people. Each meeting room has its own unique decor, and every space is equipped with a flat-screen TV for displaying images via a variety of connectors, as well as a high-quality sound and camera system.",
+                "es": "El centro de conferencias Aura de Ilmala cuenta con salas de reuniones disponibles para alquilar, en las que se pueden organizar cómodamente reuniones para entre 4 y 20 personas. Cada sala de reuniones tiene una decoración propia y todas ellas cuentan con un televisor de pantalla plana para la transmisión de imágenes, con una amplia variedad de conexiones, así como un sistema de sonido y de cámaras de alta calidad.",
+                "zh-CN": "伊尔马拉的奥拉会议中心设有可供所有人租用的会议场地，可轻松举办4至20人的会议。 每间会议室均拥有独特的装饰风格，并配备带多种接口的平板电视用于图像传输，以及高品质的音响和摄像系统。",
+                "zh-TW": "伊爾馬拉的奧拉會議中心設有可供所有人租用的會議場地，可輕鬆舉辦4至20人的會議。 每間會議室均擁有獨特的裝飾風格，並配備帶多種介面的平板電視用於影象傳輸，以及高品質的音響和攝像系統。"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Kokoustilat",
+                "en": "Meeting Rooms",
+                "es": "Salas de reuniones",
+                "zh-CN": "会议室",
+                "zh-TW": "會議室"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Säde: 4 hlö hinta 25€/h",
+                "en": "Säde: Price for 4 people: 25€/h",
+                "es": "Säde: Precio para 4 personas: 25 €/h",
+                "zh-CN": "Säde：4人价格为25欧元/小时",
+                "zh-TW": "Säde：4人價格為25歐元/小時"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Välke: 4 hlö hinta 25€/h",
+                "en": "Välke: Price for 4 people: 25€/h",
+                "es": "Välke: Precio para 4 personas: 25 €/h",
+                "zh-CN": "Välke：4人价格为25欧元/小时",
+                "zh-TW": "Välke：4人價格為25歐元/小時"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Kehä: 8 hlö hinta 35€/h",
+                "en": "Track: 8 people, price 35€/h",
+                "es": "Circuito: 8 personas, precio 35 €/h",
+                "zh-CN": "环线：8人，价格35欧元/小时",
+                "zh-TW": "環線：8人，價格35歐元/小時"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Vire: 16 hlö hinta 35€/h",
+                "en": "Vire: 16 people, price 35€/h",
+                "es": "Vire: 16 personas, precio 35 €/h",
+                "zh-CN": "Vire：16人，价格为35欧元/小时",
+                "zh-TW": "Vire：16人，價格為35歐元/小時"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Valo: 20 hlö hinta 50€/h",
+                "en": "Lighting: 20 people, price 50€/h",
+                "es": "Luz: 20 personas, precio 50 €/h",
+                "zh-CN": "灯光：20人，价格50欧元/小时",
+                "zh-TW": "燈光：20人，價格50歐元/小時"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Hintoihin lisästään alv 25,5 %",
+                "en": "A 25.5% VAT is added to the prices",
+                "es": "A los precios hay que añadir un 25,5 % de IVA.",
+                "zh-CN": "价格需另加25.5%的增值税",
+                "zh-TW": "價格需另加25.5%的增值稅"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Kokoustiloja voi varata",
+                "en": "Meeting rooms can be reserved",
+                "es": "Se pueden reservar salas de reuniones",
+                "zh-CN": "可以预订会议室",
+                "zh-TW": "可以預訂會議室"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "[email protected]",
+                "en": "[email protected]",
+                "es": "[email protected]",
+                "zh-CN": "[email protected]",
+                "zh-TW": "[email protected]"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "tai puh. 050 4731292",
+                "en": "or call 050 4731292",
+                "es": "o llame al 050 4731292",
+                "zh-CN": "或致电 050 4731292",
+                "zh-TW": "或致電 050 4731292"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Kokoustarjoilut tilaat helposti huonevarauksen yhteydessä Ravintola Akselista",
+                "en": "You can easily order meeting catering from Restaurant Akseli when you make your room reservation",
+                "es": "Puedes encargar fácilmente el catering para tu reunión al hacer la reserva de la sala en el restaurante Akseli.",
+                "zh-CN": "您可在预订会议室时，通过Akseli餐厅轻松订购会议餐饮服务",
+                "zh-TW": "您可在預訂會議室時，透過Akseli餐廳輕鬆訂購會議餐飲服務"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "[email protected]",
+                "en": "[email protected]",
+                "es": "[email protected]",
+                "zh-CN": "[email protected]",
+                "zh-TW": "[email protected]"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Tutustu pikkujoulumenuihin",
+                "en": "Check out our pre-Christmas party menus",
+                "es": "Echa un vistazo a los menús de las fiestas de Navidad",
+                "zh-CN": "了解圣诞前夕派对菜单",
+                "zh-TW": "瞭解聖誕前夕派對選單"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Nyt on täydellinen aika suunnitella vuoden odotetuinta juhlaa! Meiltä saat herkulliset pikkujoulumenut, viihtyisät juhlatilat sekä lämpimän tunnelman onnistuneisiin pikkujouluihin",
+                "en": "Now is the perfect time to plan the most anticipated party of the year! We offer delicious pre-Christmas party menus, cozy party venues, and a warm atmosphere for a successful pre-Christmas party",
+                "es": "¡Es el momento perfecto para organizar la fiesta más esperada del año! Te ofrecemos deliciosos menús para las fiestas de Navidad, acogedores espacios para celebrar y un ambiente cálido para que tus fiestas de Navidad sean todo un éxito.",
+                "zh-CN": "现在正是策划今年最令人期待的派对的绝佳时机！我们为您提供美味的圣诞前夜派对菜单、舒适的派对场地以及温馨的氛围，助您举办一场完美的圣诞前夜派对",
+                "zh-TW": "現在正是策劃今年最令人期待的派對的絕佳時機！我們為您提供美味的聖誕前夜派對選單、舒適的派對場地以及溫馨的氛圍，助您舉辦一場完美的聖誕前夜派對"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Lue lisää",
+                "en": "Read more",
+                "es": "Más información",
+                "zh-CN": "了解更多",
+                "zh-TW": "瞭解更多"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Ravintola Akselin palvelut",
+                "en": "Services at Restaurant Akseli",
+                "es": "Servicios del restaurante Akseli",
+                "zh-CN": "Akseli餐厅的服务",
+                "zh-TW": "Akseli餐廳的服務"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Lounas",
+                "en": "Lunch",
+                "es": "Almuerzo",
+                "zh-CN": "午餐",
+                "zh-TW": "午餐"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Kahvila",
+                "en": "Café",
+                "es": "Cafetería",
+                "zh-CN": "咖啡馆",
+                "zh-TW": "咖啡館"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Ravintola Akselin yhteydessä on kahvila, jossa on tarjolla monipuolinen valikoima suolaisia ja makeita herkkuja sekä käsityönä valmistettuja laadukkaita espressopohjaisia kahveja ja monipuolinen teevalikoima",
+                "en": "Adjacent to Restaurant Akseli is a café offering a wide selection of savory and sweet treats, as well as high-quality, handcrafted espresso-based coffees and a diverse selection of teas",
+                "es": "Junto al restaurante Akseli hay una cafetería que ofrece una variada selección de delicias saladas y dulces, así como cafés a base de espresso de alta calidad elaborados artesanalmente y una amplia variedad de tés.",
+                "zh-CN": "Akseli餐厅内设有一家咖啡馆，提供种类丰富的咸味和甜味美食，以及手工制作的高品质意式浓缩咖啡和种类繁多的茶饮。",
+                "zh-TW": "Akseli餐廳內設有一家咖啡館，提供種類豐富的鹹味和甜味美食，以及手工製作的高品質意式濃縮咖啡和種類繁多的茶飲。"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Kokoustarjottavat ja catering",
+                "en": "Meeting Refreshments and Catering",
+                "es": "Servicio de catering y comida para reuniones",
+                "zh-CN": "会议餐饮服务",
+                "zh-TW": "會議餐飲服務"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Oletko järjestämässä juhlia, kokousta tai muuta tilaisuutta?",
+                "en": "Are you planning a party, a meeting, or some other event?",
+                "es": "¿Estás organizando una fiesta, una reunión o cualquier otro evento?",
+                "zh-CN": "您正在筹办派对、会议或其他活动吗？",
+                "zh-TW": "您正在籌辦派對、會議或其他活動嗎？"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Tarjoamme laadukkaita kokous– ja catering-tuotteita sekä palveluita ja tilamme sopii erinomaisesti erilaisten tilaisuuksien järjestämiseen. Meillä voit järjestää esimerkiksi yritysjuhlat, aamiaistilaisuudet, perhejuhlat tai pikkujoulut. Ota yhteyttä ja suunnitellaan yhdessä:",
+                "en": "We offer high-quality meeting and catering products and services, and our venue is ideal for hosting a variety of events. For example, you can host corporate parties, breakfast events, family celebrations, or pre-Christmas parties here. Contact us and let’s plan it together:",
+                "es": "Ofrecemos productos y servicios de alta calidad para reuniones y catering, y nuestras instalaciones son ideales para organizar todo tipo de eventos. Con nosotros puedes organizar, por ejemplo, fiestas de empresa, desayunos de trabajo, celebraciones familiares o fiestas de Navidad. Ponte en contacto con nosotros y lo planificaremos juntos:",
+                "zh-CN": "我们提供高品质的会议及餐饮产品与服务，我们的场地非常适合举办各类活动。 您可以在这里举办企业庆典、早餐会、家庭聚会或圣诞前夕派对等活动。请联系我们，让我们共同策划：",
+                "zh-TW": "我們提供高品質的會議及餐飲產品與服務，我們的場地非常適合舉辦各類活動。 您可以在這裡舉辦企業慶典、早餐會、家庭聚會或聖誕前夕派對等活動。請聯絡我們，讓我們共同策劃："
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "[email protected]",
+                "en": "[email protected]",
+                "es": "[email protected]",
+                "zh-CN": "[email protected]",
+                "zh-TW": "[email protected]"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Page load link",
+                "en": "Page Load Link",
+                "es": "Enlace de carga de la página",
+                "zh-CN": "页面加载链接",
+                "zh-TW": "頁面載入連結"
+              },
+              "tags": [],
               "price": null
             }
           ]
@@ -99,18 +571,84 @@
           "items": [
             {
               "name": {
-                "fi": "Kasaa oma Ramenkeittosi soijaproteiinillä",
-                "en": "Create Your Own Ramen Dish with Soy Protein",
-                "es": "Prepara tu propio ramen con proteína de soja",
-                "zh-CN": "用大豆蛋白自制拉面",
-                "zh-TW": "用大豆蛋白自制拉麵"
+                "fi": "Punajuurikeittoa ja fetamurua",
+                "en": "Beet Soup with Crumbled Feta",
+                "es": "Sopa de remolacha y trocitos de queso feta",
+                "zh-CN": "红菜头汤配菲达奶酪碎",
+                "zh-TW": "紅菜頭湯配菲達乳酪碎"
               },
               "tags": [
                 "G",
-                "M",
-                "Veg"
+                "KM",
+                "L"
               ],
               "price": "12,80 €"
+            },
+            {
+              "name": {
+                "fi": "Ravintolassa on tarjolla päivittäin vaihtuva runsas ja monipuolinen salaattipöytä kastikkeineen ja ripotteineen, talon tuoreleipä levitteineen, keitto, kotiruoka-, makuja maailmalta- ja kasvisruoka vaihtoehdot, ruokajuoma, jälkiruoka sekä kahvi tai tee",
+                "en": "The restaurant offers a generous and varied salad bar that changes daily, complete with dressings and toppings, fresh house-baked bread with spreads, soup, home-style dishes, international cuisine, and vegetarian options, beverages to accompany your meal, dessert, and coffee or tea",
+                "es": "El restaurante ofrece una abundante y variada barra de ensaladas que cambia a diario, con salsas y aderezos; pan fresco de la casa con untables; sopa, opciones de comida casera, sabores del mundo y platos vegetarianos, bebidas para acompañar la comida, postre y café o té.",
+                "zh-CN": "餐厅每天提供丰富多样的沙拉吧，菜品每日更新，配有各种沙拉酱和配料，还有自制新鲜面包及配酱、汤、 家常菜、世界风味菜肴及素食选项，佐餐饮品、甜点以及咖啡或茶",
+                "zh-TW": "餐廳每天提供豐富多樣的沙拉吧，菜品每日更新，配有各種沙拉醬和配料，還有自制新鮮麵包及配醬、湯、 家常菜、世界風味菜餚及素食選項，佐餐飲品、甜點以及咖啡或茶"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "runsas alkusalaattipöytä, keitto, leipäpöytä, kaikki lämpöiset ruoka vaihtoehdot, ruokajuoma, jälkiruoka sekä kahvi tai tee",
+                "en": "a generous selection of appetizers, soup, a bread selection, a variety of hot dishes, a beverage to accompany the meal, dessert, and coffee or tea",
+                "es": "una abundante mesa de entrantes, sopa, mesa de pan, todas las opciones de platos calientes, bebida para acompañar la comida, postre y café o té",
+                "zh-CN": "丰盛的开胃沙拉自助台、汤、面包自助台、各类热菜、餐酒、甜点以及咖啡或茶",
+                "zh-TW": "豐盛的開胃沙拉自助臺、湯、麵包自助臺、各類熱菜、餐酒、甜點以及咖啡或茶"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Keitto-salaattiin kuuluu:",
+                "en": "A soup salad includes:",
+                "es": "La ensalada de sopa lleva:",
+                "zh-CN": "汤沙拉的配料包括：",
+                "zh-TW": "湯沙拉的配料包括："
+              },
+              "tags": [],
+              "price": "12,80 €"
+            },
+            {
+              "name": {
+                "fi": "runsas alkusalaattipöytä, keitto, leipäpöytä, ruokajuoma, jälkiruoka sekä kahvi tai tee",
+                "en": "a generous selection of appetizers, soup, a bread selection, a beverage to accompany the meal, dessert, and coffee or tea",
+                "es": "una variada mesa de entrantes, sopa, mesa de pan, bebida para acompañar la comida, postre y café o té",
+                "zh-CN": "丰盛的开胃沙拉拼盘、汤、面包拼盘、餐酒、甜点以及咖啡或茶",
+                "zh-TW": "豐盛的開胃沙拉拼盤、湯、麵包拼盤、餐酒、甜點以及咖啡或茶"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Keittolounas kuuluu:",
+                "en": "The soup lunch includes:",
+                "es": "El almuerzo con sopa incluye:",
+                "zh-CN": "汤类午餐包括：",
+                "zh-TW": "湯類午餐包括："
+              },
+              "tags": [],
+              "price": "10,30 €"
+            },
+            {
+              "name": {
+                "fi": "päivän keitto, leipäpöytä, ruokajuoma, jälkiruoka sekä kahvi tai tee",
+                "en": "Soup of the day, bread basket, beverage with the meal, dessert, and coffee or tea",
+                "es": "sopa del día, surtido de pan, bebida para acompañar la comida, postre y café o té",
+                "zh-CN": "当日汤品、面包拼盘、餐酒、甜点以及咖啡或茶",
+                "zh-TW": "當日湯品、麵包拼盤、餐酒、甜點以及咖啡或茶"
+              },
+              "tags": [],
+              "price": null
             }
           ]
         },
@@ -119,19 +657,13 @@
           "items": [
             {
               "name": {
-                "fi": "Crepes de Suzettes ( ) ja vaniljavaahtoa ( )",
-                "en": "Crêpes de Suzette ( ) and vanilla whipped cream ( )",
-                "es": "Crepes de Suzette ( ) y crema de vainilla ( )",
-                "zh-CN": "苏泽特薄饼 ( ) 和香草奶油 ( )",
-                "zh-TW": "蘇澤特薄餅 ( ) 和香草奶油 ( )"
+                "fi": "Go to Top",
+                "en": "Go to Top",
+                "es": "Ir al inicio",
+                "zh-CN": "返回顶部",
+                "zh-TW": "返回頂部"
               },
-              "tags": [
-                "G",
-                "KM",
-                "L",
-                "M",
-                "Veg"
-              ],
+              "tags": [],
               "price": null
             }
           ]
@@ -148,36 +680,24 @@
           "items": [
             {
               "name": {
-                "fi": "Burgeritorstaihampparisämpylöitä, suolakurkkua, marinoitua punasipulia ja muita hamppariherkkuja",
-                "en": "Burger Thursday: burger buns, pickles, marinated red onions, and other burger treats",
-                "es": "Jueves de hamburguesas: panecillos de hamburguesa, pepinillos, cebolla roja marinada y otras delicias para hamburguesas",
-                "zh-CN": "汉堡周四：汉堡面包、咸黄瓜、腌红洋葱及其他汉堡美食",
-                "zh-TW": "漢堡週四：漢堡麵包、鹹黃瓜、醃紅洋蔥及其他漢堡美食"
-              },
-              "tags": [],
-              "price": "14,80 €"
-            },
-            {
-              "name": {
-                "fi": "Yrteillä maustetut kasvispihvit ja sitrusjogurttikastiketta",
-                "en": "Vegetable patties seasoned with herbs and served with a citrus yogurt sauce",
-                "es": "Hamburguesas vegetarianas sazonadas con hierbas y salsa de yogur a los cítricos",
-                "zh-CN": "香草调味的蔬菜汉堡配柑橘酸奶酱",
-                "zh-TW": "香草調味的蔬菜漢堡配柑橘酸奶醬"
+                "fi": "Rakkaudella käärittyjä kasvisburritoja sekä ananas-salsaa ja quacamolea",
+                "en": "Veggie burritos made with love, served with pineapple salsa and guacamole",
+                "es": "Burritos vegetarianos preparados con mucho cariño, acompañados de salsa de piña y guacamole",
+                "zh-CN": "满载爱意的素食卷饼，搭配菠萝莎莎酱和牛油果酱",
+                "zh-TW": "滿載愛意的素食捲餅，搭配菠蘿莎莎醬和牛油果醬"
               },
               "tags": [
-                "G",
                 "Veg"
               ],
               "price": "14,80 €"
             },
             {
               "name": {
-                "fi": "Yön yli haudutettua nyhtöpossua texas bbq-kastikkeessa",
-                "en": "Overnight-simmered pulled pork in Texas BBQ sauce",
-                "es": "Cerdo desmenuzado, cocido a fuego lento durante toda la noche, con salsa barbacoa al estilo de Texas",
-                "zh-CN": "用德克萨斯烧烤酱炖制过夜的撕肉猪肉",
-                "zh-TW": "用德克薩斯燒烤醬燉制過夜的撕肉豬肉"
+                "fi": "Paahdettua kanagyrosta",
+                "en": "Roasted Chicken Gyro",
+                "es": "Gyro de pollo asado",
+                "zh-CN": "烤鸡肉吉罗斯",
+                "zh-TW": "烤雞肉吉羅斯"
               },
               "tags": [
                 "G",
@@ -187,30 +707,63 @@
             },
             {
               "name": {
-                "fi": "Rapeaa paneroitua kanaa",
-                "en": "Crispy Breaded Chicken",
-                "es": "Pollo empanado crujiente",
-                "zh-CN": "香脆炸鸡块",
-                "zh-TW": "香脆炸雞塊"
+                "fi": "Rapeaa porsaan leikettä pippurituorejuustokastikkeella",
+                "en": "Crispy Pork Chops with Pepper Cream Cheese Sauce",
+                "es": "Tiras crujientes de cerdo con salsa de queso fresco a la pimienta",
+                "zh-CN": "酥脆猪肉片配黑胡椒鲜奶酪酱",
+                "zh-TW": "酥脆豬肉片配黑胡椒鮮乳酪醬"
               },
               "tags": [
-                "M"
+                "L"
               ],
               "price": "14,80 €"
+            }
+          ]
+        },
+        {
+          "key": "side",
+          "items": [
+            {
+              "name": {
+                "fi": "ja paprikadippiä, tzatsikia",
+                "en": "and bell pepper dip, tzatziki",
+                "es": "y salsa de pimientos, tzatziki",
+                "zh-CN": "还有甜椒蘸酱、希腊酸奶酱",
+                "zh-TW": "還有甜椒蘸醬、希臘酸奶醬"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": null
             },
             {
               "name": {
-                "fi": "Rapeat ranskalaiset",
-                "en": "Crispy French fries",
-                "es": "Patatas fritas crujientes",
-                "zh-CN": "酥脆的法式薯条",
-                "zh-TW": "酥脆的法式薯條"
+                "fi": "marinoitua punasipulia",
+                "en": "marinated red onion",
+                "es": "cebolla roja encurtida",
+                "zh-CN": "腌红洋葱",
+                "zh-TW": "醃紅洋蔥"
+              },
+              "tags": [
+                "G",
+                "M"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Karamellisoituja pikkuperunoita ja yrttiöljyä",
+                "en": "Caramelized baby potatoes and herb oil",
+                "es": "Patatas pequeñas caramelizadas y aceite de hierbas",
+                "zh-CN": "焦糖小土豆配香草油",
+                "zh-TW": "焦糖小土豆配香草油"
               },
               "tags": [
                 "G",
                 "Veg"
               ],
-              "price": "14,80 €"
+              "price": null
             }
           ]
         },
@@ -219,15 +772,15 @@
           "items": [
             {
               "name": {
-                "fi": "Mintulla maustettua tuorehernekeittoa",
-                "en": "Fresh Pea Soup Flavored with Mint",
-                "es": "Sopa de guisantes frescos aromatizada con menta",
-                "zh-CN": "薄荷风味新鲜豌豆汤",
-                "zh-TW": "薄荷風味新鮮豌豆湯"
+                "fi": "Meksikolaista jauhelihakeittoa sekä nachoja",
+                "en": "Mexican ground beef soup and nachos",
+                "es": "Sopa mexicana de carne picada y nachos",
+                "zh-CN": "墨西哥风味肉末汤和玉米片",
+                "zh-TW": "墨西哥風味肉末湯和玉米片"
               },
               "tags": [
                 "G",
-                "Veg"
+                "M"
               ],
               "price": "11,50 €"
             }
@@ -238,15 +791,13 @@
           "items": [
             {
               "name": {
-                "fi": "Itse tehtyä, suussa sulavaa mustikkapiirakkaa ja vaniljakastiketta",
-                "en": "Homemade, melt-in-your-mouth blueberry pie with vanilla sauce",
-                "es": "Tarta de arándanos casera, que se deshace en la boca, con salsa de vainilla",
-                "zh-CN": "自制、入口即化的蓝莓派配香草酱",
-                "zh-TW": "自制、入口即化的藍莓派配香草醬"
+                "fi": "Luftin perjantai herkku",
+                "en": "Luft's Friday Treat",
+                "es": "La delicia del viernes de Luft",
+                "zh-CN": "卢夫特的周五美味",
+                "zh-TW": "盧夫特的週五美味"
               },
-              "tags": [
-                "L"
-              ],
+              "tags": [],
               "price": null
             }
           ]
@@ -260,70 +811,10 @@
       "groups": []
     },
     "studio10": {
-      "closed": false,
+      "closed": true,
       "unavailable": false,
       "note": null,
-      "groups": [
-        {
-          "key": "main",
-          "items": [
-            {
-              "name": {
-                "fi": "Pasta con pancetta e panna – Kermaista pekonipastaa",
-                "en": "Pasta con pancetta e panna – Creamy Pancetta Pasta",
-                "es": "Pasta con panceta y nata – Pasta cremosa con panceta",
-                "zh-CN": "Pasta con pancetta e panna——奶油培根意面",
-                "zh-TW": "Pasta con pancetta e panna——奶油培根意麵"
-              },
-              "tags": [
-                "L"
-              ],
-              "price": null
-            },
-            {
-              "name": {
-                "fi": "Pollo alla Kiev – Kievin kanaa",
-                "en": "Pollo alla Kiev – Chicken Kiev",
-                "es": "Pollo alla Kiev – Pollo a la Kiev",
-                "zh-CN": "基辅鸡——基辅式炸鸡",
-                "zh-TW": "基輔雞——基輔式炸雞"
-              },
-              "tags": [
-                "L"
-              ],
-              "price": null
-            },
-            {
-              "name": {
-                "fi": "Baccalá alla livornese – Turskaa livornolaisittain",
-                "en": "Baccalá alla livornese – Cod, Livorno-style",
-                "es": "Baccalá alla livornese – Bacalao a la livornesa",
-                "zh-CN": "利沃诺风味盐渍鳕鱼——利沃诺式鳕鱼",
-                "zh-TW": "利沃諾風味鹽漬鱈魚——利沃諾式鱈魚"
-              },
-              "tags": [
-                "G",
-                "L"
-              ],
-              "price": null
-            },
-            {
-              "name": {
-                "fi": "Verdure al forno – Uunikasviksia",
-                "en": "Verdure al forno – Oven-Roasted Vegetables",
-                "es": "Verdure al forno – Verduras al horno",
-                "zh-CN": "Verdure al forno – 烤蔬菜",
-                "zh-TW": "Verdure al forno – 烤蔬菜"
-              },
-              "tags": [
-                "G",
-                "Veg"
-              ],
-              "price": null
-            }
-          ]
-        }
-      ]
+      "groups": []
     },
     "paattari": {
       "closed": false,
@@ -335,22 +826,11 @@
           "items": [
             {
               "name": {
-                "fi": "Grillattua kanakebabia / Grillattua Vöneriä – Tzatzikia, harissa jogurttia, tulista tomaatti-chilikastiketta, fetajuustoa, hummuksia ja paljon muita täytteitä",
-                "en": "Grilled Chicken Kebab / Grilled Vöner – Tzatziki, harissa yogurt, spicy tomato-chili sauce, feta cheese, hummus, and lots of other toppings",
-                "es": "Kebab de pollo a la parrilla / Vöner a la parrilla – Tzatziki, yogur con harissa, salsa picante de tomate y chile, queso feta, hummus y muchos otros ingredientes",
-                "zh-CN": "烤鸡肉串 / 烤Vöner——塔塔基酱、哈里萨酸奶、辣番茄辣椒酱、菲达奶酪、鹰嘴豆泥以及多种其他配料",
-                "zh-TW": "烤雞肉串 / 烤Vöner——塔塔基醬、哈里薩酸奶、辣番茄辣椒醬、菲達乳酪、鷹嘴豆泥以及多種其他配料"
-              },
-              "tags": [],
-              "price": null
-            },
-            {
-              "name": {
-                "fi": "Puna-ahventa & kermaista pestokastiketta",
-                "en": "Red Perch & Creamy Pesto Sauce",
-                "es": "Perca roja y salsa de pesto cremosa",
-                "zh-CN": "红鲈鱼配奶油罗勒酱",
-                "zh-TW": "紅鱸魚配奶油羅勒醬"
+                "fi": "Friteerattua kanaa & katsukastiketta",
+                "en": "Deep-Fried Chicken & Katsu Sauce",
+                "es": "Pollo frito y salsa katsu",
+                "zh-CN": "炸鸡 & 卡苏酱",
+                "zh-TW": "炸雞 & 卡蘇醬"
               },
               "tags": [
                 "G",
@@ -360,11 +840,38 @@
             },
             {
               "name": {
-                "fi": "Bataattiranskalaisia & lohkoperunoita",
-                "en": "Sweet Potato Fries & Potato Wedges",
-                "es": "Patatas fritas de boniato y patatas en gajos",
-                "zh-CN": "红薯条与土豆块",
-                "zh-TW": "紅薯條與土豆塊"
+                "fi": "Kermainen savulohipasta & yrttikreemiä",
+                "en": "Creamy Smoked Salmon Pasta & Herb Cream Sauce",
+                "es": "Pasta cremosa de salmón ahumado y crema de hierbas",
+                "zh-CN": "奶油烟熏三文鱼意面配香草酱",
+                "zh-TW": "奶油煙燻三文魚意麵配香草醬"
+              },
+              "tags": [
+                "L"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Palak paneer – Leipäjuustoa maukkaan pinaattikastikeen kera",
+                "en": "Palak paneer – paneer served with a savory spinach sauce",
+                "es": "Palak paneer: queso paneer con una sabrosa salsa de espinacas",
+                "zh-CN": "帕拉克帕尼尔——配以美味菠菜酱的印度奶酪",
+                "zh-TW": "帕拉克帕尼爾——配以美味菠菜醬的印度乳酪"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Perunapaistos/ paahdettua kaalia / kasviksia",
+                "en": "Roasted potatoes / roasted cabbage / vegetables",
+                "es": "Patatas asadas / col asada / verduras",
+                "zh-CN": "烤土豆/烤卷心菜/时蔬",
+                "zh-TW": "烤土豆/烤捲心菜/時蔬"
               },
               "tags": [],
               "price": null
