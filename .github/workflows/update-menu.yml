@@ -2,9 +2,12 @@ name: Update Ilmala Lunch Menu
 
 on:
   schedule:
-    # 06:00 UTC = 09:00 Helsinki in summer (EEST, UTC+3) / 08:00 in winter (EET, UTC+2).
-    # Runs Mon-Fri only. Adjust the hour if you want it earlier/later local time.
-    - cron: '0 6 * * 1-5'
+    # 00:17 UTC = 03:17 Helsinki in summer (EEST, UTC+3) / 02:17 in winter (EET, UTC+2).
+    # Runs Mon-Fri only. Off-the-hour minute (17) is far less contended than
+    # minute 0, so GitHub dispatches it closer to on-time; the early-morning
+    # slot also leaves hours of slack before people check the menu, even if
+    # GitHub delays the run. Adjust the hour if you want it earlier/later.
+    - cron: '17 0 * * 1-5'
   workflow_dispatch: {}   # lets you trigger a manual run from the Actions tab
 
 permissions:

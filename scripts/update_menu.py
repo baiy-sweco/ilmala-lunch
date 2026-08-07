@@ -328,14 +328,24 @@ def parse_akseli(section_text):
         # markdown-style "- *text*" bullets, in case the source format
         # changes or this is re-used with a markdown-based fetch.
         line = raw.strip().lstrip("-* ").strip()
+        # The daily menu always ends at the "Allergeenit" legend header; below
+        # it is permanent site furniture (allergen key, catering/meeting-room
+        # marketing, contact details, footer) that isn't today's food. Stop
+        # here rather than let all of it leak in as fake dishes.
+        if re.match(r"^allergeenit\b", line, re.IGNORECASE):
+            break
         if not line or _looks_like_boilerplate(line):
             continue
-        is_porridge = "puurobaari" in line.lower()
+        # The "Puurobaari" porridge bar is Akseli's breakfast offering, not
+        # part of lunch, so drop it. The "Puurobaari:" label sits on its own
+        # line and the porridge dish on the next, so match the dish by its
+        # name (…puuroa) as well as the label itself.
+        if "puuro" in line.lower():
+            continue
         text, tags, price = extract_tags_and_price(line)
-        text = re.sub(r"(?i)puurobaari:?\s*", "", text).strip()
         if not text:
             continue
-        items.append({"text": text, "tags": tags, "price": price, "porridge": is_porridge})
+        items.append({"text": text, "tags": tags, "price": price, "porridge": False})
     return items
 
 
@@ -528,9 +538,14 @@ def build_restaurant_payload_pass1(rest, today):
             section = nordrest_day_section(text, today)
             if section is None:
                 return {"closed": False, "unavailable": True, "note": "no_date_header_found", "_groups_raw": []}
-            if is_closed_section(section):
-                return {"closed": True, "unavailable": False, "note": None, "_groups_raw": []}
+            # Parse dishes first: actual dishes are authoritative over any
+            # "suljettu" text, because these pages keep stale holiday-closure
+            # banners in the markup for weeks after reopening (e.g. a "suljettu
+            # 3.7-4.8" note still shown days after the 5.8 reopening). Only
+            # trust the closed signal when today's section has no dishes.
             items = parse_nordrest(section)
+            if not items and is_closed_section(section):
+                return {"closed": True, "unavailable": False, "note": None, "_groups_raw": []}
             groups = [{"key": "main", "items": items}] if items else []
             return {
                 "closed": False,
