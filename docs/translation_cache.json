@@ -4,6 +4,46 @@
     "es": "«Shanghai firecracker» de ternera, pimiento y brócoli en salsa agridulce",
     "zh-CN": "“上海爆竹”牛肉、彩椒和西兰花配酸辣酱"
   },
+  "= gluteeniton": {
+    "en": "= gluten-free",
+    "es": "= sin gluten",
+    "zh-CN": "= 无麸质"
+  },
+  "= laktoositon": {
+    "en": "= lactose-free",
+    "es": "= sin lactosa",
+    "zh-CN": "= 无乳糖"
+  },
+  "= maidoton": {
+    "en": "= dairy-free",
+    "es": "= sin leche",
+    "zh-CN": "= 无奶"
+  },
+  "= vegaani": {
+    "en": "= vegan",
+    "es": "= vegano",
+    "zh-CN": "= 纯素食"
+  },
+  "= vähälaktoosinen": {
+    "en": "= low-lactose",
+    "es": "= bajo en lactosa",
+    "zh-CN": "= 低乳糖"
+  },
+  "Baccalá alla livornese – Turskaa livornolaisittain": {
+    "en": "Baccalá alla livornese – Cod, Livorno-style",
+    "es": "Baccalá alla livornese – Bacalao a la livornesa",
+    "zh-CN": "利沃诺风味盐渍鳕鱼——利沃诺式鳕鱼"
+  },
+  "Bataattiranskalaisia & lohkoperunoita": {
+    "en": "Sweet Potato Fries & Potato Wedges",
+    "es": "Patatas fritas de boniato y patatas en gajos",
+    "zh-CN": "红薯条与土豆块"
+  },
+  "Burgeritorstaihampparisämpylöitä, suolakurkkua, marinoitua punasipulia ja muita hamppariherkkuja": {
+    "en": "Burger Thursday: burger buns, pickles, marinated red onions, and other burger treats",
+    "es": "Jueves de hamburguesas: panecillos de hamburguesa, pepinillos, cebolla roja marinada y otras delicias para hamburguesas",
+    "zh-CN": "汉堡周四：汉堡面包、咸黄瓜、腌红洋葱及其他汉堡美食"
+  },
   "Cajunpaahdettua lohta sitruskermaviilikastiketta": {
     "en": "Cajun-Roasted Salmon with Citrus Sour Cream Sauce",
     "es": "Salmón a la cajún con salsa de crema agria y cítricos",
@@ -29,6 +69,11 @@
     "es": "Fish & Chips al estilo de la casa, con malaxa y lima, y salsa remoulade de la casa",
     "zh-CN": "本店特色炸鱼薯条，配马拉萨酒和柠檬，佐以本店特制雷穆拉德酱"
   },
+  "Fish & Chips talon tapaan mallaksella ja limellä, talon remouladea": {
+    "en": "House-style fish & chips with malt beer and lemon, served with house remoulade",
+    "es": "Fish & Chips al estilo de la casa, con malaxa y lima, y salsa remoulade de la casa",
+    "zh-CN": "本店特色炸鱼薯条，配马拉萨酒和柠檬，佐以本店特制雷穆拉德酱"
+  },
   "Fritattuja kevätkääryleitä ja Sweet & Sour kastiketta": {
     "en": "Deep-Fried Spring Rolls with Sweet & Sour Sauce",
     "es": "Rollitos de primavera fritos con salsa agridulce",
@@ -43,6 +88,26 @@
     "en": "Slow-Cooked Buckwheat Groats Porridge",
     "es": "Gachas de trigo sarraceno cocidas a fuego lento",
     "zh-CN": "慢炖荞麦粗粒粥"
+  },
+  "Haudutettua uuniohrapuuroa": {
+    "en": "Slow-Cooked Oven-Baked Barley Porridge",
+    "es": "Gachas de avena al horno",
+    "zh-CN": "慢炖烤箱燕麦粥"
+  },
+  "Hintoihin lisästään alv 25,5 %": {
+    "en": "A 25.5% VAT is added to the prices",
+    "es": "A los precios hay que añadir un 25,5 % de IVA.",
+    "zh-CN": "价格需另加25.5%的增值税"
+  },
+  "Ilmalan Aurassa kokouskeskuksessa on kaikille vuokrattavia kokoustiloja, joissa voi kätevästi järjestää palaverin 4-20 henkilölle. Jokainen kokoushuone on sisustettu oman näköisekseen ja jokaisesta tilasta löytyy taulutelevisio kuvansiirtoon monipuolisilla liittimillä sekä laadukas äänentoisto-/kamerajärjestelmä": {
+    "en": "The Ilmala Aura Conference Center offers meeting rooms available for rent to everyone, where you can conveniently host meetings for 4–20 people. Each meeting room has its own unique decor, and every space is equipped with a flat-screen TV for displaying images via a variety of connectors, as well as a high-quality sound and camera system.",
+    "es": "El centro de conferencias Aura de Ilmala cuenta con salas de reuniones disponibles para alquilar, en las que se pueden organizar cómodamente reuniones para entre 4 y 20 personas. Cada sala de reuniones tiene una decoración propia y todas ellas cuentan con un televisor de pantalla plana para la transmisión de imágenes, con una amplia variedad de conexiones, así como un sistema de sonido y de cámaras de alta calidad.",
+    "zh-CN": "伊尔马拉的奥拉会议中心设有可供所有人租用的会议场地，可轻松举办4至20人的会议。 每间会议室均拥有独特的装饰风格，并配备带多种接口的平板电视用于图像传输，以及高品质的音响和摄像系统。"
+  },
+  "Itse tehtyä, suussa sulavaa mustikkapiirakkaa ja vaniljakastiketta": {
+    "en": "Homemade, melt-in-your-mouth blueberry pie with vanilla sauce",
+    "es": "Tarta de arándanos casera, que se deshace en la boca, con salsa de vainilla",
+    "zh-CN": "自制、入口即化的蓝莓派配香草酱"
   },
   "Juustogratinoitu uunimakkara, sekä mustapippuriketsuppia": {
     "en": "Oven-baked sausage topped with cheese, served with black pepper ketchup",
@@ -79,6 +144,11 @@
     "es": "Cuajada de oreja de cerdo",
     "zh-CN": "耳形奶酪"
   },
+  "Kukkakaalia, tofua, rapeita kikherneitä ja romescokastiketta": {
+    "en": "Cauliflower, tofu, crispy chickpeas, and romesco sauce",
+    "es": "Coliflor, tofu, garbanzos crujientes y salsa romesco",
+    "zh-CN": "花椰菜、豆腐、酥脆鹰嘴豆和罗梅斯科酱"
+  },
   "Lihamureketta & tzatzikia": {
     "en": "Meatloaf & Tzatziki",
     "es": "Hamburguesas de carne y tzatziki",
@@ -109,6 +179,11 @@
     "es": "Salmón asado con cebollino y salsa beurre blanc – Salmón asado con cebollino y salsa de vino blanco",
     "zh-CN": "香烤三文鱼配细香葱白葡萄酒酱汁"
   },
+  "Page load link": {
+    "en": "Page Load Link",
+    "es": "Enlace de carga de la página",
+    "zh-CN": "页面加载链接"
+  },
   "Paholaisen kananpoikaa vuohenjuustomurulla": {
     "en": "Devil's Chicken with Goat Cheese Crumbs",
     "es": "Pollo del diablo con migas de queso de cabra",
@@ -124,10 +199,25 @@
     "es": "La película «Passion»",
     "zh-CN": "《激情》漫画梦"
   },
+  "Pasta con pancetta e panna – Kermaista pekonipastaa": {
+    "en": "Pasta con pancetta e panna – Creamy Pancetta Pasta",
+    "es": "Pasta con panceta y nata – Pasta cremosa con panceta",
+    "zh-CN": "Pasta con pancetta e panna——奶油培根意面"
+  },
+  "Perunamuhennosta ( ) ja grillattua kaalia ja herneenversoja": {
+    "en": "Mashed potatoes ( ) with grilled cabbage and pea shoots",
+    "es": "Puré de patatas ( ) con col a la parrilla y brotes de guisantes",
+    "zh-CN": "土豆泥（ ）配烤卷心菜和豌豆苗"
+  },
   "Perunamuusia ja tuoreita yrttejä": {
     "en": "Mashed potatoes and fresh herbs",
     "es": "Puré de patatas y hierbas frescas",
     "zh-CN": "土豆泥和新鲜香草"
+  },
+  "Perunapaistos/ paahdettua kaalia / kasviksia": {
+    "en": "Roasted potatoes / roasted cabbage / vegetables",
+    "es": "Patatas asadas / col asada / verduras",
+    "zh-CN": "烤土豆/烤卷心菜/时蔬"
   },
   "Perunapaistos/ paahdettua kaalia / kasviksia": {
     "en": "Roasted potatoes / roasted cabbage / vegetables",
@@ -194,10 +284,65 @@
     "es": "Tofu pegajoso con salsa de chile",
     "zh-CN": "蜜汁豆腐配辣椒酱"
   },
+  "Suunnittele catering": {
+    "en": "Plan Your Catering",
+    "es": "Organiza el servicio de catering",
+    "zh-CN": "策划餐饮服务"
+  },
+  "Suunnittele oma catering-kokonaisuutesi": {
+    "en": "Plan Your Own Catering Package",
+    "es": "Diseña tu propio paquete de catering",
+    "zh-CN": "设计您专属的餐饮套餐"
+  },
+  "Säde: 4 hlö hinta 25€/h": {
+    "en": "Säde: Price for 4 people: 25€/h",
+    "es": "Säde: Precio para 4 personas: 25 €/h",
+    "zh-CN": "Säde：4人价格为25欧元/小时"
+  },
+  "Talon jätti lihabullia ruskeassa kastikkeessa, pulmu puolukkaa ja Myrttisen suolakurkkuja": {
+    "en": "The house served meatballs in brown sauce, lingonberry jam, and Myrttinen pickles",
+    "es": "La casa sirvió albóndigas de carne en salsa marrón, arándanos rojos y pepinillos de Myrttinen.",
+    "zh-CN": "店里提供了棕色酱汁肉丸、越橘果酱和Myrttinen牌腌黄瓜"
+  },
+  "Tarjoamme laadukkaita kokous– ja catering-tuotteita sekä palveluita ja tilamme sopii erinomaisesti erilaisten tilaisuuksien järjestämiseen. Meillä voit järjestää esimerkiksi yritysjuhlat, aamiaistilaisuudet, perhejuhlat tai pikkujoulut. Ota yhteyttä ja suunnitellaan yhdessä:": {
+    "en": "We offer high-quality meeting and catering products and services, and our venue is ideal for hosting a variety of events. For example, you can host corporate parties, breakfast events, family celebrations, or pre-Christmas parties here. Contact us and let’s plan it together:",
+    "es": "Ofrecemos productos y servicios de alta calidad para reuniones y catering, y nuestras instalaciones son ideales para organizar todo tipo de eventos. Con nosotros puedes organizar, por ejemplo, fiestas de empresa, desayunos de trabajo, celebraciones familiares o fiestas de Navidad. Ponte en contacto con nosotros y lo planificaremos juntos:",
+    "zh-CN": "我们提供高品质的会议及餐饮产品与服务，我们的场地非常适合举办各类活动。 您可以在这里举办企业庆典、早餐会、家庭聚会或圣诞前夕派对等活动。请联系我们，让我们共同策划："
+  },
+  "Testaa uusi buffetkone!": {
+    "en": "Try out the new buffet machine!",
+    "es": "¡Prueba la nueva máquina para bufé!",
+    "zh-CN": "快来试用这款新型自助餐机吧！"
+  },
+  "Tutustu menuihin": {
+    "en": "Check out the menus",
+    "es": "Echa un vistazo a los menús",
+    "zh-CN": "浏览菜单"
+  },
+  "Tutustu pikkujoulumenuihin": {
+    "en": "Check out our pre-Christmas party menus",
+    "es": "Echa un vistazo a los menús de las fiestas de Navidad",
+    "zh-CN": "了解圣诞前夕派对菜单"
+  },
   "Uova con spinaci e hollandaise – Kananmunia pinaattipedillä & hollandaisella": {
     "en": "Eggs with Spinach and Hollandaise – Eggs on a Bed of Spinach with Hollandaise Sauce",
     "es": "Huevos con espinacas y salsa holandesa – Huevos con espinacas y salsa holandesa",
     "zh-CN": "菠菜配荷兰酱煎蛋 – 菠菜煎蛋配荷兰酱"
+  },
+  "Valo: 20 hlö hinta 50€/h": {
+    "en": "Lighting: 20 people, price 50€/h",
+    "es": "Luz: 20 personas, precio 50 €/h",
+    "zh-CN": "灯光：20人，价格50欧元/小时"
+  },
+  "Verdure al forno – Uunikasviksia": {
+    "en": "Verdure al forno – Oven-Roasted Vegetables",
+    "es": "Verdure al forno – Verduras al horno",
+    "zh-CN": "Verdure al forno – 烤蔬菜"
+  },
+  "Vire: 16 hlö hinta 35€/h": {
+    "en": "Vire: 16 people, price 35€/h",
+    "es": "Vire: 16 personas, precio 35 €/h",
+    "zh-CN": "Vire：16人，价格为35欧元/小时"
   },
   "Voissa paahdettuja varhaisperunoita/ kesäkasviksia": {
     "en": "Early potatoes/summer vegetables sautéed in butter",
