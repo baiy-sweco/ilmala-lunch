@@ -54,6 +54,11 @@
     "es": "Caponata de verduras y alubias – Guarnición siciliana de verduras con alubias",
     "zh-CN": "蔬菜和豆子的卡波纳塔——西西里风味蔬菜炖菜配豆子"
   },
+  "Caponata kaurattoa yrttihärkiksellä ja tuoreella basilikalla": {
+    "en": "Caponata with Oatmeal, Herbed Beef, and Fresh Basil",
+    "es": "Caponata de avena con salsa de hierbas y albahaca fresca",
+    "zh-CN": "卡波纳塔配燕麦粥、香草牛肝菌和新鲜罗勒"
+  },
   "Chicken Lyon – Mehveää kanaa karamelisoidun sipulin ja cremefraichen kanssa": {
     "en": "Chicken Lyon – Tender chicken with caramelized onions and crème fraîche",
     "es": "Pollo a la Lyon – Pollo jugoso con cebolla caramelizada y crème fraîche",
@@ -78,6 +83,11 @@
     "en": "House-style fish & chips with malt beer and lemon, served with house remoulade",
     "es": "Fish & Chips al estilo de la casa, con malaxa y lima, y salsa remoulade de la casa",
     "zh-CN": "本店特色炸鱼薯条，配马拉萨酒和柠檬，佐以本店特制雷穆拉德酱"
+  },
+  "Freshiä kesäkeittoa,K": {
+    "en": "Fresh summer soup, K",
+    "es": "Sopa fresca de verano, K",
+    "zh-CN": "新鲜的夏日浓汤，K"
   },
   "Fritattuja kevätkääryleitä ja Sweet & Sour kastiketta": {
     "en": "Deep-Fried Spring Rolls with Sweet & Sour Sauce",
@@ -174,6 +184,16 @@
     "es": "La delicia del viernes de Luft",
     "zh-CN": "卢夫特的周五美味"
   },
+  "Mac’n & ham juustogratiinilla": {
+    "en": "Mac & Ham with Cheese Gratin",
+    "es": "Macarrones con jamón y gratinado de queso",
+    "zh-CN": "通心粉配火腿和奶酪焗烤"
+  },
+  "Mamman marjapiirakkaa ja vaniljavaahtoa": {
+    "en": "Mom's Berry Pie and Vanilla Whipped Cream",
+    "es": "Tarta de frutos rojos de mamá y crema de vainilla",
+    "zh-CN": "妈妈的浆果派配香草奶油"
+  },
   "Meksikolaista jauhelihakeittoa sekä nachoja": {
     "en": "Mexican ground beef soup and nachos",
     "es": "Sopa mexicana de carne picada y nachos",
@@ -234,6 +254,11 @@
     "es": "Patatas asadas / col asada / verduras",
     "zh-CN": "烤土豆/烤卷心菜/时蔬"
   },
+  "Pilahviriisiä ja paahdettuja kauden kasviksia": {
+    "en": "Spiced rice and roasted seasonal vegetables",
+    "es": "Arroz pilaf y verduras de temporada asadas",
+    "zh-CN": "香米饭配时令烤蔬菜"
+  },
   "Pitkään haudutettua porsaankylkeä ”Burnt Ends”, paahdettua mustapippurimajoneesia ja raikasta limecoleslawta": {
     "en": "Slow-cooked pork ribs (“Burnt Ends”), roasted black pepper mayonnaise, and fresh lime coleslaw",
     "es": "Costillas de cerdo «Burnt Ends» cocinadas a fuego lento durante mucho tiempo, mayonesa de pimienta negra tostada y ensalada de col fresca con lima",
@@ -263,6 +288,11 @@
     "en": "Veggie burritos made with love, served with pineapple salsa and guacamole",
     "es": "Burritos vegetarianos preparados con mucho cariño, acompañados de salsa de piña y guacamole",
     "zh-CN": "满载爱意的素食卷饼，配以菠萝莎莎酱和牛油果酱"
+  },
+  "Rapeaa kievin kanaa ja Cacio e pepe majoneesia": {
+    "en": "Crispy Kiev-style chicken with Cacio e pepe mayonnaise",
+    "es": "Pollo crujiente al estilo Kiev y mayonesa «Cacio e pepe»",
+    "zh-CN": "香脆基辅炸鸡配卡乔佩佩蛋黄酱"
   },
   "Rapeaa porsaan leikettä pippurituorejuustokastikkeella": {
     "en": "Crispy Pork Chops with Pepper Cream Cheese Sauce",

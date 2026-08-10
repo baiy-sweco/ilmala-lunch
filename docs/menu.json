@@ -1,67 +1,68 @@
 {
   "date": "2026-08-10",
-  "generated_at_utc": "2026-08-10T02:37:11+00:00",
+  "generated_at_utc": "2026-08-10T06:47:00+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
       "unavailable": false,
-      "note": "date_mismatch:3d",
+      "note": null,
       "groups": [
+        {
+          "key": "main",
+          "items": [
+            {
+              "name": {
+                "fi": "Mac’n & ham juustogratiinilla",
+                "en": "Mac & Ham with Cheese Gratin",
+                "es": "Macarrones con jamón y gratinado de queso",
+                "zh-CN": "通心粉配火腿和奶酪焗烤",
+                "zh-TW": "通心粉配火腿和乳酪焗烤"
+              },
+              "tags": [
+                "L"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Rapeaa kievin kanaa ja Cacio e pepe majoneesia",
+                "en": "Crispy Kiev-style chicken with Cacio e pepe mayonnaise",
+                "es": "Pollo crujiente al estilo Kiev y mayonesa «Cacio e pepe»",
+                "zh-CN": "香脆基辅炸鸡配卡乔佩佩蛋黄酱",
+                "zh-TW": "香脆基輔炸雞配卡喬佩佩蛋黃醬"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Caponata kaurattoa yrttihärkiksellä ja tuoreella basilikalla",
+                "en": "Caponata with Oatmeal, Herbed Beef, and Fresh Basil",
+                "es": "Caponata de avena con salsa de hierbas y albahaca fresca",
+                "zh-CN": "卡波纳塔配燕麦粥、香草牛肝菌和新鲜罗勒",
+                "zh-TW": "卡波納塔配燕麥粥、香草牛肝菌和新鮮羅勒"
+              },
+              "tags": [
+                "M",
+                "Veg"
+              ],
+              "price": "14,00 €"
+            }
+          ]
+        },
         {
           "key": "side",
           "items": [
             {
               "name": {
-                "fi": "Fish & Chips talon tapaan mallaksella ja limellä, talon remouladea",
-                "en": "House-style fish & chips with malt beer and lemon, served with house remoulade",
-                "es": "Fish & Chips al estilo de la casa, con malaxa y lima, y salsa remoulade de la casa",
-                "zh-CN": "本店特色炸鱼薯条，配马拉萨酒和柠檬，佐以本店特制雷穆拉德酱",
-                "zh-TW": "本店特色炸魚薯條，配馬拉薩酒和檸檬，佐以本店特製雷穆拉德醬"
-              },
-              "tags": [
-                "G",
-                "L",
-                "M"
-              ],
-              "price": null
-            },
-            {
-              "name": {
-                "fi": "Naudan hangersteakia ja säräjuureksia portviinikastikkeessa",
-                "en": "Beef hanger steak with root vegetables in a port wine sauce",
-                "es": "Filete de hangar de ternera con verduras de raíz en salsa de oporto",
-                "zh-CN": "牛腰肉排配胡萝卜，佐以波特酒酱汁",
-                "zh-TW": "牛腰肉排配胡蘿蔔，佐以波特酒醬汁"
-              },
-              "tags": [
-                "G",
-                "KM",
-                "L"
-              ],
-              "price": null
-            },
-            {
-              "name": {
-                "fi": "Rapeita ranskalaisia",
-                "en": "Crispy French fries",
-                "es": "Patatas fritas crujientes",
-                "zh-CN": "香脆的法式薯条",
-                "zh-TW": "香脆的法式薯條"
-              },
-              "tags": [
-                "G",
-                "M",
-                "Veg"
-              ],
-              "price": null
-            },
-            {
-              "name": {
-                "fi": "Korean BBQ -nyhtöä ja kasviksia, seesami-kevätsipulikastiketta",
-                "en": "Korean BBQ pulled meat and vegetables, sesame-scallion sauce",
-                "es": "Carne desmenuzada al estilo barbacoa coreana y verduras, con salsa de sésamo y cebolleta",
-                "zh-CN": "韩式烧烤——撕碎的肉和蔬菜，配芝麻香葱酱汁",
-                "zh-TW": "韓式燒烤——撕碎的肉和蔬菜，配芝麻香蔥醬汁"
+                "fi": "Pilahviriisiä ja paahdettuja kauden kasviksia",
+                "en": "Spiced rice and roasted seasonal vegetables",
+                "es": "Arroz pilaf y verduras de temporada asadas",
+                "zh-CN": "香米饭配时令烤蔬菜",
+                "zh-TW": "香米飯配時令烤蔬菜"
               },
               "tags": [
                 "G",
@@ -77,15 +78,14 @@
           "items": [
             {
               "name": {
-                "fi": "Punajuurikeittoa ja fetamurua",
-                "en": "Beet soup with crumbled feta",
-                "es": "Sopa de remolacha y trocitos de queso feta",
-                "zh-CN": "红菜头汤配菲达奶酪碎",
-                "zh-TW": "紅菜頭湯配菲達乳酪碎"
+                "fi": "Freshiä kesäkeittoa,K",
+                "en": "Fresh summer soup, K",
+                "es": "Sopa fresca de verano, K",
+                "zh-CN": "新鲜的夏日浓汤，K",
+                "zh-TW": "新鮮的夏日濃湯，K"
               },
               "tags": [
                 "G",
-                "KM",
                 "L"
               ],
               "price": "12,80 €"
@@ -97,15 +97,17 @@
           "items": [
             {
               "name": {
-                "fi": "Key Tropical Pie hyvettä",
-                "en": "Key Tropical Pie Treat",
-                "es": "Key Tropical Pie, una delicia",
-                "zh-CN": "Key Tropical Pie 美味",
-                "zh-TW": "Key Tropical Pie 美味"
+                "fi": "Mamman marjapiirakkaa ja vaniljavaahtoa",
+                "en": "Mom's Berry Pie and Vanilla Whipped Cream",
+                "es": "Tarta de frutos rojos de mamá y crema de vainilla",
+                "zh-CN": "妈妈的浆果派配香草奶油",
+                "zh-TW": "媽媽的漿果派配香草奶油"
               },
               "tags": [
                 "G",
-                "L"
+                "KM",
+                "L",
+                "M"
               ],
               "price": null
             }
