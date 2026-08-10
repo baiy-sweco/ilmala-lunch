@@ -349,12 +349,25 @@ def parse_akseli(section_text):
     return items
 
 
+def _is_dylan_placeholder(line):
+    low = line.lower()
+    return "lounaslista ravintolan sivuilta" in low or (
+        "katso" in low and "sivuilta" in low
+    )
+
+
 def parse_dylan(section_text):
     items = []
     pending_price = None
     for raw in section_text.split("\n"):
         line = raw.strip().lstrip("-* ").strip()
         if not line:
+            continue
+        # lounaat.info sometimes has no menu for the day and shows only a
+        # "check the restaurant's own site" placeholder (e.g. "Katso päivän
+        # lounaslista ravintolan sivuilta!"). Skip it so it isn't emitted as a
+        # fake dish -- the restaurant then falls through to unavailable.
+        if _is_dylan_placeholder(line):
             continue
         # A line that's *only* allergen codes (e.g. a lone "g") is 1-2 chars
         # and would otherwise be swallowed by the boilerplate length filter

@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "generated_at_utc": "2026-08-10T06:47:00+00:00",
+  "generated_at_utc": "2026-08-10T07:46:22+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
@@ -121,17 +121,132 @@
       "note": null,
       "groups": [
         {
+          "key": "main",
+          "items": [
+            {
+              "name": {
+                "fi": "Rapeat falafelpyörykät paahdettuja kasviksia sekä inkiväärimajoneesia",
+                "en": "Crispy falafel balls with roasted vegetables and ginger mayonnaise",
+                "es": "Crujientes bolitas de falafel con verduras asadas y mayonesa de jengibre",
+                "zh-CN": "酥脆的法拉费丸子、烤蔬菜以及姜味蛋黄酱",
+                "zh-TW": "酥脆的法拉費丸子、烤蔬菜以及姜味蛋黃醬"
+              },
+              "tags": [
+                "G",
+                "Veg"
+              ],
+              "price": "14,80 €"
+            },
+            {
+              "name": {
+                "fi": "Kotimaista kanaa aurajuusto sitruskastikkeessa",
+                "en": "Finnish Chicken with Aura Cheese in a Citrus Sauce",
+                "es": "Pollo finlandés con queso de aura y salsa de cítricos",
+                "zh-CN": "芬兰本土鸡配奥拉奶酪柑橘酱",
+                "zh-TW": "芬蘭本土雞配奧拉乳酪柑橘醬"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": "14,80 €"
+            },
+            {
+              "name": {
+                "fi": "Paneroitua turskaa",
+                "en": "Breaded cod",
+                "es": "Bacalao rebozado",
+                "zh-CN": "面包屑裹鳕鱼",
+                "zh-TW": "麵包屑裹鱈魚"
+              },
+              "tags": [
+                "M"
+              ],
+              "price": "14,80 €"
+            }
+          ]
+        },
+        {
+          "key": "side",
+          "items": [
+            {
+              "name": {
+                "fi": "remouladekastike",
+                "en": "remoulade sauce",
+                "es": "salsa remoulade",
+                "zh-CN": "雷穆拉德酱",
+                "zh-TW": "雷穆拉德醬"
+              },
+              "tags": [
+                "G",
+                "M"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "etikkasipsejä sekä herneitä",
+                "en": "pickled potato chips and peas",
+                "es": "chips de vinagre y guisantes",
+                "zh-CN": "醋味薯片和豌豆",
+                "zh-TW": "醋味薯片和豌豆"
+              },
+              "tags": [
+                "G",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Varhaisperunoita, tilliä ja ruskistettua voita",
+                "en": "New potatoes, dill, and browned butter",
+                "es": "Patatas tempranas, eneldo y mantequilla dorada",
+                "zh-CN": "早熟土豆、莳萝和煎黄的黄油",
+                "zh-TW": "早熟土豆、蒔蘿和煎黃的黃油"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": null
+            }
+          ]
+        },
+        {
+          "key": "soup",
+          "items": [
+            {
+              "name": {
+                "fi": "Kermainen lohikeitto",
+                "en": "Creamy Salmon Soup",
+                "es": "Sopa cremosa de salmón",
+                "zh-CN": "奶油三文鱼汤",
+                "zh-TW": "奶油三文魚湯"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": "11,50 €"
+            }
+          ]
+        },
+        {
           "key": "dessert",
           "items": [
             {
               "name": {
-                "fi": "Katso päivän lounaslista ravintolan sivuilta!",
-                "en": "Check out today's lunch menu on the restaurant's website!",
-                "es": "¡Echa un vistazo al menú del almuerzo de hoy en la página web del restaurante!",
-                "zh-CN": "请访问餐厅网站查看当天的午餐菜单！",
-                "zh-TW": "請訪問餐廳網站檢視當天的午餐選單！"
+                "fi": "Herkullista vadelmamoussea",
+                "en": "Delicious Raspberry Mousse",
+                "es": "Una deliciosa mousse de frambuesa",
+                "zh-CN": "美味的覆盆子慕斯",
+                "zh-TW": "美味的覆盆子慕斯"
               },
-              "tags": [],
+              "tags": [
+                "G",
+                "L"
+              ],
               "price": null
             }
           ]
@@ -144,17 +259,133 @@
       "note": null,
       "groups": [
         {
+          "key": "main",
+          "items": [
+            {
+              "name": {
+                "fi": "Kanan paistileikkeitä raparperilla maustetussa bbq -kastikkeessa",
+                "en": "Chicken cutlets in a rhubarb-flavored BBQ sauce",
+                "es": "Tiras de pollo a la plancha con salsa barbacoa aromatizada con ruibarbo",
+                "zh-CN": "大黄风味烧烤酱汁煎鸡排",
+                "zh-TW": "大黃風味燒烤醬汁煎雞排"
+              },
+              "tags": [
+                "G",
+                "M"
+              ],
+              "price": "14,50 €"
+            },
+            {
+              "name": {
+                "fi": "Ahvenanmaan uunimakkaraa",
+                "en": "Åland Oven-Baked Sausage",
+                "es": "Salchicha al horno de las Islas Åland",
+                "zh-CN": "奥兰群岛烤香肠",
+                "zh-TW": "奧蘭群島烤香腸"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": "14,50 €"
+            },
+            {
+              "name": {
+                "fi": "Tofua ja kasviksia raparperilla maustetussa bbq -kastikkeessa",
+                "en": "Tofu and vegetables in a rhubarb-flavored BBQ sauce",
+                "es": "Tofu y verduras con salsa barbacoa aromatizada con ruibarbo",
+                "zh-CN": "豆腐和蔬菜配大黄风味烧烤酱",
+                "zh-TW": "豆腐和蔬菜配大黃風味燒烤醬"
+              },
+              "tags": [
+                "G",
+                "Veg"
+              ],
+              "price": "14,50 €"
+            }
+          ]
+        },
+        {
+          "key": "side",
+          "items": [
+            {
+              "name": {
+                "fi": "Yrttinen couscous",
+                "en": "Herb Couscous",
+                "es": "Cuscús con hierbas",
+                "zh-CN": "香草库斯库斯",
+                "zh-TW": "香草庫斯庫斯"
+              },
+              "tags": [
+                "G",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "ja suolakurkkuja",
+                "en": "and pickles",
+                "es": "y pepinillos",
+                "zh-CN": "还有腌黄瓜",
+                "zh-TW": "還有醃黃瓜"
+              },
+              "tags": [
+                "G",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Perinteistä perunamuusia",
+                "en": "Traditional Mashed Potatoes",
+                "es": "Puré de patatas tradicional",
+                "zh-CN": "传统土豆泥",
+                "zh-TW": "傳統土豆泥"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": null
+            }
+          ]
+        },
+        {
+          "key": "soup",
+          "items": [
+            {
+              "name": {
+                "fi": "Kuohkea maa-artisokkakeitto",
+                "en": "Creamy Jerusalem Artichoke Soup",
+                "es": "Sopa cremosa de alcachofa de tierra",
+                "zh-CN": "绵密的地瓜汤",
+                "zh-TW": "綿密的地瓜湯"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": "13,70 €"
+            }
+          ]
+        },
+        {
           "key": "dessert",
           "items": [
             {
               "name": {
-                "fi": "Katso päivän lounaslista ravintolan sivuilta!",
-                "en": "Check out today's lunch menu on the restaurant's website!",
-                "es": "¡Echa un vistazo al menú del almuerzo de hoy en la página web del restaurante!",
-                "zh-CN": "请访问餐厅网站查看当天的午餐菜单！",
-                "zh-TW": "請訪問餐廳網站檢視當天的午餐選單！"
+                "fi": "Mustikkarahka",
+                "en": "Blueberry Quark",
+                "es": "Cremilla de arándanos",
+                "zh-CN": "蓝莓酸奶",
+                "zh-TW": "藍莓酸奶"
               },
-              "tags": [],
+              "tags": [
+                "G",
+                "L"
+              ],
               "price": null
             }
           ]
