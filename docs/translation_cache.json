@@ -49,6 +49,16 @@
     "es": "Salmón a la cajún con salsa de crema agria y cítricos",
     "zh-CN": "卡真风味烤三文鱼配柑橘酸奶油酱"
   },
+  "Caponata di verdure e fagioli – Sisilialaista kasvishöystöä pavuilla": {
+    "en": "Caponata di verdure e fagioli – Sicilian Vegetable Side Dish with Beans",
+    "es": "Caponata de verduras y alubias – Guarnición siciliana de verduras con alubias",
+    "zh-CN": "蔬菜和豆子的卡波纳塔——西西里风味蔬菜炖菜配豆子"
+  },
+  "Chicken Lyon – Mehveää kanaa karamelisoidun sipulin ja cremefraichen kanssa": {
+    "en": "Chicken Lyon – Tender chicken with caramelized onions and crème fraîche",
+    "es": "Pollo a la Lyon – Pollo jugoso con cebolla caramelizada y crème fraîche",
+    "zh-CN": "里昂风味鸡——嫩滑多汁的鸡肉配焦糖洋葱和法式酸奶油"
+  },
   "Cotoletta di maiale impanata – Paneroituja possun pihvejä": {
     "en": "Cotoletta di maiale impanata – Breaded pork cutlets",
     "es": "Cotoletta di maiale impanata – Chuleta de cerdo empanada",
@@ -78,6 +88,11 @@
     "en": "Deep-Fried Chicken & Katsu Sauce",
     "es": "Pollo frito y salsa katsu",
     "zh-CN": "炸鸡配卡茨酱"
+  },
+  "Halloumijuusto & kirsikkatomaattiuunipaistos": {
+    "en": "Halloumi Cheese & Cherry Tomato Baked Dish",
+    "es": "Queso halloumi y tomates cherry al horno",
+    "zh-CN": "哈鲁米奶酪与樱桃番茄烤菜"
   },
   "Haudutettua tattarisuurimopuuroa": {
     "en": "Slow-Cooked Buckwheat Groats Porridge",
@@ -113,6 +128,11 @@
     "en": "Caramelized baby potatoes and herb oil",
     "es": "Patatas pequeñas caramelizadas y aceite de hierbas",
     "zh-CN": "焦糖小土豆配香草油"
+  },
+  "Katso päivän lounaslista ravintolan sivuilta!": {
+    "en": "Check out today's lunch menu on the restaurant's website!",
+    "es": "¡Echa un vistazo al menú del almuerzo de hoy en la página web del restaurante!",
+    "zh-CN": "请访问餐厅网站查看当天的午餐菜单！"
   },
   "Kermainen savulohipasta & yrttikreemiä": {
     "en": "Creamy Smoked Salmon Pasta & Herb Cream",
@@ -224,6 +244,11 @@
     "es": "Pollo alla parmigiana – Pollo a la parmesana",
     "zh-CN": "帕尔马干酪鸡（Pollo alla parmigiana）"
   },
+  "Pollo fritto con salsa rosa – Paneroitua kanaa & punaista kastiketta": {
+    "en": "Fried Chicken with Pink Sauce – Breaded Chicken & Pink Sauce",
+    "es": "Pollo frito con salsa rosa – Pollo rebozado y salsa rosa",
+    "zh-CN": "炸鸡配粉红酱——面包糠炸鸡 & 粉红酱"
+  },
   "Polpette piccanti – Chorizopyöryköitä tulisessa tomaattikastikkeessa": {
     "en": "Polpette piccanti – Chorizo meatballs in a spicy tomato sauce",
     "es": "Polpette piccanti – Albóndigas de chorizo en salsa de tomate picante",
@@ -244,6 +269,11 @@
     "es": "Tiras crujientes de cerdo con salsa de queso fresco a la pimienta",
     "zh-CN": "酥脆猪肉片配黑胡椒鲜奶酪酱"
   },
+  "Rapeata puna-ahventa & tartarkastiketta – Paneroitua puna-ahventa & tartarkastiketta": {
+    "en": "Crispy Red Perch & Tartar Sauce – Breaded Red Perch & Tartar Sauce",
+    "es": "Perca roja crujiente con salsa tártara – Perca roja empanada con salsa tártara",
+    "zh-CN": "香脆红鲈鱼配塔塔酱——面包糠裹红鲈鱼配塔塔酱"
+  },
   "Rapeita ranskalaisia": {
     "en": "Crispy French fries",
     "es": "Patatas fritas crujientes",
@@ -254,6 +284,11 @@
     "es": "Ravioli al burro e salvia – Raviolis vegetarianos con mantequilla y salvia",
     "zh-CN": "黄油鼠尾草意式饺子——配鼠尾草黄油的素饺子"
   },
+  "Scorfano alle erbe – Puna-ahventa yrttikastikkeessa": {
+    "en": "Scorfano alle erbe – Red Perch in Herb Sauce",
+    "es": "Scorfano alle erbe – Perca roja con salsa de hierbas",
+    "zh-CN": "香草红鲈鱼——香草酱汁红鲈鱼"
+  },
   "Scorfano all’erbe fresche – Puna-ahventa tuoreyrttikastikkeella": {
     "en": "Scorfano all’erbe fresche – Red Perch with Fresh Herb Sauce",
     "es": "Scorfano con hierbas frescas – Perca roja con salsa de hierbas frescas",
@@ -263,6 +298,11 @@
     "en": "Citrus-roasted new potatoes and chili-roasted Brussels sprouts",
     "es": "Patatas tempranas asadas con cítricos y coliflor asada con chile",
     "zh-CN": "柑橘风味烤早熟土豆和辣椒烤西兰花"
+  },
+  "Spaghetti A.O.P – Spagettia valkosipulilla, oliiviöljyllä ja chilillä": {
+    "en": "Spaghetti A.O.P. – Spaghetti with garlic, olive oil, and chili",
+    "es": "Espaguetis A.O.P. – Espaguetis con ajo, aceite de oliva y guindilla",
+    "zh-CN": "A.O.P. 意面——配大蒜、橄榄油和辣椒的意面"
   },
   "Spaghetti al ragú – Spagettia & jauhelihakastiketta": {
     "en": "Spaghetti al ragú – Spaghetti & Ground Meat Sauce",
@@ -338,6 +378,11 @@
     "en": "Early potatoes/summer vegetables sautéed in butter",
     "es": "Patatas tempranas y verduras de verano salteadas en mantequilla",
     "zh-CN": "用黄油煎制的早熟土豆/夏季时蔬"
+  },
+  "Yrttiriisiä/ perunamuusia/ paahdettuja porkkanoita": {
+    "en": "Herb-flavored rice / mashed potatoes / roasted carrots",
+    "es": "Arroz con hierbas / puré de patatas / zanahorias asadas",
+    "zh-CN": "香草米饭/土豆泥/烤胡萝卜"
   },
   "ja paprikadippiä, tzatsikia": {
     "en": "and bell pepper dip, tzatziki",
