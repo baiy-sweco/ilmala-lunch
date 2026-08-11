@@ -39,6 +39,11 @@
     "es": "Baccalá alla livornese – Bacalao a la livornesa",
     "zh-CN": "利沃诺风味盐渍鳕鱼——利沃诺式鳕鱼"
   },
+  "Basilikalla maustettua kesäkurpitsasosekeittoa": {
+    "en": "Zucchini Soup with Basil",
+    "es": "Sopa de calabacín con albahaca",
+    "zh-CN": "罗勒调味的西葫芦泥汤"
+  },
   "Bataattiranskalaisia & lohkoperunoita": {
     "en": "Sweet Potato Fries & Potato Wedges",
     "es": "Patatas fritas de boniato y patatas en gajos",
@@ -68,6 +73,11 @@
     "en": "Chicken Lyon – Tender chicken with caramelized onions and crème fraîche",
     "es": "Pollo a la Lyon – Pollo jugoso con cebolla caramelizada y crème fraîche",
     "zh-CN": "里昂风味鸡——嫩滑多汁的鸡肉配焦糖洋葱和法式酸奶油"
+  },
+  "Chorizopyöryköitä mausteisessa tomaattikastikeessa & paahdettua pekonia": {
+    "en": "Chorizo balls in a spicy tomato sauce & crispy bacon",
+    "es": "Bocaditos de chorizo en salsa de tomate especiada y beicon tostado",
+    "zh-CN": "香肠丸配香辣番茄酱 & 烤培根"
   },
   "Cotoletta di maiale impanata – Paneroituja possun pihvejä": {
     "en": "Cotoletta di maiale impanata – Breaded pork cutlets",
@@ -104,6 +114,11 @@
     "es": "Pollo frito y salsa katsu",
     "zh-CN": "炸鸡配卡茨酱"
   },
+  "Fusilli ai funghi – Fusilli-pastaa sienillä": {
+    "en": "Fusilli ai funghi – Fusilli with mushrooms",
+    "es": "Fusilli ai funghi – Fusilli con setas",
+    "zh-CN": "蘑菇螺旋面——配蘑菇的螺旋面"
+  },
   "Halloumijuusto & kirsikkatomaattiuunipaistos": {
     "en": "Halloumi Cheese & Cherry Tomato Baked Dish",
     "es": "Queso halloumi y tomates cherry al horno",
@@ -133,6 +148,11 @@
     "en": "The Ilmala Aura Conference Center offers meeting rooms available for rent to everyone, where you can conveniently host meetings for 4–20 people. Each meeting room has its own unique decor, and every space is equipped with a flat-screen TV for displaying images via a variety of connectors, as well as a high-quality sound and camera system.",
     "es": "El centro de conferencias Aura de Ilmala cuenta con salas de reuniones disponibles para alquilar, en las que se pueden organizar cómodamente reuniones para entre 4 y 20 personas. Cada sala de reuniones tiene una decoración propia y todas ellas cuentan con un televisor de pantalla plana para la transmisión de imágenes, con una amplia variedad de conexiones, así como un sistema de sonido y de cámaras de alta calidad.",
     "zh-CN": "伊尔马拉的奥拉会议中心设有可供所有人租用的会议场地，可轻松举办4至20人的会议。 每间会议室均拥有独特的装饰风格，并配备带多种接口的平板电视用于图像传输，以及高品质的音响和摄像系统。"
+  },
+  "Intialaista pinaattikastiketta \"palak paneer\" tofulla": {
+    "en": "Indian spinach sauce \"palak paneer\" with tofu",
+    "es": "Salsa india de espinacas «palak paneer» con tofu",
+    "zh-CN": "印度菠菜酱“帕拉克·帕尼尔”配豆腐"
   },
   "Itse tehtyä, suussa sulavaa mustikkapiirakkaa ja vaniljakastiketta": {
     "en": "Homemade, melt-in-your-mouth blueberry pie with vanilla sauce",
@@ -174,6 +194,11 @@
     "es": "Sopa cremosa de salmón y pan del archipiélago",
     "zh-CN": "奶油鲑鱼汤和群岛面包"
   },
+  "Kermaista sienikeittoa kauden sienistä": {
+    "en": "Creamy mushroom soup made with seasonal mushrooms",
+    "es": "Sopa cremosa de setas de temporada",
+    "zh-CN": "用当季蘑菇烹制的奶油蘑菇汤"
+  },
   "Key Tropical Pie hyvettä": {
     "en": "Key Tropical Pie Treat",
     "es": "Key Tropical Pie, una delicia",
@@ -209,6 +234,21 @@
     "es": "Hamburguesas de carne y tzatziki",
     "zh-CN": "肉丸 & 塔塔基亚酱"
   },
+  "Lohkoperunat": {
+    "en": "Potato wedges",
+    "es": "Patatas en gajos",
+    "zh-CN": "土豆块"
+  },
+  "Luftin mustikkapavlola": {
+    "en": "Luft's Blueberry Pavlova",
+    "es": "Pavlova de arándanos de Luft",
+    "zh-CN": "卢夫特的蓝莓帕夫洛娃"
+  },
+  "Luftin pekonilla höystetyt pannupihvit sinappikermakastikkeessa": {
+    "en": "Luft's Pan-Fried Patties Topped with Bacon in a Mustard-Cream Sauce",
+    "es": "Filetes a la plancha de Luft con tocino, acompañados de salsa de mostaza y nata",
+    "zh-CN": "Luftin配培根的煎肉排，佐芥末奶油酱"
+  },
   "Luftin perjantai herkku": {
     "en": "Luft's Friday Treat",
     "es": "La delicia del viernes de Luft",
@@ -224,10 +264,20 @@
     "es": "Tarta de frutos rojos de mamá y crema de vainilla",
     "zh-CN": "妈妈的浆果派配香草奶油"
   },
+  "Mausteisia kasvispihvejä": {
+    "en": "Spicy Vegetable Patties",
+    "es": "Hamburguesas vegetarianas especiadas",
+    "zh-CN": "香辣素肉饼"
+  },
   "Meksikolaista jauhelihakeittoa sekä nachoja": {
     "en": "Mexican ground beef soup and nachos",
     "es": "Sopa mexicana de carne picada y nachos",
     "zh-CN": "墨西哥风味肉末汤和玉米片"
+  },
+  "Merluzzo impanato e aioli – Paneroitua turskaa & valkosipulimajoneesia": {
+    "en": "Breaded cod with aioli – Breaded cod & garlic mayonnaise",
+    "es": "Merluzzo impanato e aioli – Bacalao empanado y alioli",
+    "zh-CN": "面包屑炸鳕鱼配蒜香蛋黄酱 – 面包屑炸鳕鱼 & 蒜香蛋黄酱"
   },
   "Mustikkarahka": {
     "en": "Blueberry Quark",
@@ -244,10 +294,20 @@
     "es": "Gyro de pollo asado",
     "zh-CN": "烤鸡肉吉罗斯"
   },
+  "Paahdettua lohta & kermaista-hummerikastiketta": {
+    "en": "Seared Salmon & Creamy Lobster Sauce",
+    "es": "Salmón a la plancha con salsa cremosa de langosta",
+    "zh-CN": "香烤三文鱼配奶油龙虾酱"
+  },
   "Paahdettua lohta & ruohosipuli beurre blanc – Paahdettua lohta & ruohosipuli valkoviinikastiketta": {
     "en": "Seared Salmon & Chives with Beurre Blanc – Seared Salmon & Chives with White Wine Sauce",
     "es": "Salmón asado con cebollino y salsa beurre blanc – Salmón asado con cebollino y salsa de vino blanco",
     "zh-CN": "香烤三文鱼配细香葱白葡萄酒酱汁"
+  },
+  "Paahdettua lohta tilli-gremolatakastiketta": {
+    "en": "Seared Salmon with Dill-Gremolata Sauce",
+    "es": "Salmón a la plancha con salsa de gremolata al eneldo",
+    "zh-CN": "香烤三文鱼配莳萝格雷莫拉塔酱"
   },
   "Page load link": {
     "en": "Page Load Link",
@@ -258,6 +318,11 @@
     "en": "Devil's Chicken with Goat Cheese Crumbs",
     "es": "Pollo del diablo con migas de queso de cabra",
     "zh-CN": "“恶魔的小鸡”配山羊奶酪碎"
+  },
+  "Paistettua puna-ahventa hollandaise -kastikkeessa": {
+    "en": "Pan-Fried Red Perch with Hollandaise Sauce",
+    "es": "Perca roja frita con salsa holandesa",
+    "zh-CN": "荷兰酱煎红鲈鱼"
   },
   "Palak paneer – Leipäjuustoa maukkaan pinaattikastikeen kera": {
     "en": "Palak paneer – paneer served with a savory spinach sauce",
@@ -279,6 +344,11 @@
     "es": "Pasta con panceta y nata – Pasta cremosa con panceta",
     "zh-CN": "Pasta con pancetta e panna——奶油培根意面"
   },
+  "Peperoni ripieni di verdure – Kasvistäytteisiä paprikoita": {
+    "en": "Peperoni ripieni di verdure – Stuffed Bell Peppers",
+    "es": "Peperoni ripieni di verdure – Pimientos rellenos de verduras",
+    "zh-CN": "Peperoni ripieni di verdure – 蔬菜馅辣椒"
+  },
   "Perinteistä perunamuusia": {
     "en": "Traditional Mashed Potatoes",
     "es": "Puré de patatas tradicional",
@@ -293,6 +363,11 @@
     "en": "Mashed potatoes and fresh herbs",
     "es": "Puré de patatas y hierbas frescas",
     "zh-CN": "土豆泥和新鲜香草"
+  },
+  "Perunamuussia": {
+    "en": "Mashed potatoes",
+    "es": "Puré de patatas",
+    "zh-CN": "土豆泥"
   },
   "Perunapaistos/ paahdettua kaalia / kasviksia": {
     "en": "Roasted potatoes / roasted cabbage / vegetables",
@@ -339,6 +414,11 @@
     "es": "Pollo crujiente al estilo Kiev y mayonesa «Cacio e pepe»",
     "zh-CN": "香脆基辅炸鸡配卡乔佩佩蛋黄酱"
   },
+  "Rapeaa kiovan kanaa - ja aoilia": {
+    "en": "Crispy Kiev-style chicken—and aioli",
+    "es": "Pollo crujiente al estilo de Kiev y alioli",
+    "zh-CN": "香脆基辅炸鸡——配蒜泥蛋黄酱"
+  },
   "Rapeaa porsaan leikettä pippurituorejuustokastikkeella": {
     "en": "Crispy Pork Chops with Pepper Cream Cheese Sauce",
     "es": "Tiras crujientes de cerdo con salsa de queso fresco a la pimienta",
@@ -354,6 +434,11 @@
     "es": "Perca roja crujiente con salsa tártara – Perca roja empanada con salsa tártara",
     "zh-CN": "香脆红鲈鱼配塔塔酱——面包糠裹红鲈鱼配塔塔酱"
   },
+  "Rapeita falafelejä & chili-porkkana hummusta – Friteerattua falafelia ja chili-porkkana hummusta": {
+    "en": "Crispy Falafels & Chili-Carrot Hummus – Deep-Fried Falafels and Chili-Carrot Hummus",
+    "es": "Falafels crujientes y hummus de chile y zanahoria – Falafels fritos y hummus de chile y zanahoria",
+    "zh-CN": "酥脆的法拉费 & 辣椒胡萝卜鹰嘴豆泥——油炸法拉费和辣椒胡萝卜鹰嘴豆泥"
+  },
   "Rapeita ranskalaisia": {
     "en": "Crispy French fries",
     "es": "Patatas fritas crujientes",
@@ -363,6 +448,16 @@
     "en": "Ravioli al burro e salvia – Vegetable ravioli with sage butter",
     "es": "Ravioli al burro e salvia – Raviolis vegetarianos con mantequilla y salvia",
     "zh-CN": "黄油鼠尾草意式饺子——配鼠尾草黄油的素饺子"
+  },
+  "Ruskistetussa voissa paahdettuja perunoita / belugalinssejä/ kesä kasviksia": {
+    "en": "Potatoes sautéed in browned butter / Beluga lentils / summer vegetables",
+    "es": "Patatas salteadas en mantequilla dorada / lentejas beluga / verduras de verano",
+    "zh-CN": "用焦黄黄油煎制的土豆 / 贝卢加扁豆 / 夏季时蔬"
+  },
+  "Salsiccia al forno – Uunimakkaraa": {
+    "en": "Salsiccia al forno – Oven-Baked Sausage",
+    "es": "Salsiccia al forno – Salchicha al horno",
+    "zh-CN": "Salsiccia al forno – 烤香肠"
   },
   "Scorfano alle erbe – Puna-ahventa yrttikastikkeessa": {
     "en": "Scorfano alle erbe – Red Perch in Herb Sauce",
@@ -444,6 +539,11 @@
     "es": "Huevos con espinacas y salsa holandesa – Huevos con espinacas y salsa holandesa",
     "zh-CN": "菠菜配荷兰酱煎蛋 – 菠菜煎蛋配荷兰酱"
   },
+  "Valkosulkaamoussea": {
+    "en": "White-winged Moss",
+    "es": "Hongo de plumas blancas",
+    "zh-CN": "白羽蚕"
+  },
   "Valo: 20 hlö hinta 50€/h": {
     "en": "Lighting: 20 people, price 50€/h",
     "es": "Luz: 20 personas, precio 50 €/h",
@@ -503,5 +603,10 @@
     "en": "remoulade sauce",
     "es": "salsa remoulade",
     "zh-CN": "雷穆拉德酱"
+  },
+  "sekä vegaanista limejugurttia": {
+    "en": "and vegan lime yogurt",
+    "es": "y yogur vegano de lima",
+    "zh-CN": "以及纯素青柠酸奶"
   }
 }
