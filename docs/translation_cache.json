@@ -34,6 +34,11 @@
     "es": "Salchicha al horno de las Islas Åland",
     "zh-CN": "奥兰群岛烤香肠"
   },
+  "Akselin savulohta, feta-ruohosipulidippiä": {
+    "en": "Akseli's smoked salmon with feta-chive dip",
+    "es": "Salmón ahumado de Akseli con dip de feta y cebollino",
+    "zh-CN": "阿克塞利烟熏三文鱼配菲达奶酪香葱蘸酱"
+  },
   "Baccalá alla livornese – Turskaa livornolaisittain": {
     "en": "Baccalá alla livornese – Cod, Livorno-style",
     "es": "Baccalá alla livornese – Bacalao a la livornesa",
@@ -118,6 +123,11 @@
     "en": "Fusilli ai funghi – Fusilli with mushrooms",
     "es": "Fusilli ai funghi – Fusilli con setas",
     "zh-CN": "蘑菇螺旋面——配蘑菇的螺旋面"
+  },
+  "Grilliperunoita ja paahdettua selleriä ja pinaattia": {
+    "en": "Grilled potatoes with roasted celery and spinach",
+    "es": "Patatas a la parrilla con apio asado y espinacas",
+    "zh-CN": "烤土豆配烤芹菜和菠菜"
   },
   "Halloumijuusto & kirsikkatomaattiuunipaistos": {
     "en": "Halloumi Cheese & Cherry Tomato Baked Dish",
@@ -268,6 +278,11 @@
     "en": "Spicy Vegetable Patties",
     "es": "Hamburguesas vegetarianas especiadas",
     "zh-CN": "香辣素肉饼"
+  },
+  "Mehevää fajita-paahdettua kanaa, cheddar-juustoa, nachoja ja kirpeää limefraichea": {
+    "en": "Juicy fajita-roasted chicken, cheddar cheese, nachos and tangy lime crème fraîche",
+    "es": "Jugoso pollo asado estilo fajita, queso cheddar, nachos y crème fraîche ácida de lima",
+    "zh-CN": "多汁的法士达烤鸡、切达奶酪、玉米片和酸爽青柠法式酸奶油"
   },
   "Meksikolaista jauhelihakeittoa sekä nachoja": {
     "en": "Mexican ground beef soup and nachos",
@@ -524,6 +539,11 @@
     "es": "Tofu y verduras con salsa barbacoa aromatizada con ruibarbo",
     "zh-CN": "豆腐和蔬菜配大黄风味烧烤酱"
   },
+  "Tuore tomaattikeittoa ja tuorejuustoa": {
+    "en": "Fresh tomato soup with cream cheese",
+    "es": "Sopa fresca de tomate con queso fresco",
+    "zh-CN": "新鲜番茄汤配奶油奶酪"
+  },
   "Tutustu menuihin": {
     "en": "Check out the menus",
     "es": "Echa un vistazo a los menús",
@@ -539,6 +559,11 @@
     "es": "Huevos con espinacas y salsa holandesa – Huevos con espinacas y salsa holandesa",
     "zh-CN": "菠菜配荷兰酱煎蛋 – 菠菜煎蛋配荷兰酱"
   },
+  "Uuniomena-kinuskihyvettä": {
+    "en": "Baked apple with toffee sauce",
+    "es": "Manzana al horno con salsa de toffee",
+    "zh-CN": "烤苹果配太妃糖酱"
+  },
   "Valkosulkaamoussea": {
     "en": "White-winged Moss",
     "es": "Hongo de plumas blancas",
@@ -553,6 +578,11 @@
     "en": "New potatoes, dill, and browned butter",
     "es": "Patatas tempranas, eneldo y mantequilla dorada",
     "zh-CN": "早熟土豆、莳萝和煎黄的黄油"
+  },
+  "Vegelastuja ja kasviksia Limonello": {
+    "en": "Vegetable crisps and vegetables, Limonello style",
+    "es": "Chips vegetales y verduras, estilo Limonello",
+    "zh-CN": "素食脆片配蔬菜（Limonello 风味）"
   },
   "Verdure al forno – Uunikasviksia": {
     "en": "Verdure al forno – Oven-Roasted Vegetables",
