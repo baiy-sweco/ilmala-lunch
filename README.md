@@ -1,38 +1,59 @@
-# Ilmala 午餐板
+# Ilmala Lunch Board
 
-自动抓取 Pasila / Ilmala 附近 3 家餐厅的当日午餐菜单，翻译成中/英/西/芬四种语言（外加繁体中文本地转换），并按过敏原标签（M/L/VL/G/KM/Veg）多选筛选。
+Automatically scrapes today's lunch menus from five restaurants around Pasila / Ilmala, translates the dish names, and lets you filter dishes by allergen tags (M / L / VL / G / KM / Veg). The page UI is available in English, Finnish, and Simplified Chinese.
 
-- `docs/index.html` — 静态页面，运行时 `fetch('./menu.json')` 拿数据，纯前端，无需后端。
-- `scripts/update_menu.py` — 抓取三家餐厅页面、解析今日菜单、调用 DeepL 翻译、写出 `docs/menu.json`。
-- `.github/workflows/update-menu.yml` — 每个工作日早上自动跑一次上面的脚本并 commit。
+Restaurants covered:
 
-## 部署步骤（一次性）
+- **Ravintola Akseli** (Ninan Keittiö · Ilmalan Aura) — `ninankeittio.fi`
+- **Dylan Luft** (Ilmalantori) — `lounaat.info`
+- **Dylan La Ilma** (Ilmalanrinne) — `lounaat.info`
+- **Ravintola Studio10** (Nordrest · Yle-talo) — `nordrest.fi`
+- **Ravintola Päättäri** (Nordrest · Ilmala) — `nordrest.fi`
 
-1. **建仓库**：在 GitHub 新建一个仓库（public 或 private 都行，Pages 免费层 public 仓库最简单），把这个文件夹的内容全部 push 上去，保留目录结构不变。
+## How it works
 
-2. **申请 DeepL 免费 API key**：去 https://www.deepl.com/pro-api 注册 "DeepL API Free"（不是 Pro），拿到一个类似 `xxxxxxxx-xxxx-...:fx` 结尾是 `:fx` 的 key。免费额度每月 500,000 字符，这个用量（一天几十道菜名）完全用不完。
+- `docs/index.html` — static page that `fetch('./menu.json')` at runtime. Pure front end, no backend. Language switcher offers **EN / FI / 中文**.
+- `scripts/update_menu.py` — fetches each restaurant page, parses today's menu, translates the dish names via DeepL, and writes `docs/menu.json`.
+- `.github/workflows/update-menu.yml` — runs the script automatically every weekday morning and commits the result.
 
-3. **把 key 加成仓库密钥**：仓库 → Settings → Secrets and variables → Actions → New repository secret，名字填 `DEEPL_API_KEY`，值填上一步拿到的 key。
+The three source sites have different page structures, so the scraper uses a dedicated parser per layout:
 
-4. **开 GitHub Pages**：仓库 → Settings → Pages → Build and deployment → Source 选 "Deploy from a branch" → Branch 选 `main`，文件夹选 `/docs` → Save。几分钟后页面就能在 `https://<你的用户名>.github.io/<仓库名>/` 访问。
+- **Akseli** — flat text with the day's menu at the top; parsing stops at the `Allergeenit` legend header so the catering/meeting-room marketing and footer below it don't leak in as fake dishes. The `Puurobaari` porridge bar is dropped (it's breakfast, not lunch).
+- **Dylan Luft / La Ilma** (`lounaat.info`) — matches the day header closest to today (see the "known limitations" note about date typos) and reads allergen codes that appear on their own lines right after each dish name.
+- **Studio10 / Päättäri** (`nordrest.fi`) — allergen codes come in a trailing `(...)`. Studio10 is only treated as closed when today's section has no dishes, so a stale summer-holiday "suljettu" banner left in the markup after reopening no longer marks it closed. Päättäri is parsed straight from the DOM because its dish name and tags don't share a text line.
 
-5. **手动跑一次工作流**（不用等到明天早上）：仓库 → Actions → 左侧选 "Update Ilmala Lunch Menu" → 右侧 "Run workflow" 按钮 → Run。跑完之后 `docs/menu.json` 会被自动更新并 commit，Pages 会在下一次构建后显示新数据（通常 1-2 分钟）。
+Translation: DeepL translates the Finnish dish names into **EN / ES / ZH-CN**, and Traditional Chinese (ZH-TW) is produced locally via OpenCC. All five fields (`fi` / `en` / `es` / `zh-CN` / `zh-TW`) are stored in `menu.json`; the current page UI surfaces English, Finnish, and Simplified Chinese.
 
-完成以上五步，之后就是全自动的：每个工作日早上 6:00 UTC（夏令时相当于赫尔辛基 9:00，冬令时 8:00）自动抓取、翻译、发布，你不用再手动做任何事。
+## Deployment (one-time setup)
 
-## 已知局限（如实说明，不是隐藏的坑）
+1. **Create the repo** — make a new GitHub repository (public or private; a public repo on the free Pages tier is simplest), and push this folder's contents keeping the directory structure intact.
 
-- **抓取逻辑基于关键词和正则，不是官方 API**。三家餐厅的页面结构如果改版，解析可能失效——脚本设计成"某一家解析失败不会拖垮另外两家"，失败的那家会在页面上显示"未能自动抓取，请查看官网"，而不是显示错误的数据或让整个工作流报错退出。
-- **菜品分类（主菜/汤/配菜/甜点）是启发式猜的**，依据是"有没有价格"和关键词（比如出现"keitto"就归类成汤），不是源网站给出的显式标签。绝大多数情况下猜得对，但个别菜可能分错类。
-- **菜名翻译是机器翻译（DeepL）**，不是人工校对。日常用语基本没问题，但涉及过敏原时，页面上也提示了"请向工作人员当面确认"——过敏原代码（M/L/VL/G/KM/Veg）本身是从源网站原始文本里用正则精确提取的，不经过翻译，相对更可信。
-- **ninankeittio.fi 的日期标注本身偶尔有错**（我们抓取时就发现过"周二"标了三周后的日期这种情况）。脚本用"跟今天最接近的日期"来兜底匹配，如果偏差超过 2 天会在页面上标注提示，但仍建议偶尔人工抽查一下。
-- 定时任务默认是工作日跑一次；如果发现该餐厅经常在你早上看页面时还没更新（比如某天很晚才发菜单），可以把 `update-menu.yml` 里的 cron 时间往后调，或者加一个第二次运行作为兜底。
+2. **Get a free DeepL API key** — sign up for "DeepL API Free" (not Pro) at https://www.deepl.com/pro-api. You'll get a key ending in `:fx`. The free tier allows 500,000 characters/month, far more than this usage (a few dozen dish names per day) will ever need.
 
-## 本地测试
+3. **Add the key as a repository secret** — repo → Settings → Secrets and variables → Actions → New repository secret, name it `DEEPL_API_KEY`, value = the key from step 2.
+
+4. **Enable GitHub Pages** — repo → Settings → Pages → Build and deployment → Source: "Deploy from a branch" → Branch: `main`, folder: `/docs` → Save. After a few minutes the page is live at `https://<your-username>.github.io/<repo-name>/`.
+
+5. **Trigger the workflow once manually** (no need to wait for tomorrow morning) — repo → Actions → "Update Ilmala Lunch Menu" → "Run workflow". After it finishes, `docs/menu.json` is updated and committed automatically, and Pages shows the new data after its next build (usually 1–2 minutes).
+
+After these five steps everything is automatic: every weekday morning the workflow scrapes, translates, and publishes without any manual work.
+
+The scheduled run fires at **00:17 UTC, Monday–Friday** (03:17 Helsinki in summer / 02:17 in winter). The off-the-hour minute is far less contended than minute 0, so GitHub dispatches it closer to on time, and the early slot leaves hours of slack before anyone checks the menu even if GitHub delays the run.
+
+## Known limitations (stated honestly, not hidden)
+
+- **Scraping is keyword/regex based, not an official API.** If a source site changes its page structure, parsing may break. The script is designed so that a failure at one restaurant doesn't take down the others — the failed one shows "could not read today's menu, check the website" on the page instead of showing wrong data or crashing the whole run.
+- **Dish grouping (main / soup / side / dessert) is a heuristic guess**, based on whether a price is present and on keywords (e.g. `keitto` → soup), not an explicit label from the source. It's right most of the time, but individual dishes can land in the wrong group.
+- **Dish-name translation is machine translation (DeepL)**, not human-reviewed. Everyday wording is fine, but for allergens the page tells you to confirm with staff in person — the allergen codes (M / L / VL / G / KM / Veg) themselves are extracted verbatim from the source text with regex and are never translated, so they're relatively trustworthy.
+- **`ninankeittio.fi`'s date labels are occasionally wrong** (we've seen a "Tuesday" labelled with a date three weeks out). The scraper falls back to matching the date closest to today, and flags the page if the closest match is more than 2 days off — but an occasional manual spot-check is still wise.
+- The scheduled job runs once per weekday. If a restaurant is often still un-updated when you check in the morning (e.g. it posts its menu late some days), you can push the cron time in `update-menu.yml` later, or add a second run as a fallback.
+
+## Local testing
 
 ```bash
-pip install -r requirements.txt --break-system-packages   # 或用虚拟环境
-export DEEPL_API_KEY=你的key   # 不设置也能跑，只是新菜名不会被翻译，会显示芬兰语原文
+pip install -r requirements.txt --break-system-packages   # or use a virtualenv
+export DEEPL_API_KEY=your_key   # optional — without it the script still runs,
+                                # but new dish names stay in Finnish (untranslated)
 python scripts/update_menu.py
 cat docs/menu.json
 ```
