@@ -1,6 +1,6 @@
 {
   "date": "2026-08-11",
-  "generated_at_utc": "2026-08-11T05:53:19+00:00",
+  "generated_at_utc": "2026-08-11T06:33:03+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
@@ -242,16 +242,13 @@
           "items": [
             {
               "name": {
-                "fi": "Rapeaa kiovan kanaa - ja aoilia",
-                "en": "Crispy Kiev-style chicken—and aioli",
-                "es": "Pollo crujiente al estilo de Kiev y alioli",
-                "zh-CN": "香脆基辅炸鸡——配蒜泥蛋黄酱",
-                "zh-TW": "香脆基輔炸雞——配蒜泥蛋黃醬"
+                "fi": "Rapeaa kiovan kanaa",
+                "en": "Crispy chicken Kiev",
+                "es": "Pollo Kiev crujiente",
+                "zh-CN": "酥脆基辅鸡",
+                "zh-TW": "酥脆基輔雞"
               },
-              "tags": [
-                "G",
-                "M"
-              ],
+              "tags": [],
               "price": "14,50 €"
             },
             {
@@ -287,6 +284,20 @@
         {
           "key": "side",
           "items": [
+            {
+              "name": {
+                "fi": "aoilia",
+                "en": "aioli",
+                "es": "alioli",
+                "zh-CN": "蒜香蛋黄酱",
+                "zh-TW": "蒜香蛋黃醬"
+              },
+              "tags": [
+                "G",
+                "M"
+              ],
+              "price": null
+            },
             {
               "name": {
                 "fi": "Lohkoperunat",

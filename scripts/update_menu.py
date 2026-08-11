@@ -356,6 +356,32 @@ def _is_dylan_placeholder(line):
     )
 
 
+# lounaat.info marks a dish component that carries NO allergen codes with a
+# bare "-" standing in where its codes would go, right before the "ja" (Finnish
+# "and") that introduces the next component, e.g.
+#   "Rapeaa kiovan kanaa - ja aoilia  m  g"
+# means the (breaded) chicken has no codes and only the aioli is M/G. Without
+# special handling the trailing "m"/"g" get merged onto the whole line, falsely
+# marking the chicken dairy-/gluten-free. We split on " - ja " so the codes
+# attach to the sauce alone. The plain " - " used merely as a name separator
+# (e.g. "Poulet au vinaigre - lyonin kanaa") is NOT matched, because the marker
+# is specifically a dash immediately followed by "ja".
+DYLAN_NO_TAG_MARKER_RE = re.compile(r"^(?P<main>.+?)\s+-\s+ja\s+(?P<sauce>.+)$", re.IGNORECASE)
+
+
+def _split_dylan_no_tag_marker(text):
+    """Return (main_without_tags, sauce) when `text` uses the "- ja" no-allergen
+    marker, or (text, None) when it doesn't."""
+    m = DYLAN_NO_TAG_MARKER_RE.match(text)
+    if not m:
+        return text, None
+    main = m.group("main").strip(" ,.-")
+    sauce = m.group("sauce").strip(" ,.-")
+    if not main or not sauce:
+        return text, None
+    return main, sauce
+
+
 def parse_dylan(section_text):
     items = []
     pending_price = None
@@ -395,6 +421,14 @@ def parse_dylan(section_text):
             continue
         price = inline_price or pending_price
         pending_price = None
+        main, sauce = _split_dylan_no_tag_marker(text)
+        if sauce is not None:
+            # The main component's codes are the empty "-" placeholder, so it
+            # gets no tags; any inline tags (and the tag-only lines that follow)
+            # belong to the sauce, which becomes items[-1] for the merge step.
+            items.append({"text": main, "tags": [], "price": price, "porridge": False})
+            items.append({"text": sauce, "tags": tags, "price": None, "porridge": False})
+            continue
         items.append({"text": text, "tags": tags, "price": price, "porridge": False})
     return items
 

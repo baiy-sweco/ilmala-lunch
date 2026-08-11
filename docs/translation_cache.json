@@ -429,6 +429,11 @@
     "es": "Pollo crujiente al estilo Kiev y mayonesa «Cacio e pepe»",
     "zh-CN": "香脆基辅炸鸡配卡乔佩佩蛋黄酱"
   },
+  "Rapeaa kiovan kanaa": {
+    "en": "Crispy chicken Kiev",
+    "es": "Pollo Kiev crujiente",
+    "zh-CN": "酥脆基辅鸡"
+  },
   "Rapeaa kiovan kanaa - ja aoilia": {
     "en": "Crispy Kiev-style chicken—and aioli",
     "es": "Pollo crujiente al estilo de Kiev y alioli",
@@ -608,6 +613,11 @@
     "en": "Herb-flavored rice / mashed potatoes / roasted carrots",
     "es": "Arroz con hierbas / puré de patatas / zanahorias asadas",
     "zh-CN": "香草米饭/土豆泥/烤胡萝卜"
+  },
+  "aoilia": {
+    "en": "aioli",
+    "es": "alioli",
+    "zh-CN": "蒜香蛋黄酱"
   },
   "etikkasipsejä sekä herneitä": {
     "en": "pickled chips and peas",
