@@ -23,6 +23,7 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import date, datetime, timedelta, timezone
 
 import requests
@@ -34,8 +35,37 @@ try:
 except Exception:
     _cc = None
 
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; IlmalaLunchBot/1.0; +https://github.com/)"}
+# ninankeittio.fi (Akseli) sits behind Cloudflare. Our old self-identifying
+# "IlmalaLunchBot" User-Agent was intermittently served a Cloudflare
+# interstitial -- a 200 response whose body is a "checking your browser" page
+# with NONE of the weekly menu in it -- when the request came from GitHub
+# Actions' datacenter IPs. That surfaced as Akseli's recurring
+# "no_date_header_found" even though the menu (decided and published a week
+# ahead) was always on the real page. Presenting as an ordinary browser, with
+# the Accept headers a browser sends, avoids the bot challenge.
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "fi-FI,fi;q=0.9,en;q=0.8",
+}
 TIMEOUT = 20
+FETCH_RETRIES = 3
+RETRY_BACKOFF = 3  # seconds; multiplied by the attempt number
+
+# A Cloudflare/anti-bot interstitial returns 200 (so raise_for_status passes)
+# but the body is tiny and carries one of these tell-tale phrases instead of
+# the page. Treat such a response as a failed fetch and retry rather than
+# parsing it into an empty ("unavailable") menu.
+CHALLENGE_MARKERS = (
+    "just a moment",
+    "cf-chl",
+    "enable javascript and cookies",
+    "checking your browser",
+    "attention required",
+)
 
 FI_WEEKDAYS = ["Maanantai", "Tiistai", "Keskiviikko", "Torstai", "Perjantai"]
 VALID_TAGS = {"M", "L", "VL", "G", "KM", "VEG"}
@@ -73,10 +103,34 @@ RESTAURANTS = [
 ]
 
 
+def _looks_like_challenge(html):
+    low = html.lower()
+    return len(html) < 2000 or any(m in low for m in CHALLENGE_MARKERS)
+
+
+def fetch_html(url):
+    """GET the page, retrying if the response is a Cloudflare/anti-bot
+    interstitial rather than the real content. Raises on the last attempt if
+    every response still looks like a challenge, so the caller marks the
+    restaurant parse_error instead of silently emitting an empty menu."""
+    for attempt in range(1, FETCH_RETRIES + 1):
+        resp = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
+        resp.raise_for_status()
+        html = resp.text
+        if not _looks_like_challenge(html):
+            return html
+        print(
+            f"WARN: {url} returned a bot-challenge/empty page "
+            f"(attempt {attempt}/{FETCH_RETRIES})",
+            file=sys.stderr,
+        )
+        if attempt < FETCH_RETRIES:
+            time.sleep(RETRY_BACKOFF * attempt)
+    raise requests.RequestException(f"bot-challenge page after {FETCH_RETRIES} attempts: {url}")
+
+
 def fetch_soup(url):
-    resp = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
-    resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "html.parser")
+    soup = BeautifulSoup(fetch_html(url), "html.parser")
     for tag in soup(["script", "style", "nav", "footer"]):
         tag.decompose()
     return soup
