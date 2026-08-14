@@ -1,12 +1,126 @@
 {
   "date": "2026-08-14",
-  "generated_at_utc": "2026-08-14T02:49:14+00:00",
+  "generated_at_utc": "2026-08-14T06:20:32+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
-      "unavailable": true,
-      "note": "no_date_header_found",
-      "groups": []
+      "unavailable": false,
+      "note": null,
+      "groups": [
+        {
+          "key": "main",
+          "items": [
+            {
+              "name": {
+                "fi": "Talon nachoplate, salsaa, cream fraichea",
+                "en": "House nacho plate with salsa and crème fraîche",
+                "es": "Plato de nachos de la casa con salsa y crème fraîche",
+                "zh-CN": "招牌玉米片拼盘配莎莎酱和法式酸奶油",
+                "zh-TW": "招牌玉米片拼盤配莎莎醬和法式酸奶油"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L",
+                "M",
+                "Veg"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Välimeren feta-kasvispihvit Chilihummusta",
+                "en": "Mediterranean feta-vegetable patties with chili hummus",
+                "es": "Hamburguesas mediterráneas de feta y verduras con hummus de chile",
+                "zh-CN": "地中海菲达奶酪蔬菜饼配辣椒鹰嘴豆泥",
+                "zh-TW": "地中海菲達乳酪蔬菜餅配辣椒鷹嘴豆泥"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L",
+                "M",
+                "Veg"
+              ],
+              "price": "14,00 €"
+            }
+          ]
+        },
+        {
+          "key": "side",
+          "items": [
+            {
+              "name": {
+                "fi": "Porsaan grillipihvejä ja talon maustevoita",
+                "en": "Grilled pork steaks with house herb butter",
+                "es": "Filetes de cerdo a la parrilla con mantequilla de hierbas de la casa",
+                "zh-CN": "烤猪排配招牌香草黄油",
+                "zh-TW": "烤豬排配招牌香草黃油"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L",
+                "M"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Hölskypottuja ja grillitomaatteja",
+                "en": "Tossed potatoes and grilled tomatoes",
+                "es": "Patatas salteadas y tomates a la parrilla",
+                "zh-CN": "翻炒土豆和烤番茄",
+                "zh-TW": "翻炒土豆和烤番茄"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L",
+                "M",
+                "Veg"
+              ],
+              "price": null
+            }
+          ]
+        },
+        {
+          "key": "soup",
+          "items": [
+            {
+              "name": {
+                "fi": "Pepperonatakeittoa ja krutonkeja",
+                "en": "Peperonata soup with croutons",
+                "es": "Sopa de peperonata con picatostes",
+                "zh-CN": "意式甜椒汤配面包丁",
+                "zh-TW": "意式甜椒湯配麵包丁"
+              },
+              "tags": [
+                "G",
+                "M",
+                "Veg"
+              ],
+              "price": null
+            }
+          ]
+        },
+        {
+          "key": "dessert",
+          "items": [
+            {
+              "name": {
+                "fi": "Candy salad",
+                "en": "Candy salad",
+                "es": "Ensalada de golosinas",
+                "zh-CN": "糖果沙拉",
+                "zh-TW": "糖果沙拉"
+              },
+              "tags": [],
+              "price": null
+            }
+          ]
+        }
+      ]
     },
     "luft": {
       "closed": false,

@@ -295,6 +295,9 @@ def extract_tags_and_price(raw_line):
             all_tags.add(t)
 
     clean = re.sub(r"[*_`]", "", line)
+    # A parenthesised tag like "(veg)" leaves empty "( )" behind once its code
+    # is pulled out -- drop the now-empty brackets so they don't show in names.
+    clean = re.sub(r"\(\s*\)", " ", clean)
     clean = re.sub(r"\s*,\s*,+", ",", clean)     # collapse doubled commas left behind
     clean = re.sub(r"\s{2,}", " ", clean)
     clean = re.sub(r"\s+,", ",", clean).strip(" ,.-")  # e.g. "Ends , paahdettua" -> "Ends, paahdettua"

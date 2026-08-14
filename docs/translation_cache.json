@@ -104,6 +104,11 @@
     "es": "Salmón a la cajún con salsa de crema agria y cítricos",
     "zh-CN": "卡真风味烤三文鱼配柑橘酸奶油酱"
   },
+  "Candy salad": {
+    "en": "Candy salad",
+    "es": "Ensalada de golosinas",
+    "zh-CN": "糖果沙拉"
+  },
   "Caponata di verdure e fagioli – Sisilialaista kasvishöystöä pavuilla": {
     "en": "Caponata di verdure e fagioli – Sicilian Vegetable Side Dish with Beans",
     "es": "Caponata de verduras y alubias – Guarnición siciliana de verduras con alubias",
@@ -248,6 +253,11 @@
     "en": "Honey-roasted seasonal root vegetables and potatoes",
     "es": "Verduras de temporada y patatas asadas con miel",
     "zh-CN": "蜂蜜烤时令根茎类蔬菜和土豆"
+  },
+  "Hölskypottuja ja grillitomaatteja": {
+    "en": "Tossed potatoes and grilled tomatoes",
+    "es": "Patatas salteadas y tomates a la parrilla",
+    "zh-CN": "翻炒土豆和烤番茄"
   },
   "Ilmalan Aurassa kokouskeskuksessa on kaikille vuokrattavia kokoustiloja, joissa voi kätevästi järjestää palaverin 4-20 henkilölle. Jokainen kokoushuone on sisustettu oman näköisekseen ja jokaisesta tilasta löytyy taulutelevisio kuvansiirtoon monipuolisilla liittimillä sekä laadukas äänentoisto-/kamerajärjestelmä": {
     "en": "The Ilmala Aura Conference Center offers meeting rooms available for rent to everyone, where you can conveniently host meetings for 4–20 people. Each meeting room has its own unique decor, and every space is equipped with a flat-screen TV for displaying images via a variety of connectors, as well as a high-quality sound and camera system.",
@@ -564,6 +574,11 @@
     "es": "Peperoni ripieni di verdure – Pimientos rellenos de verduras",
     "zh-CN": "Peperoni ripieni di verdure – 蔬菜馅辣椒"
   },
+  "Pepperonatakeittoa ja krutonkeja": {
+    "en": "Peperonata soup with croutons",
+    "es": "Sopa de peperonata con picatostes",
+    "zh-CN": "意式甜椒汤配面包丁"
+  },
   "Perinteistä hernekeittoa": {
     "en": "Traditional Pea Soup",
     "es": "Sopa de guisantes tradicional",
@@ -638,6 +653,11 @@
     "en": "Polpette piccanti – Chorizo meatballs in a spicy tomato sauce",
     "es": "Polpette piccanti – Albóndigas de chorizo en salsa de tomate picante",
     "zh-CN": "辣味肉丸——香肠肉丸配辣番茄酱"
+  },
+  "Porsaan grillipihvejä ja talon maustevoita": {
+    "en": "Grilled pork steaks with house herb butter",
+    "es": "Filetes de cerdo a la parrilla con mantequilla de hierbas de la casa",
+    "zh-CN": "烤猪排配招牌香草黄油"
   },
   "Porsaan grillipihvit ja café de paris-kastiketta": {
     "en": "Grilled Pork Chops with Café de Paris Sauce",
@@ -849,6 +869,11 @@
     "es": "Surtido de mini salchichas de la casa ( )",
     "zh-CN": "本店迷你维也纳香肠拼盘 ( )"
   },
+  "Talon nachoplate, salsaa, cream fraichea": {
+    "en": "House nacho plate with salsa and crème fraîche",
+    "es": "Plato de nachos de la casa con salsa y crème fraîche",
+    "zh-CN": "招牌玉米片拼盘配莎莎酱和法式酸奶油"
+  },
   "Talon parempi pyttipannu – Perunaa, sipulia, lihapullia, makkaraa ja paistettua kananmunaa, myrttisen suolakurkkua": {
     "en": "The House Special Hash – Potatoes, onions, meatballs, sausage, and a fried egg, with pickles flavored with myrtle",
     "es": "La mejor cazuela de la casa: patatas, cebolla, albóndigas, salchichas y huevo frito, con pepinillos al mirto",
@@ -973,6 +998,11 @@
     "en": "Mediterranean Feta and Orzo Pasta – Orzo pasta, grilled vegetables, feta, and olives",
     "es": "Pasta orzo al estilo mediterráneo con queso feta: pasta orzo, verduras a la parrilla, queso feta y aceitunas",
     "zh-CN": "地中海风味菲达奶酪奥佐面——奥佐面、烤蔬菜、菲达奶酪和橄榄"
+  },
+  "Välimeren feta-kasvispihvit Chilihummusta": {
+    "en": "Mediterranean feta-vegetable patties with chili hummus",
+    "es": "Hamburguesas mediterráneas de feta y verduras con hummus de chile",
+    "zh-CN": "地中海菲达奶酪蔬菜饼配辣椒鹰嘴豆泥"
   },
   "Yrttinen couscous": {
     "en": "Herb Couscous",
