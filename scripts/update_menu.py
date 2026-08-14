@@ -378,6 +378,77 @@ def _looks_like_boilerplate(line):
     return any(snippet in low for snippet in BOILERPLATE_SNIPPETS)
 
 
+def _norm_tags(cluster):
+    """Normalise a comma-separated allergen cluster like 'L,G,KM' or 'veg'
+    into a set of canonical codes."""
+    out = set()
+    for t in cluster.split(","):
+        t = t.strip().upper()
+        if t in ("VE", "VEG"):
+            out.add("Veg")
+        elif t in ("M", "L", "VL", "G", "KM"):
+            out.add(t)
+    return out
+
+
+def _clean_akseli_name(s):
+    """Tidy a component name: drop markdown/leftover parens (a '(veg)' code
+    leaves a stray bracket once its tag is consumed), a leading 'ja' (Finnish
+    'and') from the next component, and surrounding punctuation/space."""
+    s = re.sub(r"[*_`]", "", s)
+    s = s.replace("(", " ").replace(")", " ")
+    s = re.sub(r"\s{2,}", " ", s).strip(" ,.-–")
+    s = re.sub(r"^ja\b\s*", "", s, flags=re.IGNORECASE)
+    return s.strip(" ,.-–")
+
+
+def _akseli_line_items(line):
+    """Split one Akseli menu line into its individually-tagged components.
+
+    Akseli tags each component of a plate inline, e.g.
+      'Talon nachoplate L,G,KM, salsaa M,G,Veg, cream fraichea L,G,KM 14,00€'
+    is three components with *different* allergens. Each maximal run of
+    allergen codes closes off the text before it as one component, so the codes
+    stay attached to the component they actually describe instead of being
+    merged into one misleading tag set. A line with a single code run (e.g.
+    'Mehevää kanaa, cheddaria, nachoja ja limefraichea L,G' -- commas that are
+    just an ingredient list) stays one item. The trailing plate price goes to
+    the first component (the main dish); its accompaniments carry no price and
+    therefore fall into the side group."""
+    price = None
+    price_match = re.search(r"(\d{1,2}[.,]\d{2})\s*(€|e\b)", line, re.IGNORECASE)
+    if price_match:
+        price = price_match.group(1).replace(".", ",") + " €"
+        line = line[: price_match.start()] + line[price_match.end():]
+
+    comps = []  # [name, set(tags)]
+    last_end = 0
+    for m in TAG_CLUSTER_RE.finditer(line):
+        name = _clean_akseli_name(line[last_end:m.start()])
+        last_end = m.end()
+        tags = _norm_tags(m.group(0))
+        if not name:
+            # A code run with no preceding text (e.g. the '(veg)' after another
+            # cluster) belongs to the component just before it.
+            if comps:
+                comps[-1][1] |= tags
+            continue
+        comps.append([name, tags])
+
+    tail = _clean_akseli_name(line[last_end:])
+    if tail:
+        comps.append([tail, set()])
+    if not comps:
+        whole = _clean_akseli_name(line)
+        if whole:
+            comps.append([whole, set()])
+
+    return [
+        {"text": name, "tags": sorted(tags), "price": price if i == 0 else None, "porridge": False}
+        for i, (name, tags) in enumerate(comps)
+    ]
+
+
 def parse_akseli(section_text):
     items = []
     for raw in section_text.split("\n"):
@@ -399,10 +470,7 @@ def parse_akseli(section_text):
         # name (…puuroa) as well as the label itself.
         if "puuro" in line.lower():
             continue
-        text, tags, price = extract_tags_and_price(line)
-        if not text:
-            continue
-        items.append({"text": text, "tags": tags, "price": price, "porridge": False})
+        items.extend(_akseli_line_items(line))
     return items
 
 
@@ -460,6 +528,10 @@ def parse_dylan(section_text):
             continue
         low = line.lower()
         if "buffetlounas" in low or "sisältää" in low:
+            continue
+        # The "Aamiaisella: puurobaari" porridge bar is La Ilma's breakfast
+        # offering, not lunch, so drop it -- same as Akseli's "Puurobaari".
+        if "puuro" in low:
             continue
         if low.startswith("lounas kello"):
             break
