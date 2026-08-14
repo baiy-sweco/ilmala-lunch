@@ -562,7 +562,16 @@ def parse_dylan(section_text):
     return items
 
 
-def classify_groups(items):
+def classify_groups(items, merge_main_side=False):
+    """Bucket items into porridge / main / side / soup / dessert groups.
+
+    With merge_main_side=True the main and side buckets are combined into a
+    single "mainside" group. Akseli uses this: splitting a plate into its
+    individually-tagged components (see _akseli_line_items) plus its unreliable
+    per-line pricing makes the main-vs-side split arbitrary -- a plate's
+    accompaniments are better shown next to it than hived off into a separate
+    section -- so main and side are presented together, with soup and dessert
+    still on their own."""
     if not items:
         return []
     n = len(items)
@@ -579,9 +588,11 @@ def classify_groups(items):
             key = "side"
         else:
             key = "main"
+        if merge_main_side and key in ("main", "side"):
+            key = "mainside"
         keyed.append((key, it))
 
-    order = ["porridge", "main", "side", "soup", "dessert"]
+    order = ["porridge", "mainside", "main", "side", "soup", "dessert"]
     groups = []
     for key in order:
         its = [it for k, it in keyed if k == key]
@@ -741,7 +752,7 @@ def build_restaurant_payload_pass1(rest, today):
         else:
             items = parse_dylan(section)
 
-        groups = classify_groups(items)
+        groups = classify_groups(items, merge_main_side=(rest["type"] == "akseli"))
         note = f"date_mismatch:{distance}d" if (distance is not None and distance > 2) else None
         return {
             "closed": False,

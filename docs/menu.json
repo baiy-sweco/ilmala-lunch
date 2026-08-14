@@ -1,6 +1,6 @@
 {
   "date": "2026-08-14",
-  "generated_at_utc": "2026-08-14T06:55:58+00:00",
+  "generated_at_utc": "2026-08-14T07:04:30+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
@@ -8,7 +8,7 @@
       "note": null,
       "groups": [
         {
-          "key": "main",
+          "key": "mainside",
           "items": [
             {
               "name": {
@@ -25,27 +25,6 @@
               ],
               "price": "14,00 €"
             },
-            {
-              "name": {
-                "fi": "Välimeren feta-kasvispihvit",
-                "en": "Mediterranean feta-vegetable patties",
-                "es": "Hamburguesas mediterráneas de feta y verduras",
-                "zh-CN": "地中海菲达奶酪蔬菜饼",
-                "zh-TW": "地中海菲達乳酪蔬菜餅"
-              },
-              "tags": [
-                "G",
-                "KM",
-                "L",
-                "Veg"
-              ],
-              "price": "14,00 €"
-            }
-          ]
-        },
-        {
-          "key": "side",
-          "items": [
             {
               "name": {
                 "fi": "salsaa",
@@ -134,6 +113,22 @@
                 "Veg"
               ],
               "price": null
+            },
+            {
+              "name": {
+                "fi": "Välimeren feta-kasvispihvit",
+                "en": "Mediterranean feta-vegetable patties",
+                "es": "Hamburguesas mediterráneas de feta y verduras",
+                "zh-CN": "地中海菲达奶酪蔬菜饼",
+                "zh-TW": "地中海菲達乳酪蔬菜餅"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L",
+                "Veg"
+              ],
+              "price": "14,00 €"
             },
             {
               "name": {
