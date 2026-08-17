@@ -369,7 +369,7 @@ BOILERPLATE_SNIPPETS = [
     "allergeenit", "käytämme suomalaista", "tulosta lounaslista",
     "vähänlaktoosinen", "laktoositon /", "maidoton /", "gluteeniton /",
     "kananmunaton /", "vegaaninen /",
-    "pehmis & lisukkeet", "huomioimme myös muut erikoisruokavaliot",
+    "huomioimme myös muut erikoisruokavaliot",
     "lisätietoja ruoan allergeeneistä",
 ]
 

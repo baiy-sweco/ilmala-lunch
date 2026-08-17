@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "generated_at_utc": "2026-08-17T13:10:51+00:00",
+  "generated_at_utc": "2026-08-17T13:17:18+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
@@ -561,6 +561,20 @@
                 "zh-TW": "米飯/烤蔬菜/土豆泥"
               },
               "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Pehmis & lisukkeet",
+                "en": "Soft Foods & Side Dishes",
+                "es": "Postres y acompañamientos",
+                "zh-CN": "软点心及配菜",
+                "zh-TW": "軟點心及配菜"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
               "price": null
             }
           ]
