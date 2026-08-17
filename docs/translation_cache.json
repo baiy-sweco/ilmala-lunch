@@ -69,6 +69,11 @@
     "es": "Baccalá alla livornese – Bacalao a la livornesa",
     "zh-CN": "利沃诺风味盐渍鳕鱼——利沃诺式鳕鱼"
   },
+  "Barbabietola al bleu – Punajuurta & sinihomejuustoa": {
+    "en": "Barbabietola al bleu – Beets & Blue Cheese",
+    "es": "Barbabietola al bleu – Remolacha y queso azul",
+    "zh-CN": "Barbabietola al bleu——红菜头与蓝纹奶酪"
+  },
   "Basilikalla maustettua kesäkurpitsasosekeittoa": {
     "en": "Zucchini Soup with Basil",
     "es": "Sopa de calabacín con albahaca",
@@ -209,6 +214,11 @@
     "es": "Fusilli ai funghi – Fusilli con setas",
     "zh-CN": "蘑菇螺旋面——配蘑菇的螺旋面"
   },
+  "Gnocchi al gorgonzola – Gnocchia & gorgonzola-juustoa": {
+    "en": "Gnocchi al gorgonzola – Gnocchi & Gorgonzola Cheese",
+    "es": "Ñoquis al gorgonzola – Ñoquis y queso gorgonzola",
+    "zh-CN": "戈贡佐拉奶酪意式土豆丸子——意式土豆丸子配戈贡佐拉奶酪"
+  },
   "Grilliperunoita ja paahdettua selleriä ja pinaattia": {
     "en": "Grilled potatoes with roasted celery and spinach",
     "es": "Patatas a la parrilla con apio asado y espinacas",
@@ -328,6 +338,11 @@
     "en": "Creamy Salmon Soup",
     "es": "Sopa cremosa de salmón",
     "zh-CN": "奶油三文鱼汤"
+  },
+  "Kermainen pippurikana & yrttiöljyä": {
+    "en": "Creamy Pepper Chicken & Herb Oil",
+    "es": "Pollo a la pimienta con salsa cremosa y aceite de hierbas",
+    "zh-CN": "奶油胡椒鸡配香草油"
   },
   "Kermainen savulohipasta & yrttikreemiä": {
     "en": "Creamy Smoked Salmon Pasta & Herb Cream",
@@ -649,6 +664,11 @@
     "es": "Costillas de cerdo «Burnt Ends» cocinadas a fuego lento durante mucho tiempo, mayonesa de pimienta negra tostada y ensalada de col fresca con lima",
     "zh-CN": "慢炖猪肋排“Burnt Ends”、焦香黑胡椒蛋黄酱和清爽的青柠卷心菜沙拉"
   },
+  "Pollo al peperoncino – Chilikanaa": {
+    "en": "Pollo al peperoncino – Chili Chicken",
+    "es": "Pollo al peperoncino – Pollo al chile",
+    "zh-CN": "Pollo al peperoncino – 辣椒鸡"
+  },
   "Pollo alla parmigiana – Parmesaanikanaa": {
     "en": "Pollo alla parmigiana – Chicken with Parmesan",
     "es": "Pollo alla parmigiana – Pollo a la parmesana",
@@ -663,6 +683,11 @@
     "en": "Fried Chicken with Pink Sauce – Breaded Chicken & Pink Sauce",
     "es": "Pollo frito con salsa rosa – Pollo rebozado y salsa rosa",
     "zh-CN": "炸鸡配粉红酱——面包糠炸鸡 & 粉红酱"
+  },
+  "Polpette piccanti alla crema – Mausteisia lihapullia kermakastikkeessa": {
+    "en": "Polpette piccanti alla crema – Spicy Meatballs in a Cream Sauce",
+    "es": "Polpette piccanti alla crema – Albóndigas picantes con salsa de nata",
+    "zh-CN": "Polpette piccanti alla crema – 香辣肉丸配奶油酱"
   },
   "Polpette piccanti – Chorizopyöryköitä tulisessa tomaattikastikkeessa": {
     "en": "Polpette piccanti – Chorizo meatballs in a spicy tomato sauce",
@@ -708,6 +733,11 @@
     "en": "Beet soup with crumbled feta",
     "es": "Sopa de remolacha y trocitos de queso feta",
     "zh-CN": "红菜头汤配菲达奶酪碎"
+  },
+  "Päivän kalaa & sienikastiketta": {
+    "en": "Fish of the Day & Mushroom Sauce",
+    "es": "Pescado del día y salsa de setas",
+    "zh-CN": "当日鲜鱼配蘑菇酱"
   },
   "Päivän makea herkku": {
     "en": "Today's Sweet Treat",
@@ -783,6 +813,11 @@
     "en": "Ravioli al burro e salvia – Vegetable ravioli with sage butter",
     "es": "Ravioli al burro e salvia – Raviolis vegetarianos con mantequilla y salvia",
     "zh-CN": "黄油鼠尾草意式饺子——配鼠尾草黄油的素饺子"
+  },
+  "Riisiä/ paahdettuja kasviksia/ perunamuusia": {
+    "en": "Rice / Roasted vegetables / Mashed potatoes",
+    "es": "Arroz / verduras asadas / puré de patatas",
+    "zh-CN": "米饭/烤蔬菜/土豆泥"
   },
   "Rosmariinin kera paahdettua perunaa": {
     "en": "Roasted Potatoes with Rosemary",
@@ -1033,6 +1068,11 @@
     "en": "Mediterranean feta-vegetable patties with chili hummus",
     "es": "Hamburguesas mediterráneas de feta y verduras con hummus de chile",
     "zh-CN": "地中海菲达奶酪蔬菜饼配辣椒鹰嘴豆泥"
+  },
+  "Vöneriä, fetaa ja granaattiomenansiemeniä": {
+    "en": "Vöneri, feta, and pomegranate seeds",
+    "es": "Vöneri, queso feta y semillas de granada",
+    "zh-CN": "维内里奶酪、菲达奶酪和石榴籽"
   },
   "Yrttinen couscous": {
     "en": "Herb Couscous",
