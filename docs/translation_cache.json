@@ -4,6 +4,11 @@
     "es": "Alitas «Hornet»: alitas de pollo con marinada picante",
     "zh-CN": "“Hornet”鸡翅——用辣味腌料腌制的鸡翅"
   },
+  "\"Marry me chicken\" - kanaa aurinkokuivatulla tomaateilla ja parmesaanilla": {
+    "en": "\"Marry Me Chicken\" - Chicken with Sun-Dried Tomatoes and Parmesan",
+    "es": "«Marry me chicken»: pollo con tomates secados al sol y parmesano",
+    "zh-CN": "“Marry me chicken”——配以日晒番茄和帕尔马干酪的鸡肉"
+  },
   "\"Pad thai\" paistettua kanaa, paprikaa sekä maapähkinää": {
     "en": "\"Pad Thai\" with stir-fried chicken, bell peppers, and peanuts",
     "es": "«Pad thai» con pollo salteado, pimientos y cacahuetes",
@@ -94,6 +99,11 @@
     "es": "Salsa boloñesa de carne picada",
     "zh-CN": "博洛尼亚肉酱"
   },
+  "Broileria maukkaassa maapähkinäkastikkeessa \"satay\"": {
+    "en": "Chicken in a Savory Peanut Sauce \"Satay\"",
+    "es": "Pollo a la parrilla con una sabrosa salsa de cacahuete «satay»",
+    "zh-CN": "“萨泰”风味花生酱烤鸡"
+  },
   "Burgeritorstaihampparisämpylöitä, suolakurkkua, marinoitua punasipulia ja muita hamppariherkkuja": {
     "en": "Burger Thursday: burger buns, pickles, marinated red onions, and other burger treats",
     "es": "Jueves de hamburguesas: panecillos de hamburguesa, pepinillos, cebolla roja marinada y otras delicias para hamburguesas",
@@ -149,6 +159,21 @@
     "es": "Bocaditos de chorizo en salsa de tomate especiada y beicon tostado",
     "zh-CN": "香肠丸配香辣番茄酱 & 烤培根"
   },
+  "Classic burger - naudan täyslihapihvi, cheddarjuustoa, chilimajoneesia, marinoitua punasipulia, tomaattia suolakurkkua ja salaattia. lisäksi maalaisranskalaiset": {
+    "en": "Classic Burger - all-beef patty, cheddar cheese, chili mayonnaise, marinated red onion, tomato, pickles, and lettuce. Served with country-style fries.",
+    "es": "Hamburguesa clásica: filete de ternera 100 %, queso cheddar, mayonesa de chile, cebolla roja marinada, tomate, pepinillos y lechuga. Además, patatas fritas rústicas.",
+    "zh-CN": "经典汉堡——纯牛肉饼、切达奶酪、辣椒蛋黄酱、腌红洋葱、番茄、腌黄瓜和生菜。另配乡村风味薯条"
+  },
+  "Classic vegan burger - beyond -pihvi, vegaanista \"cheddaria\", chilimajoneesia, marinoitua punasipulia, tomaattia, suolakurkkua ja salaattia. lisäksi maalaisranskalaiset": {
+    "en": "Classic vegan burger—Beyond patty, vegan \"cheddar,\" chili mayonnaise, marinated red onion, tomato, pickles, and lettuce. Also includes country-style fries",
+    "es": "Hamburguesa vegana clásica: patty «Beyond», «cheddar» vegano, mayonesa de chile, cebolla roja marinada, tomate, pepinillos y lechuga. Además, patatas fritas rústicas.",
+    "zh-CN": "经典素食汉堡——Beyond素肉饼、纯素“切达奶酪”、辣椒蛋黄酱、腌红洋葱、番茄、咸黄瓜和生菜。此外还有乡村风味薯条"
+  },
+  "Classig vege burger - beyond- pihvi, cheddaria, chilimajoneesia, marinoitua punasipulia, tomaattia, suolakurkkua ja salaattia. lisäksi maalaisranskalaiset": {
+    "en": "Classic veggie burger—Beyond patty, cheddar, chili mayo, marinated red onion, tomato, pickles, and lettuce. Also includes country-style fries",
+    "es": "Hamburguesa vegetariana clásica - Beyond: filete, queso cheddar, mayonesa de chile, cebolla roja marinada, tomate, pepinillos y lechuga. Además, patatas fritas rústicas.",
+    "zh-CN": "经典素汉堡——Beyond素肉饼、切达奶酪、辣椒蛋黄酱、腌红洋葱、番茄、咸黄瓜和生菜。此外还有乡村风味薯条"
+  },
   "Cotoletta di maiale impanata – Paneroituja possun pihvejä": {
     "en": "Cotoletta di maiale impanata – Breaded pork cutlets",
     "es": "Cotoletta di maiale impanata – Chuleta de cerdo empanada",
@@ -158,6 +183,11 @@
     "en": "Creamy Cauliflower-Cashew Soup",
     "es": "Sopa cremosa de coliflor y anacardos",
     "zh-CN": "浓稠花椰菜腰果汤"
+  },
+  "Creamy palsternakkakeittoa": {
+    "en": "Creamy Parsnip Soup",
+    "es": "Sopa cremosa de chirivía",
+    "zh-CN": "浓稠的欧洲萝卜汤"
   },
   "Crespelle con spinaci – Pinaattilettuja": {
     "en": "Crespelle con spinaci – Spinach Crepes",
@@ -234,6 +264,11 @@
     "es": "Salmón aderezado con harissa",
     "zh-CN": "撒了哈里萨调味料的鲑鱼"
   },
+  "Haudutettua haimonnia ja katkarapuja sitruunaruohokastikkeessa": {
+    "en": "Braised pork belly and shrimp in lemongrass sauce",
+    "es": "Haimonnia y gambas estofadas en salsa de limoncillo",
+    "zh-CN": "慢炖鲷鱼配虾，佐以香茅酱汁"
+  },
   "Haudutettua puna-ahventa hummerikastikkeessa": {
     "en": "Braised Red Perch in Lobster Sauce",
     "es": "Perca roja guisada con salsa de langosta",
@@ -279,6 +314,11 @@
     "es": "Patatas salteadas y tomates a la parrilla",
     "zh-CN": "翻炒土豆和烤番茄"
   },
+  "Ihanaa uuni\"feta\"pastaa, paahdettua kirsikkatomaattia sekä rucolaa": {
+    "en": "Delicious oven-baked \"feta\" pasta, roasted cherry tomatoes, and arugula",
+    "es": "Una deliciosa pasta al horno con «feta», tomates cherry asados y rúcula",
+    "zh-CN": "美味的烤箱“菲达”意面、烤樱桃番茄和芝麻菜"
+  },
   "Ilmalan Aurassa kokouskeskuksessa on kaikille vuokrattavia kokoustiloja, joissa voi kätevästi järjestää palaverin 4-20 henkilölle. Jokainen kokoushuone on sisustettu oman näköisekseen ja jokaisesta tilasta löytyy taulutelevisio kuvansiirtoon monipuolisilla liittimillä sekä laadukas äänentoisto-/kamerajärjestelmä": {
     "en": "The Ilmala Aura Conference Center offers meeting rooms available for rent to everyone, where you can conveniently host meetings for 4–20 people. Each meeting room has its own unique decor, and every space is equipped with a flat-screen TV for displaying images via a variety of connectors, as well as a high-quality sound and camera system.",
     "es": "El centro de conferencias Aura de Ilmala cuenta con salas de reuniones disponibles para alquilar, en las que se pueden organizar cómodamente reuniones para entre 4 y 20 personas. Cada sala de reuniones tiene una decoración propia y todas ellas cuentan con un televisor de pantalla plana para la transmisión de imágenes, con una amplia variedad de conexiones, así como un sistema de sonido y de cámaras de alta calidad.",
@@ -288,6 +328,11 @@
     "en": "Indian spinach sauce \"palak paneer\" with tofu",
     "es": "Salsa india de espinacas «palak paneer» con tofu",
     "zh-CN": "印度菠菜酱“帕拉克·帕尼尔”配豆腐"
+  },
+  "Itse tehdyt lohipihvit": {
+    "en": "Homemade Salmon Patties",
+    "es": "Filetes de salmón caseros",
+    "zh-CN": "自制三文鱼饼"
   },
   "Itse tehtyä, suussa sulavaa mustikkapiirakkaa ja vaniljakastiketta": {
     "en": "Homemade, melt-in-your-mouth blueberry pie with vanilla sauce",
@@ -359,10 +404,20 @@
     "es": "Sopa cremosa de setas de temporada",
     "zh-CN": "用当季蘑菇烹制的奶油蘑菇汤"
   },
+  "Kermavaahtoa": {
+    "en": "Whipped cream",
+    "es": "Nata montada",
+    "zh-CN": "鲜奶油"
+  },
   "Key Tropical Pie hyvettä": {
     "en": "Key Tropical Pie Treat",
     "es": "Key Tropical Pie, una delicia",
     "zh-CN": "Key Tropical Pie 美味"
+  },
+  "Kookosriisiä": {
+    "en": "Coconut Rice",
+    "es": "Arroz con coco",
+    "zh-CN": "椰香米饭"
   },
   "Korean BBQ -nyhtöä ja kasviksia, seesami-kevätsipulikastiketta": {
     "en": "Korean BBQ pulled meat and vegetables, sesame-scallion sauce",
@@ -434,6 +489,11 @@
     "es": "Patatas en gajos sazonadas con sal de hierbas de Luft",
     "zh-CN": "用Luft香草盐调味的土豆块"
   },
+  "Lyttyperunoita ja hapankermaa": {
+    "en": "Mashed potatoes and sour cream",
+    "es": "Patatas aplastadas y nata agria",
+    "zh-CN": "压扁土豆配酸奶油"
+  },
   "Mac’n & ham juustogratiinilla": {
     "en": "Mac & Ham with Cheese Gratin",
     "es": "Macarrones con jamón y gratinado de queso",
@@ -448,6 +508,11 @@
     "en": "Spicy Vegetable Patties",
     "es": "Hamburguesas vegetarianas especiadas",
     "zh-CN": "香辣素肉饼"
+  },
+  "Meheviä vegekoftia -paahdettuja kikherneitä ja vegaanista tsatzikia": {
+    "en": "Juicy Veggie Patties—Roasted Chickpeas and Vegan Tzatziki",
+    "es": "Sustanciosas albóndigas vegetarianas: garbanzos tostados y tzatziki vegano",
+    "zh-CN": "鲜嫩多汁的素肉丸——烤鹰嘴豆配纯素塔齐基酱"
   },
   "Mehevää fajita-paahdettua kanaa, cheddar-juustoa, nachoja ja kirpeää limefraichea": {
     "en": "Juicy fajita-roasted chicken, cheddar cheese, nachos and tangy lime crème fraîche",
@@ -519,6 +584,11 @@
     "es": "Salmón a la plancha con salsa de gremolata al eneldo",
     "zh-CN": "香烤三文鱼配莳萝格雷莫拉塔酱"
   },
+  "Paahdettua puna-ahventa sitrusvoikastikkeessa": {
+    "en": "Seared Red Perch in Citrus Butter Sauce",
+    "es": "Perca roja a la plancha con salsa de mantequilla y cítricos",
+    "zh-CN": "香烤红鲈鱼配柑橘黄油酱"
+  },
   "Paahdettua savutofua Ponzu-seesamglaceerauksella": {
     "en": "Seared Smoked Tofu with Ponzu-Sesame Glaze",
     "es": "Tofu ahumado a la parrilla con glaseado de ponzu y sésamo",
@@ -588,6 +658,16 @@
     "en": "Pasta con pancetta e panna – Creamy Pancetta Pasta",
     "es": "Pasta con panceta y nata – Pasta cremosa con panceta",
     "zh-CN": "Pasta con pancetta e panna——奶油培根意面"
+  },
+  "Pehmeä palsternakkasosekeitto": {
+    "en": "Creamy Parsnip Soup",
+    "es": "Sopa cremosa de chirivía",
+    "zh-CN": "浓稠的欧防风泥汤"
+  },
+  "Pehmeää perunamuusia": {
+    "en": "Creamy Mashed Potatoes",
+    "es": "Puré de patatas suave",
+    "zh-CN": "软糯土豆泥"
   },
   "Penne alla vodka – Pennepastaa vodkakastikkeella": {
     "en": "Penne with Vodka – Penne Pasta with Vodka Sauce",
@@ -724,6 +804,11 @@
     "es": "Filete de perca roja con salsa de vino blanco y rábano picante",
     "zh-CN": "红鲈鱼柳配辣根黄油白葡萄酒酱汁"
   },
+  "Punaherukka-omenakukkoa": {
+    "en": "Red Currant-Apple Pie",
+    "es": "Pastel de manzana y grosellas rojas",
+    "zh-CN": "红醋栗苹果派"
+  },
   "Punajuuri-vuohenjuustolasagne": {
     "en": "Beet and Goat Cheese Lasagna",
     "es": "Lasaña de remolacha y queso de cabra",
@@ -753,6 +838,16 @@
     "en": "Vegan Ragù – Soy Ragù",
     "es": "Ragú vegano – Ragú de soja",
     "zh-CN": "纯素肉酱——大豆肉酱"
+  },
+  "Raikas mandariinirahka": {
+    "en": "Fresh Mandarin Yogurt",
+    "es": "Cremilla fresca de mandarina",
+    "zh-CN": "清爽的橘子酸奶"
+  },
+  "Raikasta mojito-kananpoikaa ja lime-hunajajogurttia": {
+    "en": "Fresh Mojito Chicken and Lime-Honey Yogurt",
+    "es": "Pollo al mojito fresco y yogur de lima y miel",
+    "zh-CN": "新鲜莫吉托风味小鸡配青柠蜂蜜酸奶"
   },
   "Rakkaudella käärittyjä kasvisburritoja sekä ananas-salsaa ja quacamolea": {
     "en": "Veggie burritos made with love, served with pineapple salsa and guacamole",
@@ -899,6 +994,11 @@
     "es": "Tofu pegajoso con salsa de chile",
     "zh-CN": "蜜汁豆腐配辣椒酱"
   },
+  "Suklaamousse": {
+    "en": "Chocolate Mousse",
+    "es": "Mousse de chocolate",
+    "zh-CN": "巧克力慕斯"
+  },
   "Suunnittele catering": {
     "en": "Plan Your Catering",
     "es": "Organiza el servicio de catering",
@@ -964,6 +1064,11 @@
     "es": "Tofu y verduras con salsa barbacoa aromatizada con ruibarbo",
     "zh-CN": "豆腐和蔬菜配大黄风味烧烤酱"
   },
+  "Tofua vegaanisessa \"marry me\" -kastikkeessa": {
+    "en": "Tofu in a Vegan \"Marry Me\" Sauce",
+    "es": "Tofu con salsa vegana «marry me»",
+    "zh-CN": "素食“嫁给我”酱汁配豆腐"
+  },
   "Tulisen makeaa Kung Po kananpoikaa": {
     "en": "Spicy-Sweet Kung Po Chicken",
     "es": "Pollo Kung Po dulce y picante",
@@ -978,6 +1083,11 @@
     "en": "Fresh tomato soup with cream cheese",
     "es": "Sopa fresca de tomate con queso fresco",
     "zh-CN": "新鲜番茄汤配奶油奶酪"
+  },
+  "Tuorejuusto-kasvissosekeitto": {
+    "en": "Cream Cheese and Vegetable Soup",
+    "es": "Sopa cremosa de queso fresco y verduras",
+    "zh-CN": "新鲜奶酪蔬菜浓汤"
   },
   "Tuorejuustolla maustettua punajuurikeittoa ja lehtikaalia": {
     "en": "Beet soup seasoned with fresh cheese and kale",
@@ -1074,6 +1184,11 @@
     "es": "Vöneri, queso feta y semillas de granada",
     "zh-CN": "维内里奶酪、菲达奶酪和石榴籽"
   },
+  "Yrttimarinoituja ohranhelmiä": {
+    "en": "Herb-Marinated Barley Pearls",
+    "es": "Perlas de cebada marinadas con hierbas",
+    "zh-CN": "香草腌制的大麦粒"
+  },
   "Yrttinen couscous": {
     "en": "Herb Couscous",
     "es": "Cuscús con hierbas",
@@ -1159,6 +1274,11 @@
     "es": "cebolla roja encurtida",
     "zh-CN": "腌红洋葱"
   },
+  "paahdettuja bataatteja": {
+    "en": "roasted sweet potatoes",
+    "es": "boniatos asados",
+    "zh-CN": "烤红薯"
+  },
   "remouladekastike": {
     "en": "remoulade sauce",
     "es": "salsa remoulade",
@@ -1179,6 +1299,11 @@
     "es": "y mermelada de arándanos rojos",
     "zh-CN": "以及越橘果酱"
   },
+  "sekä sitruunaista tillikermaviiliä": {
+    "en": "and lemon-flavored dill sour cream",
+    "es": "y crema agria con eneldo y limón",
+    "zh-CN": "以及柠檬莳萝酸奶油"
+  },
   "sekä vegaanista limejugurttia": {
     "en": "and vegan lime yogurt",
     "es": "y yogur vegano de lima",
@@ -1193,6 +1318,11 @@
     "en": "contains fish sauce, contains nuts",
     "es": "contiene salsa de pescado, contiene nueces",
     "zh-CN": "含鱼酱、含坚果"
+  },
+  "sis. pähkinää": {
+    "en": "contains nuts",
+    "es": "contiene nueces",
+    "zh-CN": "含坚果"
   },
   "suolakurkkuja": {
     "en": "pickled cucumbers",

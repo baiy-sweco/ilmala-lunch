@@ -3,11 +3,20 @@ name: Update Ilmala Lunch Menu
 on:
   schedule:
     # 00:17 UTC = 03:17 Helsinki in summer (EEST, UTC+3) / 02:17 in winter (EET, UTC+2).
-    # Runs Mon-Fri only. Off-the-hour minute (17) is far less contended than
+    # Runs Mon-Fri. Off-the-hour minute (17) is far less contended than
     # minute 0, so GitHub dispatches it closer to on-time; the early-morning
     # slot also leaves hours of slack before people check the menu, even if
     # GitHub delays the run. Adjust the hour if you want it earlier/later.
     - cron: '17 0 * * 1-5'
+    # Monday-only follow-up, 08:17 UTC = 11:17 Helsinki (EEST) / 10:17 (EET).
+    # lounaat.info's Dylan restaurants (Luft, La Ilma) publish each week's
+    # fresh Monday menu mid-morning, not by the 03:17 run above -- confirmed
+    # two weeks running (2026-08-10, 2026-08-17), where the early run saw
+    # only a "check the site" placeholder / empty section and both Dylan
+    # menus came back unavailable, while a rerun later that morning picked up
+    # the real menu. This second run re-fetches everything (harmless for the
+    # other restaurants) and commits the fix once Dylan has published.
+    - cron: '17 8 * * 1'
   workflow_dispatch: {}   # lets you trigger a manual run from the Actions tab
 
 permissions:
