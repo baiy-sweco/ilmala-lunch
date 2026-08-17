@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "generated_at_utc": "2026-08-17T12:29:58+00:00",
+  "generated_at_utc": "2026-08-17T13:10:51+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
@@ -519,7 +519,10 @@
                 "zh-CN": "奶油胡椒鸡配香草油",
                 "zh-TW": "奶油胡椒雞配香草油"
               },
-              "tags": [],
+              "tags": [
+                "G",
+                "L"
+              ],
               "price": null
             },
             {
@@ -530,18 +533,23 @@
                 "zh-CN": "当日鲜鱼配蘑菇酱",
                 "zh-TW": "當日鮮魚配蘑菇醬"
               },
-              "tags": [],
+              "tags": [
+                "G",
+                "L"
+              ],
               "price": null
             },
             {
               "name": {
-                "fi": "Vöneriä, fetaa ja granaattiomenansiemeniä",
-                "en": "Vöneri, feta, and pomegranate seeds",
-                "es": "Vöneri, queso feta y semillas de granada",
-                "zh-CN": "维内里奶酪、菲达奶酪和石榴籽",
-                "zh-TW": "維內裡乳酪、菲達乳酪和石榴籽"
+                "fi": "Vöneriä, fetaa ja granaattiomenansiemeniä – Paistettuä vöneriä tomaattikastikkeessa",
+                "en": "Vöner, feta, and pomegranate seeds – Fried vöner in tomato sauce",
+                "es": "Vöneri, queso feta y semillas de granada: vöneri frito con salsa de tomate",
+                "zh-CN": "沃内里、菲达奶酪和石榴籽——番茄酱汁煎沃内里",
+                "zh-TW": "沃內裡、菲達乳酪和石榴籽——番茄醬汁煎沃內裡"
               },
-              "tags": [],
+              "tags": [
+                "L"
+              ],
               "price": null
             },
             {

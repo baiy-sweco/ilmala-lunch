@@ -233,12 +233,13 @@ PAATTARI_TAGS_ONLY_RE = re.compile(r"^\(([^)]*)\)$")
 def paattari_day_paragraphs(soup, today):
     """Päättäri's weekly menu (nordrest.fi, Elementor-built) is a run of <p>
     tags: a bold-underlined 'Weekday D.M.YYYY' header, then one <p> per dish
-    with the name in <strong> and the tagged description in <em>, up to the
-    next weekday header. Unlike Studio10 (another nordrest.fi restaurant),
-    name and tags don't share a text line, so this walks the DOM directly
-    instead of flattened text -- flattening would put name and tags on
-    separate lines with no reliable way to tell where one dish ends and the
-    next begins (verified by inspecting the actual markup)."""
+    with the name in <strong> and the tagged description following it as
+    plain text in the same <p> (e.g. '<strong>Name<br/></strong>(L,G)'), up
+    to the next weekday header. Unlike Studio10 (another nordrest.fi
+    restaurant), name and tags don't share a text line, so this walks the DOM
+    directly instead of flattened text -- flattening would put name and tags
+    on separate lines with no reliable way to tell where one dish ends and
+    the next begins (verified by inspecting the actual markup)."""
     weekday_idx = today.weekday()  # Mon=0 .. Sun=6
     if weekday_idx > 4:
         return None
@@ -287,11 +288,15 @@ def parse_paattari(day_paragraphs):
         strong = p.find("strong")
         if strong:
             name = strong.get_text(" ", strip=True)
-            em = p.find("em")
-            desc_raw = em.get_text(" ", strip=True) if em else ""
-            text, tags = _paattari_split_tags(desc_raw)
             if not name:
                 continue
+            # The tagged description isn't in its own element -- it's plain
+            # text in the same <p>, right after </strong> -- so pull it out
+            # by stripping the (already-extracted) name off the paragraph's
+            # full text rather than looking for a dedicated tag/element.
+            full = p.get_text(" ", strip=True)
+            desc_raw = full[len(name):].strip() if full.startswith(name) else ""
+            text, tags = _paattari_split_tags(desc_raw)
             full_text = f"{name} – {text}" if text else name
             items.append({"text": full_text, "tags": sorted(tags), "price": None, "porridge": False})
             continue
