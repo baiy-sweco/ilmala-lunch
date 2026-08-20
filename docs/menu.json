@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-19",
-  "generated_at_utc": "2026-08-19T01:54:59+00:00",
+  "date": "2026-08-20",
+  "generated_at_utc": "2026-08-20T01:54:13+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
@@ -12,26 +12,11 @@
           "items": [
             {
               "name": {
-                "fi": "Sahramivoissa haudutettua puna-ahventa ja kauden kasviksia",
-                "en": "Red perch braised in saffron butter with seasonal vegetables",
-                "es": "Perca roja guisada con azafrán y verduras de temporada",
-                "zh-CN": "用萨赫拉米沃慢炖的红鲈鱼配时令蔬菜",
-                "zh-TW": "用薩赫拉米沃慢燉的紅鱸魚配時令蔬菜"
-              },
-              "tags": [
-                "G",
-                "KM",
-                "L"
-              ],
-              "price": "14,00 €"
-            },
-            {
-              "name": {
-                "fi": "Mehevän rapeita luuttomia porsaan ribsejä Korean BBQ",
-                "en": "Juicy, Crispy, Boneless Pork Ribs, Korean BBQ Style",
-                "es": "Costillas de cerdo sin hueso, jugosas y crujientes, al estilo barbacoa coreana",
-                "zh-CN": "多汁酥脆的无骨韩式烤猪肋排",
-                "zh-TW": "多汁酥脆的無骨韓式烤豬肋排"
+                "fi": "Hawaijinleikettä grillatulla tuore ananaksella",
+                "en": "Hawaiian Salad with Grilled Fresh Pineapple",
+                "es": "Ensalada hawaiana con piña fresca a la parrilla",
+                "zh-CN": "夏威夷风味沙拉配烤新鲜菠萝",
+                "zh-TW": "夏威夷風味沙拉配烤新鮮菠蘿"
               },
               "tags": [
                 "G",
@@ -41,26 +26,53 @@
             },
             {
               "name": {
-                "fi": "Kermaperunoita",
-                "en": "Creamy Potatoes",
-                "es": "Patatas con nata",
-                "zh-CN": "奶油土豆",
-                "zh-TW": "奶油土豆"
+                "fi": "currymajoa",
+                "en": "curry sauce",
+                "es": "salsa de curry",
+                "zh-CN": "咖喱酱",
+                "zh-TW": "咖哩醬"
               },
               "tags": [
                 "G",
-                "KM",
+                "M"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Pirteän kirpsakkaa Limonello kananpoikaa",
+                "en": "A zesty, crispy Limonello chicken",
+                "es": "Pollo Limonello, jugoso y crujiente",
+                "zh-CN": "鲜嫩爽脆的利蒙内洛小鸡",
+                "zh-TW": "鮮嫩爽脆的利蒙內洛小雞"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Lyttyperunoita",
+                "en": "Mashed Potatoes",
+                "es": "Patatas aplastadas",
+                "zh-CN": "压扁土豆",
+                "zh-TW": "壓扁土豆"
+              },
+              "tags": [
+                "G",
                 "L"
               ],
               "price": null
             },
             {
               "name": {
-                "fi": "paahdettua parsakaalia ja punasipulia",
-                "en": "roasted broccoli and red onion",
-                "es": "brócoli asado y cebolla roja",
-                "zh-CN": "烤西兰花和红洋葱",
-                "zh-TW": "烤西蘭花和紅洋蔥"
+                "fi": "paahdettua porkkanaa",
+                "en": "roasted carrots",
+                "es": "zanahoria asada",
+                "zh-CN": "烤胡萝卜",
+                "zh-TW": "烤胡蘿蔔"
               },
               "tags": [
                 "G",
@@ -71,26 +83,59 @@
             },
             {
               "name": {
-                "fi": "Pinaatti-ricottacanneloneja bechamel-kastikkeessa ja grillattuja tomaatteja",
-                "en": "Spinach and Ricotta Cannelloni with Béchamel Sauce and Grilled Tomatoes",
-                "es": "Canelones de espinacas y ricotta con salsa bechamel y tomates a la parrilla",
-                "zh-CN": "菠菜里科塔奶酪千层面配白酱和烤番茄",
-                "zh-TW": "菠菜里科塔乳酪千層麵配白醬和烤番茄"
+                "fi": "Rapsakoita ”no beef” leikkeitä",
+                "en": "Crispy “no beef” cutlets",
+                "es": "Tiras crujientes «sin carne»",
+                "zh-CN": "香脆的“无牛肉”肉片",
+                "zh-TW": "香脆的“無牛肉”肉片"
               },
               "tags": [
-                "VL"
+                "M",
+                "Veg"
               ],
               "price": "14,00 €"
             },
             {
               "name": {
-                "fi": "saaristolaisleipää",
-                "en": "archipelago bread",
-                "es": "pan de las islas",
-                "zh-CN": "群岛面包",
-                "zh-TW": "群島麵包"
+                "fi": "curry-kaura fraichea",
+                "en": "curry-flavored oat fraiche",
+                "es": "avena al curry con nata fresca",
+                "zh-CN": "咖喱燕麦酸奶油",
+                "zh-TW": "咖哩燕麥酸奶油"
               },
-              "tags": [],
+              "tags": [
+                "M",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Talon pannukakkua",
+                "en": "Homemade Pancakes",
+                "es": "Tortitas caseras",
+                "zh-CN": "自制煎饼",
+                "zh-TW": "自制煎餅"
+              },
+              "tags": [
+                "L",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "marjahilloketta",
+                "en": "berry compote",
+                "es": "compota de frutos del bosque",
+                "zh-CN": "果酱",
+                "zh-TW": "果醬"
+              },
+              "tags": [
+                "G",
+                "L",
+                "Veg"
+              ],
               "price": null
             }
           ]
@@ -100,18 +145,18 @@
           "items": [
             {
               "name": {
-                "fi": "Akselin kermaista merilohikeittoa",
-                "en": "Akseli's Creamy Salmon Soup",
-                "es": "Sopa cremosa de salmón de mar de Akseli",
-                "zh-CN": "阿克塞尔的奶油海鲑鱼汤",
-                "zh-TW": "阿克塞爾的奶油海鮭魚湯"
+                "fi": "Mausteista linssi-tomaattikeittoa",
+                "en": "Spicy Lentil and Tomato Soup",
+                "es": "Sopa de lentejas y tomate bien condimentada",
+                "zh-CN": "香辣扁豆番茄汤",
+                "zh-TW": "香辣扁豆番茄湯"
               },
               "tags": [
                 "G",
-                "KM",
-                "L"
+                "M",
+                "Veg"
               ],
-              "price": "12,80 €"
+              "price": null
             }
           ]
         },
@@ -120,15 +165,14 @@
           "items": [
             {
               "name": {
-                "fi": "Mansikka-mashmallow unelmaa",
-                "en": "A Strawberry-Marshmallow Dream",
-                "es": "El sueño de las fresas y los malvaviscos",
-                "zh-CN": "草莓棉花糖之梦",
-                "zh-TW": "草莓棉花糖之夢"
+                "fi": "kermavaahtoa",
+                "en": "whipped cream",
+                "es": "nata montada",
+                "zh-CN": "鲜奶油",
+                "zh-TW": "鮮奶油"
               },
               "tags": [
                 "G",
-                "KM",
                 "L"
               ],
               "price": null
@@ -147,11 +191,11 @@
           "items": [
             {
               "name": {
-                "fi": "Vegejuustolla kuorrutetut tofu-sienikasvistäytteiset kesäkurpitsat",
-                "en": "Zucchini Stuffed with Tofu and Mushrooms, Topped with Veggie Cheese",
-                "es": "Calabacines rellenos de tofu y setas, recubiertos de queso vegetal",
-                "zh-CN": "裹着素芝士、馅料为豆腐蘑菇的西葫芦",
-                "zh-TW": "裹著素芝士、餡料為豆腐蘑菇的西葫蘆"
+                "fi": "Maukkaita kasvispihvejä sekä chilimajoneesia",
+                "en": "Delicious vegetable patties and chili mayonnaise",
+                "es": "Sabrosas hamburguesas vegetarianas y mayonesa de chile",
+                "zh-CN": "美味的素肉饼和辣椒蛋黄酱",
+                "zh-TW": "美味的素肉餅和辣椒蛋黃醬"
               },
               "tags": [
                 "G",
@@ -161,29 +205,28 @@
             },
             {
               "name": {
-                "fi": "Paahdettua porsaan ulkofileetä punaviinikastike",
-                "en": "Roasted Pork Tenderloin with Red Wine Sauce",
-                "es": "Filete de lomo de cerdo a la parrilla con salsa de vino tinto",
-                "zh-CN": "红酒酱汁烤猪里脊",
-                "zh-TW": "紅酒醬汁烤豬裡脊"
+                "fi": "Meillä tehdyt lindströminpihvit, ruskeaakastiketta ja karamellisoitua sipulia",
+                "en": "Lindström steaks made here, brown sauce, and caramelized onions",
+                "es": "Filetes de Lindström hechos en casa, salsa marrón y cebolla caramelizada",
+                "zh-CN": "我们自制的林德斯特伦牛排、棕色酱汁和焦糖洋葱",
+                "zh-TW": "我們自制的林德斯特倫牛排、棕色醬汁和焦糖洋蔥"
               },
               "tags": [
                 "G",
-                "M"
+                "L"
               ],
               "price": "14,80 €"
             },
             {
               "name": {
-                "fi": "Rapeaa frittikanaa ja cheddarjuustokastiketta",
-                "en": "Crispy fried chicken with cheddar cheese sauce",
-                "es": "Pollo frito crujiente con salsa de queso cheddar",
-                "zh-CN": "香脆炸鸡配切达奶酪酱",
-                "zh-TW": "香脆炸雞配切達乳酪醬"
+                "fi": "Paholaisen kanaa ”el diablo” sekä vuohenjuustokreemiä",
+                "en": "\"El Diablo\" Devil's Chicken and Goat Cheese Cream",
+                "es": "Pollo «el diablo» y crema de queso de cabra",
+                "zh-CN": "“恶魔鸡”（el diablo）配山羊奶酪酱",
+                "zh-TW": "“惡魔雞”（el diablo）配山羊乳酪醬"
               },
               "tags": [
-                "G",
-                "L"
+                "G"
               ],
               "price": "14,80 €"
             }
@@ -194,29 +237,15 @@
           "items": [
             {
               "name": {
-                "fi": "Kermaperunoita",
-                "en": "Creamy Potatoes",
-                "es": "Patatas con nata",
-                "zh-CN": "奶油土豆",
-                "zh-TW": "奶油土豆"
+                "fi": "Perunamuusia",
+                "en": "Mashed Potatoes",
+                "es": "Puré de patatas",
+                "zh-CN": "土豆泥",
+                "zh-TW": "土豆泥"
               },
               "tags": [
                 "G",
                 "L"
-              ],
-              "price": null
-            },
-            {
-              "name": {
-                "fi": "Höyrytettyä basmatiriisiä",
-                "en": "Steamed basmati rice",
-                "es": "Arroz basmati al vapor",
-                "zh-CN": "蒸巴斯马蒂米",
-                "zh-TW": "蒸巴斯馬蒂米"
-              },
-              "tags": [
-                "G",
-                "Veg"
               ],
               "price": null
             }
@@ -227,15 +256,15 @@
           "items": [
             {
               "name": {
-                "fi": "Perinteinen makkarakeitto",
-                "en": "Traditional Sausage Soup",
-                "es": "Sopa tradicional de salchichas",
-                "zh-CN": "传统香肠汤",
-                "zh-TW": "傳統香腸湯"
+                "fi": "Mintulla maustettua tuorehernekeittoa",
+                "en": "Fresh Pea Soup Flavored with Mint",
+                "es": "Sopa de guisantes frescos aromatizada con menta",
+                "zh-CN": "薄荷风味新鲜豌豆汤",
+                "zh-TW": "薄荷風味新鮮豌豆湯"
               },
               "tags": [
                 "G",
-                "M"
+                "Veg"
               ],
               "price": "11,50 €"
             }
@@ -246,14 +275,13 @@
           "items": [
             {
               "name": {
-                "fi": "Vaniljapannacotta ja passionmelba",
-                "en": "Vanilla Panna Cotta and Passion Melba",
-                "es": "Panna cotta de vainilla y melba de maracuyá",
-                "zh-CN": "香草意式奶冻和百香果梅尔巴",
-                "zh-TW": "香草意式奶凍和百香果梅爾巴"
+                "fi": "Pannukakkua, marjahilloa ja kermavaahtoa",
+                "en": "Pancakes, berry jam, and whipped cream",
+                "es": "Tortitas, mermelada de frutos rojos y nata montada",
+                "zh-CN": "煎饼、浆果果酱和鲜奶油",
+                "zh-TW": "煎餅、漿果果醬和鮮奶油"
               },
               "tags": [
-                "G",
                 "L"
               ],
               "price": null
@@ -272,25 +300,25 @@
           "items": [
             {
               "name": {
-                "fi": "Butter chicken - kanaa intialaisittain tomaatti-voikastikkeessa",
-                "en": "Butter Chicken - Indian-style chicken in a tomato-butter sauce",
-                "es": "Pollo al curry - Pollo al estilo indio con salsa de tomate y mantequilla",
-                "zh-CN": "黄油鸡——印度风味番茄黄油酱鸡",
-                "zh-TW": "黃油雞——印度風味番茄黃油醬雞"
+                "fi": "Cremolatalla kuorrutettua lohta",
+                "en": "Salmon Glazed with Cremolata",
+                "es": "Salmón glaseado con crema",
+                "zh-CN": "覆有克雷莫拉塔酱的鲑鱼",
+                "zh-TW": "覆有克雷莫拉塔醬的鮭魚"
               },
               "tags": [
                 "G",
-                "L"
+                "M"
               ],
               "price": "14,80 €"
             },
             {
               "name": {
-                "fi": "Paneroitua porsaanleikettä",
-                "en": "Breaded Pork Cutlet",
-                "es": "Filete de cerdo empanado",
-                "zh-CN": "面包屑裹猪排",
-                "zh-TW": "麵包屑裹豬排"
+                "fi": "Pasta \"carbonara\" pekonista ja kinkusta",
+                "en": "Pasta \"carbonara\" with bacon and ham",
+                "es": "Pasta «carbonara» con beicon y jamón serrano",
+                "zh-CN": "培根火腿“卡博纳拉”意面",
+                "zh-TW": "培根火腿“卡博納拉”意麵"
               },
               "tags": [
                 "L"
@@ -299,11 +327,11 @@
             },
             {
               "name": {
-                "fi": "Seitan suikaleita ja kasviksia hoisinkastikkeessa",
-                "en": "Seitan strips and vegetables in hoisin sauce",
-                "es": "Tiras de seitán y verduras en salsa hoisin",
-                "zh-CN": "素肉条配蔬菜，佐以霍辛酱汁",
-                "zh-TW": "素肉條配蔬菜，佐以霍辛醬汁"
+                "fi": "Vegaaninen pasta \"carbonara\" oumph!:sta",
+                "en": "Vegan \"Carbonara\" Pasta from oumph!",
+                "es": "Pasta vegana «carbonara» de oumph!",
+                "zh-CN": "来自“oumph!”的纯素“卡博纳拉”意面",
+                "zh-TW": "來自“oumph!”的純素“卡博納拉”意麵"
               },
               "tags": [
                 "Veg"
@@ -359,11 +387,11 @@
           "items": [
             {
               "name": {
-                "fi": "Basmatiriisi",
-                "en": "Basmati rice",
-                "es": "Arroz basmati",
-                "zh-CN": "巴斯马蒂大米",
-                "zh-TW": "巴斯馬蒂大米"
+                "fi": "tuoretta sipulia",
+                "en": "fresh onion",
+                "es": "cebolla fresca",
+                "zh-CN": "新鲜洋葱",
+                "zh-TW": "新鮮洋蔥"
               },
               "tags": [
                 "G",
@@ -373,27 +401,84 @@
             },
             {
               "name": {
-                "fi": "ja gochujang -majoneesia",
-                "en": "and gochujang mayonnaise",
-                "es": "y mayonesa de gochujang",
-                "zh-CN": "以及韩式辣椒酱蛋黄酱",
-                "zh-TW": "以及韓式辣椒醬蛋黃醬"
+                "fi": "sinappia",
+                "en": "mustard",
+                "es": "mostaza",
+                "zh-CN": "芥末",
+                "zh-TW": "芥末"
               },
               "tags": [
+                "G",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "ja palvikinkkua",
+                "en": "and smoked ham",
+                "es": "y jamón ahumado",
+                "zh-CN": "以及烟熏火腿",
+                "zh-TW": "以及煙燻火腿"
+              },
+              "tags": [
+                "G",
                 "M"
               ],
               "price": null
             },
             {
               "name": {
-                "fi": "Dominomousse",
-                "en": "Domino Mousse",
-                "es": "Mousse de dominó",
-                "zh-CN": "多米诺慕斯",
-                "zh-TW": "多米諾慕斯"
+                "fi": "Uuden sadon perunaa",
+                "en": "New-crop potatoes",
+                "es": "Patatas de la nueva cosecha",
+                "zh-CN": "新收成的土豆",
+                "zh-TW": "新收成的土豆"
               },
               "tags": [
-                "VL"
+                "G",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Pannukakkua",
+                "en": "Pancakes",
+                "es": "Tortita",
+                "zh-CN": "煎饼",
+                "zh-TW": "煎餅"
+              },
+              "tags": [
+                "L"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "mansikkahilloa",
+                "en": "strawberry jam",
+                "es": "mermelada de fresa",
+                "zh-CN": "草莓果酱",
+                "zh-TW": "草莓果醬"
+              },
+              "tags": [
+                "G",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "sekä kermavaahtoa",
+                "en": "and whipped cream",
+                "es": "y nata montada",
+                "zh-CN": "以及鲜奶油",
+                "zh-TW": "以及鮮奶油"
+              },
+              "tags": [
+                "G",
+                "L"
               ],
               "price": null
             }
@@ -404,14 +489,15 @@
           "items": [
             {
               "name": {
-                "fi": "Chilillä ja kookoksella höystetty myskikurpitsakeitto v",
-                "en": "Butternut squash soup flavored with chili and coconut v",
-                "es": "Sopa de calabaza moscada con un toque de chile y coco v",
-                "zh-CN": "加入辣椒和椰子的香瓜汤 v",
-                "zh-TW": "加入辣椒和椰子的香瓜湯 v"
+                "fi": "Hernekeittoa",
+                "en": "Pea Soup",
+                "es": "Sopa de guisantes",
+                "zh-CN": "豌豆汤",
+                "zh-TW": "豌豆湯"
               },
               "tags": [
-                "G"
+                "G",
+                "Veg"
               ],
               "price": "11,50 €"
             }
@@ -429,52 +515,51 @@
           "items": [
             {
               "name": {
-                "fi": "Fusilli con ciliegino – Kirsikkatomaattipastaa",
-                "en": "Fusilli con ciliegino – Cherry Tomato Pasta",
-                "es": "Fusilli con ciliegino – Pasta con tomates cherry",
-                "zh-CN": "Fusilli con ciliegino——樱桃番茄意面",
-                "zh-TW": "Fusilli con ciliegino——櫻桃番茄意麵"
+                "fi": "Rigatoni ai formaggi – Rigatoni -pastaa juustokastikkeella",
+                "en": "Rigatoni ai formaggi – Rigatoni with cheese sauce",
+                "es": "Rigatoni ai formaggi – Pasta rigatoni con salsa de queso",
+                "zh-CN": "Rigatoni ai formaggi——Rigatoni意面配奶酪酱",
+                "zh-TW": "Rigatoni ai formaggi——Rigatoni意麵配乳酪醬"
               },
               "tags": [
-                "Veg"
-              ],
-              "price": null
-            },
-            {
-              "name": {
-                "fi": "Salmone alla crema – Lohta kermakastikkeessa",
-                "en": "Salmone alla crema – Salmon in a Cream Sauce",
-                "es": "Salmone alla crema – Salmón con salsa de nata",
-                "zh-CN": "Salmone alla crema——奶油酱鲑鱼",
-                "zh-TW": "Salmone alla crema——奶油醬鮭魚"
-              },
-              "tags": [
-                "G",
                 "L"
               ],
               "price": null
             },
             {
               "name": {
-                "fi": "Pollo ai funghi – Kanaa sienikastikkeessa",
-                "en": "Pollo ai funghi – Chicken in Mushroom Sauce",
-                "es": "Pollo ai funghi – Pollo con salsa de setas",
-                "zh-CN": "Pollo ai funghi – 蘑菇酱鸡",
-                "zh-TW": "Pollo ai funghi – 蘑菇醬雞"
+                "fi": "Arrosto di maiale al rosmarino – Possua rosmariinikastikkeella",
+                "en": "Roast Pork with Rosemary – Pork with Rosemary Sauce",
+                "es": "Asado de cerdo al romero – Cerdo con salsa de romero",
+                "zh-CN": "迷迭香烤猪肉——配迷迭香酱的猪肉",
+                "zh-TW": "迷迭香烤豬肉——配迷迭香醬的豬肉"
               },
               "tags": [
                 "G",
-                "L"
+                "M"
               ],
               "price": null
             },
             {
               "name": {
-                "fi": "Lenticchie & tofu – Linssejä & tofua",
-                "en": "Lenticchie & tofu – Lentils & tofu",
-                "es": "Lenticchie & tofu – Lentejas y tofu",
-                "zh-CN": "Lenticchie & tofu – 扁豆与豆腐",
-                "zh-TW": "Lenticchie & tofu – 扁豆與豆腐"
+                "fi": "Pesce impanato con maionnaise – Paneroitua kalaa & majoneesia",
+                "en": "Pesce impanato con maionnaise – Breaded Fish & Mayonnaise",
+                "es": "Pesce impanato con mayonesa – Pescado empanado con mayonesa",
+                "zh-CN": "面包糠炸鱼配蛋黄酱 – 面包糠炸鱼 & 蛋黄酱",
+                "zh-TW": "麵包糠炸魚配蛋黃醬 – 麵包糠炸魚 & 蛋黃醬"
+              },
+              "tags": [
+                "M"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Funghi trifolati – Herkkusieniä balsamico-kastikkeella",
+                "en": "Funghi trifolati – Mushrooms with Balsamic Sauce",
+                "es": "Funghi trifolati – Setas con salsa de vinagre balsámico",
+                "zh-CN": "Funghi trifolati——配巴萨米克酱的蘑菇",
+                "zh-TW": "Funghi trifolati——配巴薩米克醬的蘑菇"
               },
               "tags": [
                 "G",
@@ -496,11 +581,24 @@
           "items": [
             {
               "name": {
-                "fi": "Yön yli haudutettua possunniskaa – & tummaa timjamikastiketta",
-                "en": "Pork neck braised overnight – & dark thyme sauce",
-                "es": "Cuello de cerdo cocido a fuego lento durante toda la noche – y salsa oscura de tomillo",
-                "zh-CN": "炖了一整夜的猪颈肉——配浓郁百里香酱汁",
-                "zh-TW": "燉了一整夜的豬頸肉——配濃郁百里香醬汁"
+                "fi": "Paneroitua turskaa & parmesan dippiä",
+                "en": "Breaded Cod & Parmesan Dip",
+                "es": "Bacalao rebozado y salsa de parmesano",
+                "zh-CN": "面包屑炸鳕鱼配帕尔马干酪蘸酱",
+                "zh-TW": "麵包屑炸鱈魚配帕爾馬乾酪蘸醬"
+              },
+              "tags": [
+                "L"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Paahdettua kanaa, sweet chili creme fraichea ja pikkelöityä paprikaa",
+                "en": "Roasted chicken, sweet chili crème fraîche, and pickled bell peppers",
+                "es": "Pollo asado, crema fresca con chile dulce y pimientos encurtidos",
+                "zh-CN": "烤鸡、甜辣椒酸奶油和腌红椒",
+                "zh-TW": "烤雞、甜辣椒酸奶油和醃紅椒"
               },
               "tags": [
                 "G",
@@ -510,11 +608,11 @@
             },
             {
               "name": {
-                "fi": "Puna-ahventa & ruohosipuli beurre blanc – Paistettua puna-ahventa & ruohosipuli voivalkoviini kastiketta",
-                "en": "Red Perch & Chives Beurre Blanc – Pan-fried Red Perch with a Chive-Butter-Wine Sauce",
-                "es": "Perca roja y cebollino con salsa beurre blanc – Perca roja frita con salsa de mantequilla, vino blanco y cebollino",
-                "zh-CN": "红鲈鱼配香葱白酱——香煎红鲈鱼配香葱白葡萄酒酱汁",
-                "zh-TW": "紅鱸魚配香蔥白醬——香煎紅鱸魚配香蔥白葡萄酒醬汁"
+                "fi": "Chili sin carne – Herkullinen kasvispata chilin kera",
+                "en": "Chili sin carne – A delicious vegetable stew with chili",
+                "es": "Chili sin carne: un delicioso guiso vegetariano con chile",
+                "zh-CN": "辣椒炖肉——配辣椒的美味素炖菜",
+                "zh-TW": "辣椒燉肉——配辣椒的美味素燉菜"
               },
               "tags": [
                 "G",
@@ -524,25 +622,11 @@
             },
             {
               "name": {
-                "fi": "Kukkakaali-mifu gratiinia ja mozzarellaa",
-                "en": "Cauliflower Mifu Gratin with Mozzarella",
-                "es": "Gratinado de coliflor y mozzarella",
-                "zh-CN": "花椰菜米福焗烤配马苏里拉奶酪",
-                "zh-TW": "花椰菜米福焗烤配馬蘇裡拉乳酪"
-              },
-              "tags": [
-                "G",
-                "L"
-              ],
-              "price": null
-            },
-            {
-              "name": {
-                "fi": "Kermaperunoita/ orzopastaa / paahdettuja juureksia",
-                "en": "Creamy potatoes / orzo pasta / roasted root vegetables",
-                "es": "Patatas con nata / pasta de orzo / tubérculos asados",
-                "zh-CN": "奶油土豆/奥佐面/烤根茎蔬菜",
-                "zh-TW": "奶油土豆/奧佐面/烤根莖蔬菜"
+                "fi": "Yrtti riisiä/ kauden kasviksia",
+                "en": "Herb-flavored rice / seasonal vegetables",
+                "es": "Arroz con hierbas / verduras de temporada",
+                "zh-CN": "香草炒饭/时令蔬菜",
+                "zh-TW": "香草炒飯/時令蔬菜"
               },
               "tags": [],
               "price": null
