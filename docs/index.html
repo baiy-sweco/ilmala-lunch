@@ -118,10 +118,20 @@ h1 span{color:var(--lingon);}
 main{max-width:760px;margin:26px auto 0;padding:0 20px;}
 .resto{margin-bottom:34px;border-top:2px solid var(--mustard);padding-top:16px;}
 .resto-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 18px;margin-bottom:4px;}
+.resto-head-names{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
 .resto-name{font-family:'Oswald',sans-serif;font-weight:600;font-size:22px;letter-spacing:.01em;color:var(--chalk);}
 .resto-sub{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--chalk-dim);}
 .resto-meta{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--chalk-dim);margin-bottom:14px;}
 .resto-meta a{color:var(--mustard);text-decoration:none;border-bottom:1px dotted var(--mustard);}
+.resto-toggle{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;background:transparent;
+  color:var(--chalk-dim);border:1px solid var(--line);border-radius:5px;padding:4px 9px;cursor:pointer;
+  transition:all .15s ease;display:inline-flex;align-items:center;gap:5px;
+}
+.resto-toggle:hover{color:var(--chalk);border-color:var(--mustard);}
+.resto-toggle .chevron{display:inline-block;transition:transform .15s ease;}
+.resto.collapsed .resto-toggle .chevron{transform:rotate(-90deg);}
+.resto.collapsed .resto-body{display:none;}
 
 .closed-note,.unavailable-note{
   font-family:'Source Serif 4',serif;font-style:italic;color:var(--chalk-dim);
@@ -219,6 +229,7 @@ const UI = {
     filterNoteTpl: n => `Showing only dishes matching all selected tags: ${n}`,
     emptyState: "No dishes in this category match the current filters",
     website: "Website ↗",
+    toggleAria: "Show or hide this restaurant's menu",
     legendTitle: "Allergen key:",
     legend: "M dairy-free · L lactose-free · VL low-lactose · G gluten-free · KM egg-free · Veg vegan/vegetarian",
     autoNote: "Menus are fetched and translated automatically every weekday morning by a GitHub Action. Dish names are machine-translated from Finnish (DeepL) — please double-check allergens with staff if it matters to you.",
@@ -243,6 +254,7 @@ const UI = {
     filterNoteTpl: n => `Näytetään vain ruoat, jotka täyttävät kaikki valitut merkinnät: ${n}`,
     emptyState: "Tässä kategoriassa ei ole valittuja suodattimia vastaavia ruokia",
     website: "Verkkosivu ↗",
+    toggleAria: "Näytä tai piilota tämän ravintolan lista",
     legendTitle: "Allergeenimerkinnät:",
     legend: "M maidoton · L laktoositon · VL vähälaktoosinen · G gluteeniton · KM kananmunaton · Veg vegaaninen",
     autoNote: "Lounaslistat haetaan ja käännetään automaattisesti joka arkiaamu GitHub Actionilla. Ruokien nimet on konekäännetty suomesta (DeepL) — tarkista allergeenit henkilökunnalta, jos se on sinulle tärkeää.",
@@ -267,6 +279,7 @@ const UI = {
     filterNoteTpl: n => `仅显示符合所有已选标签的菜品：${n}`,
     emptyState: "该分类下没有符合当前筛选条件的菜品",
     website: "官网 ↗",
+    toggleAria: "展开或收起该餐厅的菜单",
     legendTitle: "过敏原标签说明：",
     legend: "M 无乳制品 · L 无乳糖 · VL 低乳糖 · G 无麸质 · KM 无蛋 · Veg 纯素/素食",
     autoNote: "菜单由 GitHub Action 每个工作日早上自动抓取并翻译。菜名为机器翻译（DeepL）——如果过敏原信息对你很重要，请务必向店员当面确认。",
@@ -385,7 +398,18 @@ function renderMain(){
 
     const head = document.createElement('div');
     head.className = 'resto-head';
-    head.innerHTML = `<span class="resto-name">${meta.name}</span><span class="resto-sub">${meta.sub}</span>`;
+    const toggle = document.createElement('button');
+    toggle.className = 'resto-toggle';
+    toggle.type = 'button';
+    toggle.setAttribute('aria-label', t.toggleAria);
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.innerHTML = '<span class="chevron">▾</span>';
+    toggle.addEventListener('click', () => {
+      const collapsed = section.classList.toggle('collapsed');
+      toggle.setAttribute('aria-expanded', String(!collapsed));
+    });
+    head.innerHTML = `<span class="resto-head-names"><span class="resto-name">${meta.name}</span><span class="resto-sub">${meta.sub}</span></span>`;
+    head.appendChild(toggle);
     section.appendChild(head);
 
     const metaLine = document.createElement('div');
@@ -393,11 +417,15 @@ function renderMain(){
     metaLine.innerHTML = `${meta.address} · ${t[meta.hoursKey]} · <a href="${meta.link}" target="_blank" rel="noopener">${t.website}</a>`;
     section.appendChild(metaLine);
 
+    const body = document.createElement('div');
+    body.className = 'resto-body';
+    section.appendChild(body);
+
     if (data.closed) {
       const note = document.createElement('div');
       note.className = 'closed-note';
       note.textContent = t.closedNote;
-      section.appendChild(note);
+      body.appendChild(note);
       main.appendChild(section);
       return;
     }
@@ -406,7 +434,7 @@ function renderMain(){
       const note = document.createElement('div');
       note.className = 'unavailable-note';
       note.textContent = t.unavailableNote;
-      section.appendChild(note);
+      body.appendChild(note);
       main.appendChild(section);
       return;
     }
@@ -417,14 +445,14 @@ function renderMain(){
       stale.style.display = 'block';
       stale.style.marginBottom = '10px';
       stale.textContent = t.staleNote;
-      section.appendChild(stale);
+      body.appendChild(stale);
     }
 
     data.groups.forEach(group => {
       const label = document.createElement('div');
       label.className = 'section-label';
       label.textContent = t.groups[group.key] || group.key;
-      section.appendChild(label);
+      body.appendChild(label);
 
       group.items.forEach(item => {
         const row = document.createElement('div');
@@ -444,13 +472,13 @@ function renderMain(){
           price.textContent = item.price;
           row.appendChild(price);
         }
-        section.appendChild(row);
+        body.appendChild(row);
       });
 
       const empty = document.createElement('div');
       empty.className = 'empty-state';
       empty.textContent = t.emptyState;
-      section.appendChild(empty);
+      body.appendChild(empty);
     });
 
     main.appendChild(section);
