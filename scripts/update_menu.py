@@ -81,14 +81,19 @@ RESTAURANTS = [
         "url": "https://www.ninankeittio.fi/helsinki-ilmala-akseli/",
     },
     {
+        # lounaat.info was the original source here, but it doesn't get each
+        # week's fresh Monday menu published until sometime mid-morning (see
+        # the Monday retry window in the GitHub Actions workflow) -- lounas.app
+        # carries the same restaurant's menu and has consistently already had
+        # it by the early-morning run, so it's the source now.
         "key": "luft",
-        "type": "dylan",
-        "url": "https://www.lounaat.info/lounas/dylan-luft/helsinki",
+        "type": "dylan_lounasapp",
+        "url": "https://lounas.app/lounaslista/dylan-luft",
     },
     {
         "key": "lailma",
-        "type": "dylan",
-        "url": "https://www.lounaat.info/lounas/dylan-la-ilma/helsinki",
+        "type": "dylan_lounasapp",
+        "url": "https://lounas.app/lounaslista/dylan-la-ilma",
     },
     {
         "key": "studio10",
@@ -142,9 +147,17 @@ def fetch_text(url):
 
 def closest_day_section(text, today):
     """Find the header (Weekday D.M.) whose date is closest to today, and
-    return (section_text, distance_in_days) or (None, None) if no header found."""
+    return (section_text, distance_in_days) or (None, None) if no header found.
+
+    The pattern includes Saturday/Sunday even though the script only ever
+    looks for a Mon-Fri "today" -- they're never picked as the closest match,
+    but they still need to count as header boundaries. lounas.app's pages
+    list Sat/Sun too (usually just a "suljettu" closed notice), and without
+    recognizing those headers, Friday's section would run past them all the
+    way to the next unmatched boundary, absorbing the weekend's "suljettu"
+    text and making a perfectly open Friday look closed."""
     pattern = re.compile(
-        r"(Maanantai|Tiistai|Keskiviikko|Torstai|Perjantai)(?:na)?\s+(\d{1,2})\.(\d{1,2})\.",
+        r"(Maanantai|Tiistai|Keskiviikko|Torstai|Perjantai|Lauantai|Sunnuntai)(?:na)?\s+(\d{1,2})\.(\d{1,2})\.",
         re.IGNORECASE,
     )
     matches = list(pattern.finditer(text))
@@ -486,17 +499,18 @@ def _is_dylan_placeholder(line):
     )
 
 
-# lounaat.info marks a dish component that carries NO allergen codes with a
-# bare "-" standing in where its codes would go, right before the "ja" (Finnish
+# Dylan's pages mark a dish component that carries NO allergen codes with a
+# dash standing in where its codes would go, right before the "ja" (Finnish
 # "and") that introduces the next component, e.g.
 #   "Rapeaa kiovan kanaa - ja aoilia  m  g"
-# means the (breaded) chicken has no codes and only the aioli is M/G. Without
-# special handling the trailing "m"/"g" get merged onto the whole line, falsely
-# marking the chicken dairy-/gluten-free. We split on " - ja " so the codes
-# attach to the sauce alone. The plain " - " used merely as a name separator
-# (e.g. "Poulet au vinaigre - lyonin kanaa") is NOT matched, because the marker
-# is specifically a dash immediately followed by "ja".
-DYLAN_NO_TAG_MARKER_RE = re.compile(r"^(?P<main>.+?)\s+-\s+ja\s+(?P<sauce>.+)$", re.IGNORECASE)
+#   "Kana cordon Bleu (-) ja dijonmajoneesia  M  G"  (lounas.app's parenthesised variant)
+# means the (breaded) chicken has no codes and only the aioli/sauce is M/G.
+# Without special handling the trailing "m"/"g" get merged onto the whole
+# line, falsely marking the chicken dairy-/gluten-free. We split on the dash
+# + "ja" so the codes attach to the sauce alone. A plain " - " used merely as
+# a name separator (e.g. "Poulet au vinaigre - lyonin kanaa") is NOT matched,
+# because the marker is specifically a dash immediately followed by "ja".
+DYLAN_NO_TAG_MARKER_RE = re.compile(r"^(?P<main>.+?)\s+(?:-|\(-\))\s+ja\s+(?P<sauce>.+)$", re.IGNORECASE)
 
 
 def _split_dylan_no_tag_marker(text):
@@ -564,6 +578,67 @@ def parse_dylan(section_text):
             items.append({"text": sauce, "tags": tags, "price": None, "porridge": False})
             continue
         items.append({"text": text, "tags": tags, "price": price, "porridge": False})
+    return items
+
+
+# lounas.app (unlike lounaat.info) puts a dish's price *after* its name and
+# tag lines, not before -- e.g. "Kermainen lohikeitto / L / G / 14,00 €" --
+# and a real "€" sign rather than a bare "e". It also sometimes gives a side
+# its own line introduced by "Ja "/"Sekä " ("and"/"as well as") instead of
+# lounaat.info's inline "- ja" marker, e.g. a main course followed by
+#   "Perinteinen makkarastroganoff" (L, G) / "ja maustekurkkua" (VEG, G) / 14,80 €
+# where the trailing price belongs to the main course, not the garnish line.
+# `group_start` tracks the index of the item that should receive the next
+# price: it's set to the most recent *non-continuation* dish and left alone
+# while continuation lines are appended, so the price lands on the actual
+# dish rather than whichever line happens to precede it.
+DYLAN_LOUNASAPP_PRICE_RE = re.compile(r"(\d{1,2}[.,]\d{2})\s*€")
+DYLAN_LOUNASAPP_CONTINUATION_RE = re.compile(r"^(?:ja|sekä)\s+(.+)$", re.IGNORECASE)
+
+
+def parse_dylan_lounasapp(section_text):
+    items = []
+    group_start = None
+    for raw in section_text.split("\n"):
+        line = raw.strip().lstrip("-* ").strip()
+        if not line:
+            continue
+        if _is_dylan_placeholder(line):
+            continue
+        is_tag_only_line = bool(re.fullmatch(rf"{TAG_TOKEN}(?:\s*,\s*{TAG_TOKEN})*", line, re.IGNORECASE))
+        if not is_tag_only_line and _looks_like_boilerplate(line):
+            continue
+        low = line.lower()
+        if "buffetlounas" in low or "sisältää" in low:
+            continue
+        if "puuro" in low:
+            continue
+        if low.startswith("lounas kello"):
+            break
+        price_only = DYLAN_LOUNASAPP_PRICE_RE.fullmatch(line)
+        if price_only:
+            if group_start is not None:
+                items[group_start]["price"] = price_only.group(1).replace(".", ",") + " €"
+            group_start = None
+            continue
+        text, tags, inline_price = extract_tags_and_price(line)
+        if not text:
+            if tags and items:
+                items[-1]["tags"] = sorted(set(items[-1]["tags"]) | set(tags))
+            continue
+        cont_m = DYLAN_LOUNASAPP_CONTINUATION_RE.match(text) if group_start is not None else None
+        if cont_m:
+            text = cont_m.group(1).strip(" ,.-")
+        main, sauce = _split_dylan_no_tag_marker(text)
+        if sauce is not None:
+            items.append({"text": main, "tags": [], "price": inline_price, "porridge": False})
+            items.append({"text": sauce, "tags": tags, "price": None, "porridge": False})
+            if not cont_m:
+                group_start = len(items) - 2
+            continue
+        items.append({"text": text, "tags": tags, "price": inline_price, "porridge": False})
+        if not cont_m:
+            group_start = len(items) - 1
     return items
 
 
@@ -754,6 +829,8 @@ def build_restaurant_payload_pass1(rest, today):
 
         if rest["type"] == "akseli":
             items = parse_akseli(section)
+        elif rest["type"] == "dylan_lounasapp":
+            items = parse_dylan_lounasapp(section)
         else:
             items = parse_dylan(section)
 

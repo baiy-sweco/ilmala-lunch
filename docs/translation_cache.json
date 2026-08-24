@@ -159,6 +159,21 @@
     "es": "Pollo al curry - Pollo al estilo indio con salsa de tomate y mantequilla",
     "zh-CN": "黄油鸡——印度风味番茄黄油酱鸡"
   },
+  "CLASSIC BURGER - Naudan täyslihapihvi, cheddarjuustoa, chilimajoneesia, marinoitua punasipulia, tomaattia suolakurkkua ja salaattia. Lisäksi maalaisranskalaiset": {
+    "en": "CLASSIC BURGER - All-beef patty, cheddar cheese, chili mayonnaise, marinated red onion, tomato, pickles, and lettuce. Served with country-style fries",
+    "es": "CLASSIC BURGER: hamburguesa de ternera 100 %, queso cheddar, mayonesa de chile, cebolla roja marinada, tomate, pepinillos y lechuga. Además, patatas fritas rústicas.",
+    "zh-CN": "经典汉堡——纯牛肉饼、切达干酪、辣椒蛋黄酱、腌红洋葱、番茄、咸黄瓜和生菜。另配乡村风味薯条"
+  },
+  "CLASSIC VEGAN BURGER - Beyond -pihvi, vegaanista \"cheddaria\", chilimajoneesia, marinoitua punasipulia, tomaattia, suolakurkkua ja salaattia. Lisäksi maalaisranskalaiset": {
+    "en": "CLASSIC VEGAN BURGER - Beyond patty, vegan \"cheddar,\" chili mayonnaise, marinated red onion, tomato, pickles, and lettuce. Also includes country-style fries",
+    "es": "HAMBURGUESA VEGANA CLÁSICA: filete «Beyond», «cheddar» vegano, mayonesa de chile, cebolla roja marinada, tomate, pepinillos y lechuga. Además, patatas fritas rústicas.",
+    "zh-CN": "经典素食汉堡——Beyond素肉饼、纯素“切达”奶酪、辣椒蛋黄酱、腌红洋葱、番茄、腌黄瓜和生菜。此外还有乡村风味薯条"
+  },
+  "CLASSIG VEGE BURGER - Beyond- pihvi, cheddaria, chilimajoneesia, marinoitua punasipulia, tomaattia, suolakurkkua ja salaattia. Lisäksi maalaisranskalaiset": {
+    "en": "CLASSIC VEGE BURGER - Beyond patty, cheddar, chili mayonnaise, marinated red onion, tomato, pickles, and lettuce. Also includes country-style fries",
+    "es": "CLASSIG VEGE BURGER: hamburguesa Beyond, queso cheddar, mayonesa de chile, cebolla roja marinada, tomate, pepinillos y lechuga. Además, patatas fritas rústicas.",
+    "zh-CN": "经典素汉堡——Beyond素肉饼、切达奶酪、辣椒蛋黄酱、腌红洋葱、番茄、咸黄瓜和生菜。此外还有乡村风味薯条"
+  },
   "Cajun maustettua nyhtökauraa, paahdettua paprikaa ja sipulia": {
     "en": "Cajun-seasoned pulled oats, roasted bell peppers, and onions",
     "es": "Copos de avena al estilo cajún, pimiento asado y cebolla",
@@ -313,6 +328,11 @@
     "en": "House-style fish & chips with malt beer and lemon, served with house remoulade",
     "es": "Fish & Chips al estilo de la casa, con malaxa y lima, y salsa remoulade de la casa",
     "zh-CN": "本店特色炸鱼薯条，配马拉萨酒和柠檬，佐以本店特制雷穆拉德酱"
+  },
+  "Fish&chips! Tempurapaneroitua turskaa ja ranskalaisia lisukkeineen": {
+    "en": "Fish & Chips! Tempura-battered cod and French fries with sides",
+    "es": "¡Fish & chips! Bacalao rebozado al estilo tempura y patatas fritas con guarnición",
+    "zh-CN": "炸鱼薯条！裹着天妇罗面衣的鳕鱼配薯条及配菜"
   },
   "Five layers of Happiness": {
     "en": "Five Layers of Happiness",
@@ -489,6 +509,11 @@
     "es": "Buffet de helados",
     "zh-CN": "冰淇淋自助餐"
   },
+  "Kana cordon Bleu": {
+    "en": "Chicken Cordon Bleu",
+    "es": "Pollo al cordon bleu",
+    "zh-CN": "法式蓝带鸡"
+  },
   "Kanakebabia chilillä höystetyllä tomaattikastikkeella": {
     "en": "Chicken kebab with tomato sauce seasoned with chili",
     "es": "Kebab de pollo con salsa de tomate al chile",
@@ -603,6 +628,11 @@
     "en": "Cinnamon Roll Quark",
     "es": "Cuajada de oreja de cerdo",
     "zh-CN": "耳形奶酪"
+  },
+  "Kotimaista broileria Tikka-masalakastikkeessa ja mintturaita": {
+    "en": "Finnish broiler chicken in Tikka masala sauce with a mint garnish",
+    "es": "Pollo de cría nacional con salsa Tikka Masala y guarnición de menta",
+    "zh-CN": "芬兰本土肉鸡配蒂卡马萨拉酱和薄荷沙拉"
   },
   "Kotimaista kanaa aurajuusto sitruskastikkeessa": {
     "en": "Finnish Chicken with Aura Cheese in a Citrus Sauce",
@@ -788,6 +818,11 @@
     "en": "Mexican Ground Beef Soup",
     "es": "Sopa mexicana de carne picada",
     "zh-CN": "墨西哥肉末汤"
+  },
+  "Mini donitseja": {
+    "en": "Mini donuts",
+    "es": "Mini donuts",
+    "zh-CN": "迷你甜甜圈"
   },
   "Minttu-suklaamoussea": {
     "en": "Mint Chocolate Mousse",
@@ -1063,6 +1098,16 @@
     "en": "Traditional Sausage Soup",
     "es": "Sopa tradicional de salchichas",
     "zh-CN": "传统香肠汤"
+  },
+  "Perinteinen makkarastroganoff": {
+    "en": "Traditional Sausage Stroganoff",
+    "es": "Strogonof tradicional con salchichas",
+    "zh-CN": "传统香肠斯特罗加诺夫"
+  },
+  "Perinteinen perunamuusi": {
+    "en": "Traditional Mashed Potatoes",
+    "es": "Puré de patatas tradicional",
+    "zh-CN": "传统土豆泥"
   },
   "Perinteistä hernekeittoa": {
     "en": "Traditional Pea Soup",
@@ -1519,6 +1564,11 @@
     "es": "Espaguetis al ragú – Espaguetis con salsa de carne picada",
     "zh-CN": "意式肉酱面——意大利面配肉酱"
   },
+  "Splettihelmiä": {
+    "en": "Split beads",
+    "es": "Perlas de spelt",
+    "zh-CN": "裂纹珍珠"
+  },
   "Sticky tofua & chilikastiketta": {
     "en": "Sticky Tofu & Chili Sauce",
     "es": "Tofu pegajoso con salsa de chile",
@@ -1609,6 +1659,11 @@
     "es": "Tofu con alubias – Tofu y alubias",
     "zh-CN": "豆腐配豆子——豆腐与豆子"
   },
+  "Tofu-kookoskorma sekä paahdettua mantelia": {
+    "en": "Tofu and Coconut Korma with Roasted Almonds",
+    "es": "Corma de tofu y coco con almendras tostadas",
+    "zh-CN": "豆腐椰浆咖喱配烤杏仁"
+  },
   "Tofua ja kasviksia raparperilla maustetussa bbq -kastikkeessa": {
     "en": "Tofu and vegetables in a rhubarb-flavored BBQ sauce",
     "es": "Tofu y verduras con salsa barbacoa aromatizada con ruibarbo",
@@ -1624,6 +1679,16 @@
     "es": "Sopa de lentejas con tomate",
     "zh-CN": "番茄扁豆汤"
   },
+  "Tomaattinen papu-juurespata": {
+    "en": "Tomato-Based Bean and Root Vegetable Stew",
+    "es": "Guiso de judías y tubérculos con tomate",
+    "zh-CN": "番茄炖豆类和根茎类蔬菜"
+  },
+  "Tryffelillä aateloitua maa-artisokkakeittoa": {
+    "en": "Artichoke Soup Enriched with Truffles",
+    "es": "Sopa de alcachofa de tierra con trufa",
+    "zh-CN": "松露风味菊芋浓汤"
+  },
   "Tulisen makeaa Kung Po kananpoikaa": {
     "en": "Spicy-Sweet Kung Po Chicken",
     "es": "Pollo Kung Po dulce y picante",
@@ -1638,6 +1703,11 @@
     "en": "Fresh tomato soup with cream cheese",
     "es": "Sopa fresca de tomate con queso fresco",
     "zh-CN": "新鲜番茄汤配奶油奶酪"
+  },
+  "Tuoreilla yrteillä maustettua riisiä": {
+    "en": "Rice seasoned with fresh herbs",
+    "es": "Arroz sazonado con hierbas frescas",
+    "zh-CN": "用新鲜香草调味的米饭"
   },
   "Tuorejuusto-kasvissosekeitto": {
     "en": "Cream Cheese and Vegetable Soup",
@@ -1663,6 +1733,11 @@
     "en": "Rich Chanterelle Soup",
     "es": "Sopa sustanciosa de rebozuelos",
     "zh-CN": "浓郁的牛肝菌汤"
+  },
+  "UU LA LAA! Jäätelöbuffet, hilloa, kermavaahtoa": {
+    "en": "UU LA LAA! Ice cream buffet, jam, whipped cream",
+    "es": "¡UU LA LAA! Buffet de helados, mermelada, nata montada",
+    "zh-CN": "哇哦！冰淇淋自助餐、果酱、鲜奶油"
   },
   "Uova con spinaci e hollandaise – Kananmunia pinaattipedillä & hollandaisella": {
     "en": "Eggs with Spinach and Hollandaise – Eggs on a Bed of Spinach with Hollandaise Sauce",
@@ -1839,6 +1914,11 @@
     "es": "salsa de curry",
     "zh-CN": "咖喱酱"
   },
+  "dijonmajoneesia": {
+    "en": "Dijon mayonnaise",
+    "es": "mayonesa de Dijon",
+    "zh-CN": "第戎蛋黄酱"
+  },
   "etikkasipsejä sekä herneitä": {
     "en": "pickled chips and peas",
     "es": "chips de vinagre y guisantes",
@@ -1943,6 +2023,11 @@
     "en": "berry compote",
     "es": "compota de frutos del bosque",
     "zh-CN": "果酱"
+  },
+  "maustekurkkua": {
+    "en": "pickled cucumber",
+    "es": "pepino encurtido",
+    "zh-CN": "腌黄瓜"
   },
   "paahdettua parsakaalia ja punasipulia": {
     "en": "roasted broccoli and red onion",
