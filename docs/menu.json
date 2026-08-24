@@ -1,6 +1,6 @@
 {
   "date": "2026-08-24",
-  "generated_at_utc": "2026-08-24T07:44:25+00:00",
+  "generated_at_utc": "2026-08-24T07:47:30+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
@@ -315,48 +315,6 @@
                 "Veg"
               ],
               "price": "14,80 €"
-            },
-            {
-              "name": {
-                "fi": "CLASSIC BURGER - Naudan täyslihapihvi, cheddarjuustoa, chilimajoneesia, marinoitua punasipulia, tomaattia suolakurkkua ja salaattia. Lisäksi maalaisranskalaiset",
-                "en": "CLASSIC BURGER - All-beef patty, cheddar cheese, chili mayonnaise, marinated red onion, tomato, pickles, and lettuce. Served with country-style fries",
-                "es": "CLASSIC BURGER: hamburguesa de ternera 100 %, queso cheddar, mayonesa de chile, cebolla roja marinada, tomate, pepinillos y lechuga. Además, patatas fritas rústicas.",
-                "zh-CN": "经典汉堡——纯牛肉饼、切达干酪、辣椒蛋黄酱、腌红洋葱、番茄、咸黄瓜和生菜。另配乡村风味薯条",
-                "zh-TW": "經典漢堡——純牛肉餅、切達乾酪、辣椒蛋黃醬、醃紅洋蔥、番茄、鹹黃瓜和生菜。另配鄉村風味薯條"
-              },
-              "tags": [
-                "G",
-                "L"
-              ],
-              "price": "15,20 €"
-            },
-            {
-              "name": {
-                "fi": "CLASSIG VEGE BURGER - Beyond- pihvi, cheddaria, chilimajoneesia, marinoitua punasipulia, tomaattia, suolakurkkua ja salaattia. Lisäksi maalaisranskalaiset",
-                "en": "CLASSIC VEGE BURGER - Beyond patty, cheddar, chili mayonnaise, marinated red onion, tomato, pickles, and lettuce. Also includes country-style fries",
-                "es": "CLASSIG VEGE BURGER: hamburguesa Beyond, queso cheddar, mayonesa de chile, cebolla roja marinada, tomate, pepinillos y lechuga. Además, patatas fritas rústicas.",
-                "zh-CN": "经典素汉堡——Beyond素肉饼、切达奶酪、辣椒蛋黄酱、腌红洋葱、番茄、咸黄瓜和生菜。此外还有乡村风味薯条",
-                "zh-TW": "經典素漢堡——Beyond素肉餅、切達乳酪、辣椒蛋黃醬、醃紅洋蔥、番茄、鹹黃瓜和生菜。此外還有鄉村風味薯條"
-              },
-              "tags": [
-                "G",
-                "L"
-              ],
-              "price": "15,20 €"
-            },
-            {
-              "name": {
-                "fi": "CLASSIC VEGAN BURGER - Beyond -pihvi, vegaanista \"cheddaria\", chilimajoneesia, marinoitua punasipulia, tomaattia, suolakurkkua ja salaattia. Lisäksi maalaisranskalaiset",
-                "en": "CLASSIC VEGAN BURGER - Beyond patty, vegan \"cheddar,\" chili mayonnaise, marinated red onion, tomato, pickles, and lettuce. Also includes country-style fries",
-                "es": "HAMBURGUESA VEGANA CLÁSICA: filete «Beyond», «cheddar» vegano, mayonesa de chile, cebolla roja marinada, tomate, pepinillos y lechuga. Además, patatas fritas rústicas.",
-                "zh-CN": "经典素食汉堡——Beyond素肉饼、纯素“切达”奶酪、辣椒蛋黄酱、腌红洋葱、番茄、腌黄瓜和生菜。此外还有乡村风味薯条",
-                "zh-TW": "經典素食漢堡——Beyond素肉餅、純素“切達”乳酪、辣椒蛋黃醬、醃紅洋蔥、番茄、醃黃瓜和生菜。此外還有鄉村風味薯條"
-              },
-              "tags": [
-                "G",
-                "Veg"
-              ],
-              "price": "15,20 €"
             }
           ]
         },
@@ -447,6 +405,53 @@
                 "L"
               ],
               "price": "14,00 €"
+            }
+          ]
+        },
+        {
+          "key": "burger",
+          "items": [
+            {
+              "name": {
+                "fi": "CLASSIC BURGER - Naudan täyslihapihvi, cheddarjuustoa, chilimajoneesia, marinoitua punasipulia, tomaattia suolakurkkua ja salaattia. Lisäksi maalaisranskalaiset",
+                "en": "CLASSIC BURGER - All-beef patty, cheddar cheese, chili mayonnaise, marinated red onion, tomato, pickles, and lettuce. Served with country-style fries",
+                "es": "CLASSIC BURGER: hamburguesa de ternera 100 %, queso cheddar, mayonesa de chile, cebolla roja marinada, tomate, pepinillos y lechuga. Además, patatas fritas rústicas.",
+                "zh-CN": "经典汉堡——纯牛肉饼、切达干酪、辣椒蛋黄酱、腌红洋葱、番茄、咸黄瓜和生菜。另配乡村风味薯条",
+                "zh-TW": "經典漢堡——純牛肉餅、切達乾酪、辣椒蛋黃醬、醃紅洋蔥、番茄、鹹黃瓜和生菜。另配鄉村風味薯條"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": "15,20 €"
+            },
+            {
+              "name": {
+                "fi": "CLASSIG VEGE BURGER - Beyond- pihvi, cheddaria, chilimajoneesia, marinoitua punasipulia, tomaattia, suolakurkkua ja salaattia. Lisäksi maalaisranskalaiset",
+                "en": "CLASSIC VEGE BURGER - Beyond patty, cheddar, chili mayonnaise, marinated red onion, tomato, pickles, and lettuce. Also includes country-style fries",
+                "es": "CLASSIG VEGE BURGER: hamburguesa Beyond, queso cheddar, mayonesa de chile, cebolla roja marinada, tomate, pepinillos y lechuga. Además, patatas fritas rústicas.",
+                "zh-CN": "经典素汉堡——Beyond素肉饼、切达奶酪、辣椒蛋黄酱、腌红洋葱、番茄、咸黄瓜和生菜。此外还有乡村风味薯条",
+                "zh-TW": "經典素漢堡——Beyond素肉餅、切達乳酪、辣椒蛋黃醬、醃紅洋蔥、番茄、鹹黃瓜和生菜。此外還有鄉村風味薯條"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": "15,20 €"
+            },
+            {
+              "name": {
+                "fi": "CLASSIC VEGAN BURGER - Beyond -pihvi, vegaanista \"cheddaria\", chilimajoneesia, marinoitua punasipulia, tomaattia, suolakurkkua ja salaattia. Lisäksi maalaisranskalaiset",
+                "en": "CLASSIC VEGAN BURGER - Beyond patty, vegan \"cheddar,\" chili mayonnaise, marinated red onion, tomato, pickles, and lettuce. Also includes country-style fries",
+                "es": "HAMBURGUESA VEGANA CLÁSICA: filete «Beyond», «cheddar» vegano, mayonesa de chile, cebolla roja marinada, tomate, pepinillos y lechuga. Además, patatas fritas rústicas.",
+                "zh-CN": "经典素食汉堡——Beyond素肉饼、纯素“切达”奶酪、辣椒蛋黄酱、腌红洋葱、番茄、腌黄瓜和生菜。此外还有乡村风味薯条",
+                "zh-TW": "經典素食漢堡——Beyond素肉餅、純素“切達”乳酪、辣椒蛋黃醬、醃紅洋蔥、番茄、醃黃瓜和生菜。此外還有鄉村風味薯條"
+              },
+              "tags": [
+                "G",
+                "Veg"
+              ],
+              "price": "15,20 €"
             }
           ]
         }

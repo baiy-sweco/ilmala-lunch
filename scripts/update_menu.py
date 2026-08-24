@@ -656,7 +656,11 @@ def parse_dylan_lounasapp(section_text):
 
 
 def classify_groups(items, merge_main_side=False):
-    """Bucket items into porridge / main / side / soup / dessert groups.
+    """Bucket items into porridge / main / side / soup / dessert / burger groups.
+
+    Burgers (La Ilma's own section on its actual menu, e.g. "CLASSIC BURGER -
+    ...") get pulled into their own "burger" bucket, shown last, rather than
+    sitting in "main" alongside the day's other, unrelated mains.
 
     With merge_main_side=True the main and side buckets are combined into a
     single "mainside" group. Akseli uses this: splitting a plate into its
@@ -673,6 +677,8 @@ def classify_groups(items, merge_main_side=False):
         low = it["text"].lower()
         if it.get("porridge"):
             key = "porridge"
+        elif "burger" in low:
+            key = "burger"
         elif "keitto" in low:
             key = "soup"
         elif it["price"] is None and i == n - 1:
@@ -685,7 +691,7 @@ def classify_groups(items, merge_main_side=False):
             key = "mainside"
         keyed.append((key, it))
 
-    order = ["porridge", "mainside", "main", "side", "soup", "dessert"]
+    order = ["porridge", "mainside", "main", "side", "soup", "dessert", "burger"]
     groups = []
     for key in order:
         its = [it for k, it in keyed if k == key]
