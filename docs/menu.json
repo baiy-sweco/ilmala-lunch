@@ -1,6 +1,6 @@
 {
   "date": "2026-08-24",
-  "generated_at_utc": "2026-08-24T07:31:03+00:00",
+  "generated_at_utc": "2026-08-24T07:44:25+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
@@ -471,7 +471,7 @@
               "tags": [
                 "L"
               ],
-              "price": null
+              "price": "14,00 €"
             },
             {
               "name": {
@@ -484,7 +484,7 @@
               "tags": [
                 "M"
               ],
-              "price": null
+              "price": "14,00 €"
             },
             {
               "name": {
@@ -498,7 +498,7 @@
                 "G",
                 "M"
               ],
-              "price": null
+              "price": "14,00 €"
             },
             {
               "name": {
@@ -512,7 +512,7 @@
                 "G",
                 "L"
               ],
-              "price": null
+              "price": "14,00 €"
             }
           ]
         }
@@ -535,7 +535,7 @@
                 "zh-TW": "沙嗲雞肉配米飯"
               },
               "tags": [],
-              "price": null
+              "price": "14,00 €"
             },
             {
               "name": {
@@ -549,7 +549,7 @@
                 "G",
                 "L"
               ],
-              "price": null
+              "price": "14,00 €"
             },
             {
               "name": {
@@ -563,7 +563,7 @@
                 "G",
                 "L"
               ],
-              "price": null
+              "price": "14,00 €"
             },
             {
               "name": {
@@ -577,7 +577,7 @@
                 "G",
                 "L"
               ],
-              "price": null
+              "price": "14,00 €"
             },
             {
               "name": {
@@ -588,7 +588,7 @@
                 "zh-TW": "熱土豆沙拉 / 米飯 / 烤胡蘿蔔"
               },
               "tags": [],
-              "price": null
+              "price": "14,00 €"
             },
             {
               "name": {
@@ -602,7 +602,7 @@
                 "G",
                 "L"
               ],
-              "price": null
+              "price": "14,00 €"
             }
           ]
         }

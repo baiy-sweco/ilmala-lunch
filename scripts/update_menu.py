@@ -237,6 +237,19 @@ def parse_nordrest(section_text):
     return items
 
 
+# Studio10 and Päättäri (both nordrest.fi) charge one flat lunch price rather
+# than pricing each dish individually, so it never appears per-line like the
+# other restaurants' prices do -- but the page states it in its own sentence,
+# e.g. "Lounaan hinta vuonna 2026 on 14,00 €.". Scrape that instead of
+# hardcoding the figure, so a price change doesn't silently go stale here.
+NORDREST_FIXED_PRICE_RE = re.compile(r"lounaan hinta.{0,60}?(\d{1,2}[.,]\d{2})\s*€", re.IGNORECASE | re.DOTALL)
+
+
+def extract_nordrest_fixed_price(text):
+    m = NORDREST_FIXED_PRICE_RE.search(text)
+    return m.group(1).replace(".", ",") + " €" if m else None
+
+
 PAATTARI_HEADER_RE = re.compile(
     r"^(" + "|".join(FI_WEEKDAYS) + r")(?:na)?\s+\d{1,2}\.\d{1,2}\.", re.IGNORECASE
 )
@@ -791,6 +804,9 @@ def build_restaurant_payload_pass1(rest, today):
             if paragraphs is None:
                 return {"closed": False, "unavailable": True, "note": "no_date_header_found", "_groups_raw": []}
             items = parse_paattari(paragraphs)
+            fixed_price = extract_nordrest_fixed_price(soup.get_text("\n"))
+            for it in items:
+                it["price"] = fixed_price
             groups = [{"key": "main", "items": items}] if items else []
             return {
                 "closed": False,
@@ -813,6 +829,9 @@ def build_restaurant_payload_pass1(rest, today):
             items = parse_nordrest(section)
             if not items and is_closed_section(section):
                 return {"closed": True, "unavailable": False, "note": None, "_groups_raw": []}
+            fixed_price = extract_nordrest_fixed_price(text)
+            for it in items:
+                it["price"] = fixed_price
             groups = [{"key": "main", "items": items}] if items else []
             return {
                 "closed": False,
