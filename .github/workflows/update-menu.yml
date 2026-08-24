@@ -12,11 +12,17 @@ on:
     # 06:17 (EET). lounaat.info's Dylan restaurants (Luft, La Ilma) publish
     # each week's fresh Monday menu some time mid-morning, not by the 03:17
     # run above -- confirmed unavailable as late as 09:47 Helsinki on
-    # 2026-08-10, only actually up by ~10:52. Rather than gamble on one fixed
-    # time (which is also at the mercy of GitHub's own scheduling slop), the
-    # "Fetch & translate" step below detects this specific trigger and
-    # rechecks every ~25 min for up to 4 hours, committing as soon as Dylan's
-    # menu appears instead of waiting out the full window regardless.
+    # 2026-08-10 and still unavailable at 10:14 on 2026-08-24. Rather than
+    # gamble on one fixed time (which is also at the mercy of GitHub's own
+    # scheduling slop), the "Fetch & translate" step below rechecks every
+    # ~25 min for up to 4 hours, committing as soon as Dylan's menu appears
+    # instead of waiting out the full window regardless. This retry behavior
+    # also kicks in for a manual workflow_dispatch run started in the same
+    # Monday-morning window (not just this exact cron) -- on 2026-08-24 this
+    # scheduled run was manually cancelled mid-retry and replaced by a
+    # one-shot manual rerun that landed on the placeholder and overwrote the
+    # in-progress retry with a permanent "unavailable", so a manual rerun
+    # during this window needs to retry too, not just this cron trigger.
     - cron: '17 4 * * 1'
   workflow_dispatch: {}   # lets you trigger a manual run from the Actions tab
 
@@ -47,10 +53,16 @@ jobs:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: |
           python scripts/update_menu.py
-          if [ "${{ github.event.schedule }}" = "17 4 * * 1" ]; then
-            # Monday retry window (see schedule comment above): keep
-            # re-fetching until Dylan's menu is no longer "unavailable" or we
-            # hit the cutoff, then fall through to the commit step either way.
+          # Monday-morning retry window (see schedule comment above), roughly
+          # 04:00-09:00 UTC -- covers both the dedicated retry cron and any
+          # workflow_dispatch run (manual or otherwise) that happens to land
+          # in this window, so a manual rerun can't cut a retry short again.
+          now_dow=$(date -u +%u)   # 1 = Monday
+          now_hour=$(date -u +%H)
+          if [ "$now_dow" = "1" ] && [ "$now_hour" -ge 4 ] && [ "$now_hour" -lt 9 ]; then
+            # Keep re-fetching until Dylan's menu is no longer "unavailable"
+            # or we hit the cutoff, then fall through to the commit step
+            # either way.
             cutoff=$(( $(date -u +%s) + 4*3600 ))
             while [ "$(date -u +%s)" -lt "$cutoff" ]; do
               still_missing=$(python -c "import json; d = json.load(open('docs/menu.json', encoding='utf-8')); print(any(v.get('unavailable') for k, v in d['restaurants'].items() if k in ('luft', 'lailma')))")
