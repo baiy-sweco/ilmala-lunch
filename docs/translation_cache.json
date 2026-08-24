@@ -109,6 +109,11 @@
     "es": "Barbabietola al bleu – Remolacha y queso azul",
     "zh-CN": "Barbabietola al bleu——红菜头与蓝纹奶酪"
   },
+  "Barbabietola con caprino – Punajuurta & vuohenjuustoa": {
+    "en": "Barbabietola con caprino – Beets & Goat Cheese",
+    "es": "Barbabietola con caprino – Remolacha y queso de cabra",
+    "zh-CN": "Barbabietola con caprino——红菜头配山羊奶酪"
+  },
   "Basilikalla maustettua kesäkurpitsasosekeittoa": {
     "en": "Zucchini Soup with Basil",
     "es": "Sopa de calabacín con albahaca",
@@ -1114,6 +1119,11 @@
     "es": "Pollo alla salvia – Pollo a la salvia",
     "zh-CN": "鼠尾草烤鸡 – 鼠尾草鸡"
   },
+  "Pollo alle erbe fresche – Kanaa & tuoreita yrttejä": {
+    "en": "Pollo alle erbe fresche – Chicken & Fresh Herbs",
+    "es": "Pollo alle erbe fresche – Pollo y hierbas frescas",
+    "zh-CN": "Pollo alle erbe fresche – 鸡肉配新鲜香草"
+  },
   "Pollo fritto con salsa rosa – Paneroitua kanaa & punaista kastiketta": {
     "en": "Fried Chicken with Pink Sauce – Breaded Chicken & Pink Sauce",
     "es": "Pollo frito con salsa rosa – Pollo rebozado y salsa rosa",
@@ -1363,6 +1373,11 @@
     "en": "Velvety Orange-Carrot Puree Soup",
     "es": "Sopa cremosa de naranja y zanahoria",
     "zh-CN": "丝滑的橙子胡萝卜浓汤"
+  },
+  "Scaloppa di maiale con ananas – Hawaijin leikkeitä": {
+    "en": "Pork Scaloppes with Pineapple – Hawaiian-Style Cuts",
+    "es": "Escalopas de cerdo con piña – Escalopas hawaianas",
+    "zh-CN": "菠萝猪里脊片——夏威夷风味"
   },
   "Schnitzel & anjoviskreemiä – Paneroitua porsaanleikettä ja anjoviskreemiä": {
     "en": "Schnitzel & Anchovy Cream – Breaded pork cutlet with anchovy cream",
