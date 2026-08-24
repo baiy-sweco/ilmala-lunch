@@ -204,6 +204,11 @@
     "es": "Chili sin carne: un delicioso guiso vegetariano con chile",
     "zh-CN": "辣椒炖肉——配辣椒的美味素炖菜"
   },
+  "Chili-maissikeittoa": {
+    "en": "Chili Corn Soup",
+    "es": "Sopa de maíz con chile",
+    "zh-CN": "辣椒玉米汤"
+  },
   "Chilihummusta": {
     "en": "chili hummus",
     "es": "hummus de chile",
@@ -243,6 +248,11 @@
     "en": "Cotoletta di maiale impanata – Breaded pork cutlets",
     "es": "Cotoletta di maiale impanata – Chuleta de cerdo empanada",
     "zh-CN": "面包屑裹猪排 – 面包屑裹猪排"
+  },
+  "Cowboy butteria": {
+    "en": "Cowboy Butter",
+    "es": "Mantequilla de vaquero",
+    "zh-CN": "牛仔黄油"
   },
   "Creamy kukkakaali-cashewkeittoa": {
     "en": "Creamy Cauliflower-Cashew Soup",
@@ -619,6 +629,11 @@
     "es": "Sopa cremosa de alcachofa de tierra",
     "zh-CN": "绵密的地瓜汤"
   },
+  "Kuohkeaa herukkahyvettä": {
+    "en": "Fluffy currant jam",
+    "es": "Mermelada espumosa de grosellas",
+    "zh-CN": "松软的红醋栗果酱"
+  },
   "Kuohkeaa purjo-perunasosekeittia": {
     "en": "Creamy Leek and Potato Soup",
     "es": "Sopa cremosa de puerros y patatas",
@@ -684,6 +699,11 @@
     "es": "Patatas aplastadas y nata agria",
     "zh-CN": "压扁土豆配酸奶油"
   },
+  "Lämmin perunasalaatti / riisiä/ paahdettuja porkkanoita": {
+    "en": "Warm potato salad / rice / roasted carrots",
+    "es": "Ensalada templada de patatas / arroz / zanahorias asadas",
+    "zh-CN": "热土豆沙拉 / 米饭 / 烤胡萝卜"
+  },
   "Mac’n & ham juustogratiinilla": {
     "en": "Mac & Ham with Cheese Gratin",
     "es": "Macarrones con jamón y gratinado de queso",
@@ -699,10 +719,20 @@
     "es": "El sueño de las fresas y los malvaviscos",
     "zh-CN": "草莓棉花糖之梦"
   },
+  "Marinoitua tofua & pinaattikastiketta": {
+    "en": "Marinated Tofu & Spinach Sauce",
+    "es": "Tofu marinado y salsa de espinacas",
+    "zh-CN": "腌制豆腐配菠菜酱"
+  },
   "Marja-lemoncurdhyvettä": {
     "en": "Berry-Lemon Curd Dessert",
     "es": "Crema de limón y frutos del bosque",
     "zh-CN": "浆果柠檬奶酱"
+  },
+  "Maukasta kanaa maapähkinäkastikkeessa": {
+    "en": "Delicious Chicken in Peanut Sauce",
+    "es": "Delicioso pollo con salsa de cacahuete",
+    "zh-CN": "花生酱汁鸡肉，美味可口"
   },
   "Maukkaita kasvispihvejä sekä chilimajoneesia": {
     "en": "Delicious vegetable patties and chili mayonnaise",
@@ -779,6 +809,16 @@
     "es": "Cremilla de arándanos",
     "zh-CN": "蓝莓酸奶"
   },
+  "Nachotomua": {
+    "en": "Nachotomua",
+    "es": "Nachotomua",
+    "zh-CN": "纳乔托穆阿"
+  },
+  "Nappulaperunoita": {
+    "en": "Baby Potatoes",
+    "es": "Patatas en rodajas finas",
+    "zh-CN": "小土豆块"
+  },
   "Naudan hangersteakia ja säräjuureksia portviinikastikkeessa": {
     "en": "Beef hanger steak with root vegetables in a port wine sauce",
     "es": "Filete de hangar de ternera con verduras de raíz en salsa de oporto",
@@ -818,6 +858,11 @@
     "en": "Roasted Chicken Gyro",
     "es": "Gyro de pollo asado",
     "zh-CN": "烤鸡肉吉罗斯"
+  },
+  "Paahdettua kananpoikaa, freshiä gremolataa ja fetamurua": {
+    "en": "Roasted chicken, fresh gremolata, and crumbled feta",
+    "es": "Pollo asado, gremolata fresca y trocitos de queso feta",
+    "zh-CN": "烤小鸡、新鲜的格雷莫拉塔酱和菲达奶酪碎"
   },
   "Paahdettua lohta & kermaista-hummerikastiketta": {
     "en": "Seared Salmon & Creamy Lobster Sauce",
@@ -1094,6 +1139,11 @@
     "es": "Pollo Limonello, jugoso y crujiente",
     "zh-CN": "鲜嫩爽脆的利蒙内洛小鸡"
   },
+  "Pitkään haudutettua porsaan niskaa": {
+    "en": "Slow-cooked pork neck",
+    "es": "Cuello de cerdo cocido a fuego lento durante mucho tiempo",
+    "zh-CN": "慢炖猪颈肉"
+  },
   "Pitkään haudutettua porsaankylkeä ”Burnt Ends”, paahdettua mustapippurimajoneesia ja raikasta limecoleslawta": {
     "en": "Slow-cooked pork ribs (“Burnt Ends”), roasted black pepper mayonnaise, and fresh lime coleslaw",
     "es": "Costillas de cerdo «Burnt Ends» cocinadas a fuego lento durante mucho tiempo, mayonesa de pimienta negra tostada y ensalada de col fresca con lima",
@@ -1178,6 +1228,11 @@
     "en": "Red Perch & Chives Beurre Blanc – Pan-fried Red Perch with a Chive-Butter-Wine Sauce",
     "es": "Perca roja y cebollino con salsa beurre blanc – Perca roja frita con salsa de mantequilla, vino blanco y cebollino",
     "zh-CN": "红鲈鱼配香葱白酱——香煎红鲈鱼配香葱白葡萄酒酱汁"
+  },
+  "Puna-ahventa & valkoviinikastiketta": {
+    "en": "Red Perch & White Wine Sauce",
+    "es": "Perca roja con salsa de vino blanco",
+    "zh-CN": "红鲈鱼配白葡萄酒酱汁"
   },
   "Punaherukka-omenakukkoa": {
     "en": "Red Currant-Apple Pie",
@@ -1373,6 +1428,16 @@
     "en": "Velvety Orange-Carrot Puree Soup",
     "es": "Sopa cremosa de naranja y zanahoria",
     "zh-CN": "丝滑的橙子胡萝卜浓汤"
+  },
+  "Satay kanaa & riisiä": {
+    "en": "Chicken Satay & Rice",
+    "es": "Satay de pollo con arroz",
+    "zh-CN": "沙嗲鸡肉配米饭"
+  },
+  "Savutofua, kasviksia ja freshiä gremolataa": {
+    "en": "Smoked tofu, vegetables, and fresh gremolata",
+    "es": "Tofu ahumado, verduras y gremolata fresca",
+    "zh-CN": "烟熏豆腐、时蔬和新鲜的格雷莫拉塔酱"
   },
   "Scaloppa di maiale con ananas – Hawaijin leikkeitä": {
     "en": "Pork Scaloppes with Pineapple – Hawaiian-Style Cuts",

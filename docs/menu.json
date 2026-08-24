@@ -1,12 +1,163 @@
 {
   "date": "2026-08-24",
-  "generated_at_utc": "2026-08-24T01:59:50+00:00",
+  "generated_at_utc": "2026-08-24T06:43:34+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
-      "unavailable": true,
-      "note": "no_date_header_found",
-      "groups": []
+      "unavailable": false,
+      "note": null,
+      "groups": [
+        {
+          "key": "mainside",
+          "items": [
+            {
+              "name": {
+                "fi": "Paahdettua kananpoikaa, freshiä gremolataa ja fetamurua",
+                "en": "Roasted chicken, fresh gremolata, and crumbled feta",
+                "es": "Pollo asado, gremolata fresca y trocitos de queso feta",
+                "zh-CN": "烤小鸡、新鲜的格雷莫拉塔酱和菲达奶酪碎",
+                "zh-TW": "烤小雞、新鮮的格雷莫拉塔醬和菲達乳酪碎"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Pitkään haudutettua porsaan niskaa",
+                "en": "Slow-cooked pork neck",
+                "es": "Cuello de cerdo cocido a fuego lento durante mucho tiempo",
+                "zh-CN": "慢炖猪颈肉",
+                "zh-TW": "慢燉豬頸肉"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "M"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Cowboy butteria",
+                "en": "Cowboy Butter",
+                "es": "Mantequilla de vaquero",
+                "zh-CN": "牛仔黄油",
+                "zh-TW": "牛仔黃油"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Nappulaperunoita",
+                "en": "Baby Potatoes",
+                "es": "Patatas en rodajas finas",
+                "zh-CN": "小土豆块",
+                "zh-TW": "小土豆塊"
+              },
+              "tags": [
+                "G",
+                "M",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "kauden kasviksia",
+                "en": "seasonal vegetables",
+                "es": "verduras de temporada",
+                "zh-CN": "时令蔬菜",
+                "zh-TW": "時令蔬菜"
+              },
+              "tags": [
+                "G",
+                "M",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Savutofua, kasviksia ja freshiä gremolataa",
+                "en": "Smoked tofu, vegetables, and fresh gremolata",
+                "es": "Tofu ahumado, verduras y gremolata fresca",
+                "zh-CN": "烟熏豆腐、时蔬和新鲜的格雷莫拉塔酱",
+                "zh-TW": "煙燻豆腐、時蔬和新鮮的格雷莫拉塔醬"
+              },
+              "tags": [
+                "G",
+                "M",
+                "Veg"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Nachotomua",
+                "en": "Nachotomua",
+                "es": "Nachotomua",
+                "zh-CN": "纳乔托穆阿",
+                "zh-TW": "納喬託穆阿"
+              },
+              "tags": [
+                "G",
+                "M",
+                "Veg"
+              ],
+              "price": null
+            }
+          ]
+        },
+        {
+          "key": "soup",
+          "items": [
+            {
+              "name": {
+                "fi": "Chili-maissikeittoa",
+                "en": "Chili Corn Soup",
+                "es": "Sopa de maíz con chile",
+                "zh-CN": "辣椒玉米汤",
+                "zh-TW": "辣椒玉米湯"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L"
+              ],
+              "price": "12,80 €"
+            }
+          ]
+        },
+        {
+          "key": "dessert",
+          "items": [
+            {
+              "name": {
+                "fi": "Kuohkeaa herukkahyvettä",
+                "en": "Fluffy currant jam",
+                "es": "Mermelada espumosa de grosellas",
+                "zh-CN": "松软的红醋栗果酱",
+                "zh-TW": "鬆軟的紅醋栗果醬"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L"
+              ],
+              "price": null
+            }
+          ]
+        }
+      ]
     },
     "luft": {
       "closed": false,
@@ -96,11 +247,22 @@
           "items": [
             {
               "name": {
-                "fi": "Kermainen pippurikana & yrttiöljyä",
-                "en": "Creamy Pepper Chicken & Herb Oil",
-                "es": "Pollo a la pimienta con salsa cremosa y aceite de hierbas",
-                "zh-CN": "奶油胡椒鸡配香草油",
-                "zh-TW": "奶油胡椒雞配香草油"
+                "fi": "Satay kanaa & riisiä",
+                "en": "Chicken Satay & Rice",
+                "es": "Satay de pollo con arroz",
+                "zh-CN": "沙嗲鸡肉配米饭",
+                "zh-TW": "沙嗲雞肉配米飯"
+              },
+              "tags": [],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Maukasta kanaa maapähkinäkastikkeessa",
+                "en": "Delicious Chicken in Peanut Sauce",
+                "es": "Delicioso pollo con salsa de cacahuete",
+                "zh-CN": "花生酱汁鸡肉，美味可口",
+                "zh-TW": "花生醬汁雞肉，美味可口"
               },
               "tags": [
                 "G",
@@ -110,11 +272,11 @@
             },
             {
               "name": {
-                "fi": "Päivän kalaa & sienikastiketta",
-                "en": "Fish of the Day & Mushroom Sauce",
-                "es": "Pescado del día y salsa de setas",
-                "zh-CN": "当日鲜鱼配蘑菇酱",
-                "zh-TW": "當日鮮魚配蘑菇醬"
+                "fi": "Puna-ahventa & valkoviinikastiketta",
+                "en": "Red Perch & White Wine Sauce",
+                "es": "Perca roja con salsa de vino blanco",
+                "zh-CN": "红鲈鱼配白葡萄酒酱汁",
+                "zh-TW": "紅鱸魚配白葡萄酒醬汁"
               },
               "tags": [
                 "G",
@@ -124,24 +286,25 @@
             },
             {
               "name": {
-                "fi": "Vöneriä, fetaa ja granaattiomenansiemeniä – Paistettuä vöneriä tomaattikastikkeessa",
-                "en": "Vöner, feta, and pomegranate seeds – Fried vöner in tomato sauce",
-                "es": "Vöneri, queso feta y semillas de granada: vöneri frito con salsa de tomate",
-                "zh-CN": "沃内里、菲达奶酪和石榴籽——番茄酱汁煎沃内里",
-                "zh-TW": "沃內裡、菲達乳酪和石榴籽——番茄醬汁煎沃內裡"
+                "fi": "Marinoitua tofua & pinaattikastiketta",
+                "en": "Marinated Tofu & Spinach Sauce",
+                "es": "Tofu marinado y salsa de espinacas",
+                "zh-CN": "腌制豆腐配菠菜酱",
+                "zh-TW": "醃製豆腐配菠菜醬"
               },
               "tags": [
+                "G",
                 "L"
               ],
               "price": null
             },
             {
               "name": {
-                "fi": "Riisiä/ paahdettuja kasviksia/ perunamuusia",
-                "en": "Rice / Roasted vegetables / Mashed potatoes",
-                "es": "Arroz / verduras asadas / puré de patatas",
-                "zh-CN": "米饭/烤蔬菜/土豆泥",
-                "zh-TW": "米飯/烤蔬菜/土豆泥"
+                "fi": "Lämmin perunasalaatti / riisiä/ paahdettuja porkkanoita",
+                "en": "Warm potato salad / rice / roasted carrots",
+                "es": "Ensalada templada de patatas / arroz / zanahorias asadas",
+                "zh-CN": "热土豆沙拉 / 米饭 / 烤胡萝卜",
+                "zh-TW": "熱土豆沙拉 / 米飯 / 烤胡蘿蔔"
               },
               "tags": [],
               "price": null
