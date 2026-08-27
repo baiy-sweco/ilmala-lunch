@@ -8,6 +8,17 @@ on:
     # slot also leaves hours of slack before people check the menu, even if
     # GitHub delays the run. Adjust the hour if you want it earlier/later.
     - cron: '17 0 * * 1-5'
+    # Backup run, one hour later, in case GitHub just never delivers the
+    # trigger above -- confirmed happening on 2026-08-27 (a Thursday, so not
+    # a cron-syntax issue): every other weekday since 2026-08-06 had a
+    # "schedule" run recorded, but that day had none at all, only a manual
+    # workflow_dispatch. GitHub documents scheduled ("cron") triggers as
+    # best-effort and occasionally dropped outright under platform load, with
+    # no error or retry on their side. The "Fetch & translate" step below
+    # skips doing anything if today's menu.json is already dated today, so
+    # this is a no-op (no extra commit) on every normal day where the run
+    # above already succeeded.
+    - cron: '17 1 * * 1-5'
     # Monday-only retry window, starting 04:17 UTC = 07:17 Helsinki (EEST) /
     # 06:17 (EET). lounaat.info's Dylan restaurants (Luft, La Ilma) publish
     # each week's fresh Monday menu some time mid-morning, not by the 03:17
@@ -40,15 +51,35 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Check whether the backup run is actually needed
+        id: freshness
+        run: |
+          # Only the backup cron (see schedule comment above) skips -- the
+          # primary run, the Monday retry, and any manual dispatch should
+          # always do real work. "Today" uses the same fixed UTC+3 offset as
+          # the Python script (see main()), not true Europe/Helsinki tzdata,
+          # so the two agree on what date they're looking for.
+          if [ "${{ github.event.schedule }}" = "17 1 * * 1-5" ]; then
+            today=$(date -u -d '+3 hours' +%F)
+            existing=$(jq -r '.date // ""' docs/menu.json 2>/dev/null || echo "")
+            if [ "$existing" = "$today" ]; then
+              echo "menu.json is already dated $today -- primary run succeeded, skipping backup."
+              echo "skip=true" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
       - name: Set up Python
+        if: steps.freshness.outputs.skip != 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install dependencies
+        if: steps.freshness.outputs.skip != 'true'
         run: pip install -r requirements.txt
 
       - name: Fetch & translate today's menu
+        if: steps.freshness.outputs.skip != 'true'
         env:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: |
@@ -77,6 +108,7 @@ jobs:
           fi
 
       - name: Commit updated menu.json
+        if: steps.freshness.outputs.skip != 'true'
         run: |
           git config user.name "menu-bot"
           git config user.email "menu-bot@users.noreply.github.com"
