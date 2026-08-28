@@ -654,6 +654,11 @@
     "es": "Tortitas con canela",
     "zh-CN": "肉桂味煎饼"
   },
+  "Kanelivaahtoa": {
+    "en": "Cinnamon Mousse",
+    "es": "Espuma de canela",
+    "zh-CN": "肉桂泡沫"
+  },
   "Karamellisoituja pikkuperunoita ja yrttiöljyä": {
     "en": "Caramelized baby potatoes and herb oil",
     "es": "Patatas pequeñas caramelizadas y aceite de hierbas",
@@ -678,6 +683,11 @@
     "en": "Seasonal oven-roasted vegetables with vegetable strips and a vegan herb sauce",
     "es": "Plato de verduras al horno de temporada con tiras de verduras y una guarnición vegana de hierbas",
     "zh-CN": "本季烤箱蔬菜拼盘，配以素食脆片和纯素香草酱"
+  },
+  "Kebabia lempeän mausteisessa tomaattikastikkeessa": {
+    "en": "Kebab in a mildly spiced tomato sauce",
+    "es": "Kebab en salsa de tomate ligeramente especiada",
+    "zh-CN": "配以微辣番茄酱的烤肉串"
   },
   "Kermainen kasvissosekeitto": {
     "en": "Creamy Vegetable Soup",
@@ -1044,6 +1054,11 @@
     "es": "Patatas con hierbas trituradas / Cuscús vegetal",
     "zh-CN": "香草土豆泥 / 蔬菜库斯库斯"
   },
+  "Mustajuurikeittoa": {
+    "en": "Black Root Soup",
+    "es": "Sopa de raíz negra",
+    "zh-CN": "黑根汤"
+  },
   "Mustikkarahka": {
     "en": "Blueberry Quark",
     "es": "Cremilla de arándanos",
@@ -1083,6 +1098,11 @@
     "en": "Pulled Pork, Korean-Style BBQ",
     "es": "Cerdo desmenuzado al estilo barbacoa coreana",
     "zh-CN": "韩式烤肉——撕肉猪肉"
+  },
+  "Omena-kaurapaistosta": {
+    "en": "Apple-Oat Bake",
+    "es": "Tarta de manzana y avena",
+    "zh-CN": "苹果燕麦饼"
   },
   "PIZZAPERJANTAI! – Päättärin omalla pizzapohjareseptillä leivoittua": {
     "en": "PIZZA FRIDAY! – Baked using Päättärin’s own pizza crust recipe",
@@ -1659,6 +1679,11 @@
     "es": "Cremilla fresca de mandarina",
     "zh-CN": "清爽的橘子酸奶"
   },
+  "Raikasta kurkkudippiä": {
+    "en": "Fresh Cucumber Dip",
+    "es": "Salsa fresca de pepino",
+    "zh-CN": "清爽黄瓜蘸酱"
+  },
   "Raikasta mojito-kananpoikaa ja lime-hunajajogurttia": {
     "en": "Fresh Mojito Chicken and Lime-Honey Yogurt",
     "es": "Pollo al mojito fresco y yogur de lima y miel",
@@ -1798,6 +1823,16 @@
     "en": "Roasted Potatoes with Rosemary",
     "es": "Patatas asadas con romero",
     "zh-CN": "香草烤土豆"
+  },
+  "Rouskuvan rapsakoita kanapaloja": {
+    "en": "Crispy Chicken Bites from Rouskuva",
+    "es": "Trozos de pollo crujientes y jugosos",
+    "zh-CN": "酥脆的炸鸡块"
+  },
+  "Ruisrouhetta": {
+    "en": "Rye bran",
+    "es": "Sémola de centeno",
+    "zh-CN": "黑麦粗粉"
   },
   "Rummo-pastaa": {
     "en": "Rummo pasta",
@@ -2054,6 +2089,11 @@
     "es": "La mejor cazuela de la casa: patatas, cebolla, albóndigas, salchichas y huevo frito, con pepinillos al mirto",
     "zh-CN": "本店招牌炖菜——土豆、洋葱、肉丸、香肠和煎鸡蛋，配以迷迭香腌黄瓜"
   },
+  "Talon ranskalaisia": {
+    "en": "The French in the House",
+    "es": "Los franceses de la casa",
+    "zh-CN": "这家店的法国人"
+  },
   "Tarjoamme laadukkaita kokous– ja catering-tuotteita sekä palveluita ja tilamme sopii erinomaisesti erilaisten tilaisuuksien järjestämiseen. Meillä voit järjestää esimerkiksi yritysjuhlat, aamiaistilaisuudet, perhejuhlat tai pikkujoulut. Ota yhteyttä ja suunnitellaan yhdessä:": {
     "en": "We offer high-quality meeting and catering products and services, and our venue is ideal for hosting a variety of events. For example, you can host corporate parties, breakfast events, family celebrations, or pre-Christmas parties here. Contact us and let’s plan it together:",
     "es": "Ofrecemos productos y servicios de alta calidad para reuniones y catering, y nuestras instalaciones son ideales para organizar todo tipo de eventos. Con nosotros puedes organizar, por ejemplo, fiestas de empresa, desayunos de trabajo, celebraciones familiares o fiestas de Navidad. Ponte en contacto con nosotros y lo planificaremos juntos:",
@@ -2209,6 +2249,16 @@
     "es": "Panna cotta de yogur con frambuesas",
     "zh-CN": "覆盆子酸奶潘娜科塔"
   },
+  "Valkosipulijogurttia": {
+    "en": "Garlic Yogurt",
+    "es": "Yogur de ajo",
+    "zh-CN": "大蒜酸奶"
+  },
+  "Valkosipulijurttia": {
+    "en": "Garlic Yogurt",
+    "es": "Yogur de ajo",
+    "zh-CN": "大蒜酸奶"
+  },
   "Valkosulkaamoussea": {
     "en": "White-winged Moss",
     "es": "Hongo de plumas blancas",
@@ -2228,6 +2278,11 @@
     "en": "New potatoes, dill, and browned butter",
     "es": "Patatas tempranas, eneldo y mantequilla dorada",
     "zh-CN": "早熟土豆、莳萝和煎黄的黄油"
+  },
+  "Vebabia lempeän mausteissa tomaattikastikkeessa": {
+    "en": "Vebabia in a mildly spiced tomato sauce",
+    "es": "Vebabia en salsa de tomate con especias suaves",
+    "zh-CN": "Vebabia 配以温和的香料，佐以番茄酱"
   },
   "Vegaaninen melanzane": {
     "en": "Vegan Melanzane",
@@ -2518,6 +2573,11 @@
     "en": "yogurt sauce flavored with mint",
     "es": "salsa de yogur aromatizada con menta",
     "zh-CN": "薄荷风味酸奶酱"
+  },
+  "paahdettua bataattia jalapenopirskeellä": {
+    "en": "Roasted sweet potato with jalapeño sauce",
+    "es": "boniato asado con salsa de jalapeños",
+    "zh-CN": "烤红薯配哈拉佩尼奥辣椒酱"
   },
   "paahdettua kukkakaalia ja herneenversoja": {
     "en": "roasted cauliflower and pea shoots",

@@ -1,12 +1,206 @@
 {
   "date": "2026-08-28",
-  "generated_at_utc": "2026-08-28T10:06:52+00:00",
+  "generated_at_utc": "2026-08-28T10:28:44+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
-      "unavailable": true,
-      "note": "no_date_header_found",
-      "groups": []
+      "unavailable": false,
+      "note": null,
+      "groups": [
+        {
+          "key": "mainside",
+          "items": [
+            {
+              "name": {
+                "fi": "Kebabia lempeän mausteisessa tomaattikastikkeessa",
+                "en": "Kebab in a mildly spiced tomato sauce",
+                "es": "Kebab en salsa de tomate ligeramente especiada",
+                "zh-CN": "配以微辣番茄酱的烤肉串",
+                "zh-TW": "配以微辣番茄醬的烤肉串"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "M"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Valkosipulijogurttia",
+                "en": "Garlic Yogurt",
+                "es": "Yogur de ajo",
+                "zh-CN": "大蒜酸奶",
+                "zh-TW": "大蒜酸奶"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Rouskuvan rapsakoita kanapaloja",
+                "en": "Crispy Chicken Bites from Rouskuva",
+                "es": "Trozos de pollo crujientes y jugosos",
+                "zh-CN": "酥脆的炸鸡块",
+                "zh-TW": "酥脆的炸雞塊"
+              },
+              "tags": [
+                "KM",
+                "M"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Raikasta kurkkudippiä",
+                "en": "Fresh Cucumber Dip",
+                "es": "Salsa fresca de pepino",
+                "zh-CN": "清爽黄瓜蘸酱",
+                "zh-TW": "清爽黃瓜蘸醬"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Talon ranskalaisia",
+                "en": "The French in the House",
+                "es": "Los franceses de la casa",
+                "zh-CN": "这家店的法国人",
+                "zh-TW": "這家店的法國人"
+              },
+              "tags": [
+                "G",
+                "M",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "paahdettua bataattia jalapenopirskeellä",
+                "en": "Roasted sweet potato with jalapeño sauce",
+                "es": "boniato asado con salsa de jalapeños",
+                "zh-CN": "烤红薯配哈拉佩尼奥辣椒酱",
+                "zh-TW": "烤紅薯配哈拉佩尼奧辣椒醬"
+              },
+              "tags": [
+                "G",
+                "M",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Vebabia lempeän mausteissa tomaattikastikkeessa",
+                "en": "Vebabia in a mildly spiced tomato sauce",
+                "es": "Vebabia en salsa de tomate con especias suaves",
+                "zh-CN": "Vebabia 配以温和的香料，佐以番茄酱",
+                "zh-TW": "Vebabia 配以溫和的香料，佐以番茄醬"
+              },
+              "tags": [
+                "G",
+                "M",
+                "Veg"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Valkosipulijurttia",
+                "en": "Garlic Yogurt",
+                "es": "Yogur de ajo",
+                "zh-CN": "大蒜酸奶",
+                "zh-TW": "大蒜酸奶"
+              },
+              "tags": [
+                "G",
+                "M",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Ruisrouhetta",
+                "en": "Rye bran",
+                "es": "Sémola de centeno",
+                "zh-CN": "黑麦粗粉",
+                "zh-TW": "黑麥粗粉"
+              },
+              "tags": [
+                "M",
+                "Veg"
+              ],
+              "price": null
+            },
+            {
+              "name": {
+                "fi": "Omena-kaurapaistosta",
+                "en": "Apple-Oat Bake",
+                "es": "Tarta de manzana y avena",
+                "zh-CN": "苹果燕麦饼",
+                "zh-TW": "蘋果燕麥餅"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L"
+              ],
+              "price": null
+            }
+          ]
+        },
+        {
+          "key": "soup",
+          "items": [
+            {
+              "name": {
+                "fi": "Mustajuurikeittoa",
+                "en": "Black Root Soup",
+                "es": "Sopa de raíz negra",
+                "zh-CN": "黑根汤",
+                "zh-TW": "黑根湯"
+              },
+              "tags": [
+                "G",
+                "M",
+                "Veg"
+              ],
+              "price": "12,80 €"
+            }
+          ]
+        },
+        {
+          "key": "dessert",
+          "items": [
+            {
+              "name": {
+                "fi": "Kanelivaahtoa",
+                "en": "Cinnamon Mousse",
+                "es": "Espuma de canela",
+                "zh-CN": "肉桂泡沫",
+                "zh-TW": "肉桂泡沫"
+              },
+              "tags": [
+                "G",
+                "KM",
+                "L"
+              ],
+              "price": null
+            }
+          ]
+        }
+      ]
     },
     "luft": {
       "closed": false,
@@ -353,144 +547,15 @@
     },
     "studio10": {
       "closed": false,
-      "unavailable": false,
-      "note": null,
-      "groups": [
-        {
-          "key": "main",
-          "items": [
-            {
-              "name": {
-                "fi": "Rigatoni ai formaggi – Rigatoni-pastaa juustolla",
-                "en": "Rigatoni ai formaggi – Rigatoni with Cheese",
-                "es": "Rigatoni ai formaggi – Pasta rigatoni con queso",
-                "zh-CN": "Rigatoni ai formaggi——芝士里加托尼意面",
-                "zh-TW": "Rigatoni ai formaggi——芝士里加託尼意麵"
-              },
-              "tags": [
-                "L"
-              ],
-              "price": "14,00 €"
-            },
-            {
-              "name": {
-                "fi": "Scorfano al pesto rosso – Puna-ahventa & punaista pestoa",
-                "en": "Scorfano al pesto rosso – Red sea bass & red pesto",
-                "es": "Scorfano al pesto rosso – Scorfano con pesto rojo",
-                "zh-CN": "红酱鲉鱼——红鲉鱼配红酱",
-                "zh-TW": "紅醬鮋魚——紅鮋魚配紅醬"
-              },
-              "tags": [
-                "G",
-                "L"
-              ],
-              "price": "14,00 €"
-            },
-            {
-              "name": {
-                "fi": "Pollo all’aglio – Valkosipulikanaa",
-                "en": "Pollo all’aglio – Garlic Chicken",
-                "es": "Pollo al ajillo – Pollo al ajo",
-                "zh-CN": "Pollo all’aglio——蒜香鸡",
-                "zh-TW": "Pollo all’aglio——蒜香雞"
-              },
-              "tags": [
-                "G",
-                "M"
-              ],
-              "price": "14,00 €"
-            },
-            {
-              "name": {
-                "fi": "Lasagne con spinaci – Pinaattilasagnea",
-                "en": "Lasagna with Spinach – Spinach Lasagna",
-                "es": "Lasaña con espinacas – Lasaña de espinacas",
-                "zh-CN": "菠菜千层面 – 菠菜千层面",
-                "zh-TW": "菠菜千層麵 – 菠菜千層麵"
-              },
-              "tags": [
-                "L"
-              ],
-              "price": "14,00 €"
-            }
-          ]
-        }
-      ]
+      "unavailable": true,
+      "note": "parse_error",
+      "groups": []
     },
     "paattari": {
       "closed": false,
-      "unavailable": false,
-      "note": null,
-      "groups": [
-        {
-          "key": "main",
-          "items": [
-            {
-              "name": {
-                "fi": "PIZZAPERJANTAI! – Päättärin omalla pizzapohjareseptillä leivottua",
-                "en": "PIZZA FRIDAY! – Baked using Päättärin's own pizza crust recipe",
-                "es": "¡VIERNES DE PIZZA! – La he horneado con mi propia receta de masa de pizza",
-                "zh-CN": "披萨星期五！——用Päättärin自创的披萨面团配方烤制的",
-                "zh-TW": "披薩星期五！——用Päättärin自創的披薩麵糰配方烤制的"
-              },
-              "tags": [],
-              "price": "14,00 €"
-            },
-            {
-              "name": {
-                "fi": "Pasta carbonara",
-                "en": "Pasta Carbonara",
-                "es": "Pasta a la carbonara",
-                "zh-CN": "卡博纳拉意面",
-                "zh-TW": "卡博納拉意麵"
-              },
-              "tags": [
-                "L"
-              ],
-              "price": "14,00 €"
-            },
-            {
-              "name": {
-                "fi": "Halloumi tomaattipaistos & viikunaa",
-                "en": "Baked Halloumi with Tomatoes & Figs",
-                "es": "Halloumi al horno con tomate y higos",
-                "zh-CN": "哈卢米奶酪番茄烤菜配无花果",
-                "zh-TW": "哈盧米乳酪番茄烤菜配無花果"
-              },
-              "tags": [
-                "G",
-                "L"
-              ],
-              "price": "14,00 €"
-            },
-            {
-              "name": {
-                "fi": "Paahdettuja yrttiperunoita",
-                "en": "Roasted Herbed Potatoes",
-                "es": "Patatas asadas con hierbas",
-                "zh-CN": "香烤香草土豆",
-                "zh-TW": "香烤香草土豆"
-              },
-              "tags": [],
-              "price": "14,00 €"
-            },
-            {
-              "name": {
-                "fi": "Pehmis & lisukkeet",
-                "en": "Soft Foods & Side Dishes",
-                "es": "Postres y acompañamientos",
-                "zh-CN": "软食与配菜",
-                "zh-TW": "軟食與配菜"
-              },
-              "tags": [
-                "G",
-                "L"
-              ],
-              "price": "14,00 €"
-            }
-          ]
-        }
-      ]
+      "unavailable": true,
+      "note": "parse_error",
+      "groups": []
     }
   }
 }
