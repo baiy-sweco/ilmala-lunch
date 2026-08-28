@@ -1,6 +1,6 @@
 {
   "date": "2026-08-28",
-  "generated_at_utc": "2026-08-28T10:28:44+00:00",
+  "generated_at_utc": "2026-08-28T10:31:37+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
@@ -547,15 +547,144 @@
     },
     "studio10": {
       "closed": false,
-      "unavailable": true,
-      "note": "parse_error",
-      "groups": []
+      "unavailable": false,
+      "note": null,
+      "groups": [
+        {
+          "key": "main",
+          "items": [
+            {
+              "name": {
+                "fi": "Rigatoni ai formaggi – Rigatoni-pastaa juustolla",
+                "en": "Rigatoni ai formaggi – Rigatoni with Cheese",
+                "es": "Rigatoni ai formaggi – Pasta rigatoni con queso",
+                "zh-CN": "Rigatoni ai formaggi——芝士里加托尼意面",
+                "zh-TW": "Rigatoni ai formaggi——芝士里加託尼意麵"
+              },
+              "tags": [
+                "L"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Scorfano al pesto rosso – Puna-ahventa & punaista pestoa",
+                "en": "Scorfano al pesto rosso – Red sea bass & red pesto",
+                "es": "Scorfano al pesto rosso – Scorfano con pesto rojo",
+                "zh-CN": "红酱鲉鱼——红鲉鱼配红酱",
+                "zh-TW": "紅醬鮋魚——紅鮋魚配紅醬"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Pollo all’aglio – Valkosipulikanaa",
+                "en": "Pollo all’aglio – Garlic Chicken",
+                "es": "Pollo al ajillo – Pollo al ajo",
+                "zh-CN": "Pollo all’aglio——蒜香鸡",
+                "zh-TW": "Pollo all’aglio——蒜香雞"
+              },
+              "tags": [
+                "G",
+                "M"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Lasagne con spinaci – Pinaattilasagnea",
+                "en": "Lasagna with Spinach – Spinach Lasagna",
+                "es": "Lasaña con espinacas – Lasaña de espinacas",
+                "zh-CN": "菠菜千层面 – 菠菜千层面",
+                "zh-TW": "菠菜千層麵 – 菠菜千層麵"
+              },
+              "tags": [
+                "L"
+              ],
+              "price": "14,00 €"
+            }
+          ]
+        }
+      ]
     },
     "paattari": {
       "closed": false,
-      "unavailable": true,
-      "note": "parse_error",
-      "groups": []
+      "unavailable": false,
+      "note": null,
+      "groups": [
+        {
+          "key": "main",
+          "items": [
+            {
+              "name": {
+                "fi": "PIZZAPERJANTAI! – Päättärin omalla pizzapohjareseptillä leivottua",
+                "en": "PIZZA FRIDAY! – Baked using Päättärin's own pizza crust recipe",
+                "es": "¡VIERNES DE PIZZA! – La he horneado con mi propia receta de masa de pizza",
+                "zh-CN": "披萨星期五！——用Päättärin自创的披萨面团配方烤制的",
+                "zh-TW": "披薩星期五！——用Päättärin自創的披薩麵糰配方烤制的"
+              },
+              "tags": [],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Pasta carbonara",
+                "en": "Pasta Carbonara",
+                "es": "Pasta a la carbonara",
+                "zh-CN": "卡博纳拉意面",
+                "zh-TW": "卡博納拉意麵"
+              },
+              "tags": [
+                "L"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Halloumi tomaattipaistos & viikunaa",
+                "en": "Baked Halloumi with Tomatoes & Figs",
+                "es": "Halloumi al horno con tomate y higos",
+                "zh-CN": "哈卢米奶酪番茄烤菜配无花果",
+                "zh-TW": "哈盧米乳酪番茄烤菜配無花果"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Paahdettuja yrttiperunoita",
+                "en": "Roasted Herbed Potatoes",
+                "es": "Patatas asadas con hierbas",
+                "zh-CN": "香烤香草土豆",
+                "zh-TW": "香烤香草土豆"
+              },
+              "tags": [],
+              "price": "14,00 €"
+            },
+            {
+              "name": {
+                "fi": "Pehmis & lisukkeet",
+                "en": "Soft Foods & Side Dishes",
+                "es": "Postres y acompañamientos",
+                "zh-CN": "软食与配菜",
+                "zh-TW": "軟食與配菜"
+              },
+              "tags": [
+                "G",
+                "L"
+              ],
+              "price": "14,00 €"
+            }
+          ]
+        }
+      ]
     }
   }
 }
