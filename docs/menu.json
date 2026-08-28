@@ -1,6 +1,6 @@
 {
   "date": "2026-08-28",
-  "generated_at_utc": "2026-08-28T10:31:37+00:00",
+  "generated_at_utc": "2026-08-28T11:29:10+00:00",
   "restaurants": {
     "akseli": {
       "closed": false,
@@ -555,11 +555,11 @@
           "items": [
             {
               "name": {
-                "fi": "Rigatoni ai formaggi – Rigatoni-pastaa juustolla",
-                "en": "Rigatoni ai formaggi – Rigatoni with Cheese",
-                "es": "Rigatoni ai formaggi – Pasta rigatoni con queso",
-                "zh-CN": "Rigatoni ai formaggi——芝士里加托尼意面",
-                "zh-TW": "Rigatoni ai formaggi——芝士里加託尼意麵"
+                "fi": "Pasta al salmone – Lohipastaa",
+                "en": "Pasta al salmone – Salmon Pasta",
+                "es": "Pasta al salmone – Pasta con salmón",
+                "zh-CN": "Pasta al salmone——三文鱼意面",
+                "zh-TW": "Pasta al salmone——三文魚意麵"
               },
               "tags": [
                 "L"
@@ -568,11 +568,11 @@
             },
             {
               "name": {
-                "fi": "Scorfano al pesto rosso – Puna-ahventa & punaista pestoa",
-                "en": "Scorfano al pesto rosso – Red sea bass & red pesto",
-                "es": "Scorfano al pesto rosso – Scorfano con pesto rojo",
-                "zh-CN": "红酱鲉鱼——红鲉鱼配红酱",
-                "zh-TW": "紅醬鮋魚——紅鮋魚配紅醬"
+                "fi": "Carni mix e patate con uova – Pyttipannua & kananmunia",
+                "en": "Meat and Potato Mix with Eggs – Hash & Eggs",
+                "es": "Mezcla de carne y patatas con huevos – Pyttipannu y huevos",
+                "zh-CN": "肉末土豆炒蛋——土豆煎蛋",
+                "zh-TW": "肉末土豆炒蛋——土豆煎蛋"
               },
               "tags": [
                 "G",
@@ -582,25 +582,25 @@
             },
             {
               "name": {
-                "fi": "Pollo all’aglio – Valkosipulikanaa",
-                "en": "Pollo all’aglio – Garlic Chicken",
-                "es": "Pollo al ajillo – Pollo al ajo",
-                "zh-CN": "Pollo all’aglio——蒜香鸡",
-                "zh-TW": "Pollo all’aglio——蒜香雞"
+                "fi": "Pollo alla crema – Kermaista herkkukanaa",
+                "en": "Pollo alla crema – Creamy Chicken Delight",
+                "es": "Pollo alla crema – Pollo cremoso y delicioso",
+                "zh-CN": "Pollo alla crema——奶油焗鸡",
+                "zh-TW": "Pollo alla crema——奶油焗雞"
               },
               "tags": [
                 "G",
-                "M"
+                "L"
               ],
               "price": "14,00 €"
             },
             {
               "name": {
-                "fi": "Lasagne con spinaci – Pinaattilasagnea",
-                "en": "Lasagna with Spinach – Spinach Lasagna",
-                "es": "Lasaña con espinacas – Lasaña de espinacas",
-                "zh-CN": "菠菜千层面 – 菠菜千层面",
-                "zh-TW": "菠菜千層麵 – 菠菜千層麵"
+                "fi": "Crespelle con spinaci e mirtillo rosso – Pinaattilettuja & puolukkahilloa",
+                "en": "Crespelle con spinaci e mirtillo rosso – Spinach Crepes & Lingonberry Jam",
+                "es": "Crepes con espinacas y arándanos rojos – Crepes de espinacas y mermelada de arándanos rojos",
+                "zh-CN": "菠菜薄饼配红越橘果酱 – 菠菜薄饼与红越橘果酱",
+                "zh-TW": "菠菜薄餅配紅越橘果醬 – 菠菜薄餅與紅越橘果醬"
               },
               "tags": [
                 "L"

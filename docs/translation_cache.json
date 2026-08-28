@@ -249,6 +249,11 @@
     "es": "Caponata de avena con salsa de hierbas y albahaca fresca",
     "zh-CN": "卡波纳塔配燕麦粥、香草牛肝菌和新鲜罗勒"
   },
+  "Carni mix e patate con uova – Pyttipannua & kananmunia": {
+    "en": "Meat and Potato Mix with Eggs – Hash & Eggs",
+    "es": "Mezcla de carne y patatas con huevos – Pyttipannu y huevos",
+    "zh-CN": "肉末土豆炒蛋——土豆煎蛋"
+  },
   "Cavolfiore gratinato – Gratinoitua kukkakaalia": {
     "en": "Cauliflower Gratin – Gratinated Cauliflower",
     "es": "Cavolfiore gratinado – Coliflor gratinada",
@@ -338,6 +343,11 @@
     "en": "Salmon Glazed with Cremolata",
     "es": "Salmón glaseado con crema",
     "zh-CN": "覆有克雷莫拉塔酱的鲑鱼"
+  },
+  "Crespelle con spinaci e mirtillo rosso – Pinaattilettuja & puolukkahilloa": {
+    "en": "Crespelle con spinaci e mirtillo rosso – Spinach Crepes & Lingonberry Jam",
+    "es": "Crepes con espinacas y arándanos rojos – Crepes de espinacas y mermelada de arándanos rojos",
+    "zh-CN": "菠菜薄饼配红越橘果酱 – 菠菜薄饼与红越橘果酱"
   },
   "Crespelle con spinaci – Pinaattilettuja": {
     "en": "Crespelle con spinaci – Spinach Crepes",
@@ -1299,6 +1309,11 @@
     "es": "Pasta al pesto rosso – Pasta y pesto rojo",
     "zh-CN": "红青酱意面——意面配红青酱"
   },
+  "Pasta al salmone – Lohipastaa": {
+    "en": "Pasta al salmone – Salmon Pasta",
+    "es": "Pasta al salmone – Pasta con salmón",
+    "zh-CN": "Pasta al salmone——三文鱼意面"
+  },
   "Pasta alla pancetta e panna – Kermaista pekonipastaa": {
     "en": "Pasta alla pancetta e panna – Creamy Pancetta Pasta",
     "es": "Pasta con panceta y nata – Pasta cremosa con panceta",
@@ -1513,6 +1528,11 @@
     "en": "Pollo al peperoncino – Chili Chicken",
     "es": "Pollo al peperoncino – Pollo al chile",
     "zh-CN": "Pollo al peperoncino – 辣椒鸡"
+  },
+  "Pollo alla crema – Kermaista herkkukanaa": {
+    "en": "Pollo alla crema – Creamy Chicken Delight",
+    "es": "Pollo alla crema – Pollo cremoso y delicioso",
+    "zh-CN": "Pollo alla crema——奶油焗鸡"
   },
   "Pollo alla parmigiana – Parmesaanikanaa": {
     "en": "Pollo alla parmigiana – Chicken with Parmesan",
