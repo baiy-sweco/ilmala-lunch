@@ -145,65 +145,99 @@ def fetch_text(url):
     return fetch_soup(url).get_text("\n")
 
 
-def closest_day_section(text, today):
-    """Find the header (Weekday D.M.) whose date is closest to today, and
-    return (section_text, distance_in_days) or (None, None) if no header found.
+def week_dates(today):
+    """This week's Monday-Friday dates (as date objects), Monday first."""
+    monday = today - timedelta(days=today.weekday())
+    return [monday + timedelta(days=i) for i in range(5)]
 
-    The pattern includes Saturday/Sunday even though the script only ever
-    looks for a Mon-Fri "today" -- they're never picked as the closest match,
-    but they still need to count as header boundaries. lounas.app's pages
-    list Sat/Sun too (usually just a "suljettu" closed notice), and without
-    recognizing those headers, Friday's section would run past them all the
-    way to the next unmatched boundary, absorbing the weekend's "suljettu"
-    text and making a perfectly open Friday look closed."""
+
+def all_day_sections(text, today):
+    """Find every header (Weekday D.M.) in text, resolve each to a real
+    calendar date, and match those headers against this week's Mon-Fri dates.
+
+    Returns {date_iso: (section_text, distance_in_days)}, using -- per
+    weekday -- whichever header is closest to that weekday's date. This is
+    the same "closest header wins" fallback the single-day version used
+    (absorbs ninankeittio.fi's occasional date typos), just resolved once per
+    weekday of the week instead of once for "today".
+
+    The pattern includes Saturday/Sunday even though only Mon-Fri targets are
+    ever looked up -- they're never picked as a match, but they still need to
+    count as header boundaries. lounas.app's pages list Sat/Sun too (usually
+    just a "suljettu" closed notice), and without recognizing those headers,
+    Friday's section would run past them all the way to the next unmatched
+    boundary, absorbing the weekend's "suljettu" text and making a perfectly
+    open Friday look closed."""
     pattern = re.compile(
         r"(Maanantai|Tiistai|Keskiviikko|Torstai|Perjantai|Lauantai|Sunnuntai)(?:na)?\s+(\d{1,2})\.(\d{1,2})\.",
         re.IGNORECASE,
     )
     matches = list(pattern.finditer(text))
     if not matches:
-        return None, None
+        return {}
 
-    best = None
+    resolved = []  # [(resolved_date, section_text), ...]
     for i, m in enumerate(matches):
         day, month = int(m.group(2)), int(m.group(3))
+        best_date = None
         for year_offset in (0, -1, 1):
             try:
                 d = date(today.year + year_offset, month, day)
             except ValueError:
                 continue
-            dist = abs((d - today).days)
-            if best is None or dist < best[0]:
-                start = m.end()
-                end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
-                best = (dist, text[start:end])
-    return (best[1], best[0]) if best else (None, None)
+            if best_date is None or abs((d - today).days) < abs((best_date - today).days):
+                best_date = d
+        if best_date is None:
+            continue
+        start = m.end()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+        resolved.append((best_date, text[start:end]))
+
+    out = {}
+    for target in week_dates(today):
+        best = None
+        for d, section in resolved:
+            dist = abs((d - target).days)
+            if best is None or dist < best[1]:
+                best = (section, dist)
+        if best is not None:
+            out[target.isoformat()] = best
+    return out
 
 
 def is_closed_section(section_text):
     return "suljettu" in section_text.lower()
 
 
-def nordrest_day_section(text, today):
+def nordrest_week_sections(text, today):
     """nordrest.fi's Studio10 page has no per-day dates in the weekly list --
     headers are bilingual weekday names only (e.g. 'GIOVENDí / TORSTAI'), and
     the whole week's menu appears twice in the fetched text (duplicate markup
     block, seemingly a responsive/mobile variant). So instead of matching a
-    date like closest_day_section(), we just look up today's Finnish weekday
-    name and take the text up to the next weekday header -- this stays
-    correct even with the duplicated block, since the next header in
-    document order is always the true end of today's section."""
-    weekday_idx = today.weekday()  # Mon=0 .. Sun=6
-    if weekday_idx > 4:
-        return None
-    fi_name = FI_WEEKDAYS[weekday_idx]
+    date like all_day_sections(), this looks up each of this week's Mon-Fri
+    Finnish weekday names in turn, searching strictly forward from the end of
+    the previous day's header -- this finds the first (non-duplicated) Mon-Fri
+    run of headers in document order and stays correct even with the
+    duplicated block after it, since each day's section only ever runs up to
+    the next header found this same way.
+
+    Returns {date_iso: section_text} -- a day is simply absent if its header
+    isn't found (e.g. the page's markup changed)."""
     header_re = re.compile(r"\b(" + "|".join(FI_WEEKDAYS) + r")\b", re.IGNORECASE)
     matches = list(header_re.finditer(text))
-    for i, m in enumerate(matches):
-        if m.group(1).lower() == fi_name.lower():
-            end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
-            return text[m.end():end]
-    return None
+    targets = week_dates(today)
+
+    out = {}
+    search_from = 0
+    for weekday_idx, target in enumerate(targets):
+        fi_name = FI_WEEKDAYS[weekday_idx]
+        for i in range(search_from, len(matches)):
+            if matches[i].group(1).lower() == fi_name.lower():
+                end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+                out[target.isoformat()] = text[matches[i].end():end]
+                search_from = i + 1
+                break
+    return out
 
 
 # Studio10's dishes carry allergen tags in a trailing parenthesis, e.g.
@@ -251,12 +285,12 @@ def extract_nordrest_fixed_price(text):
 
 
 PAATTARI_HEADER_RE = re.compile(
-    r"^(" + "|".join(FI_WEEKDAYS) + r")(?:na)?\s+\d{1,2}\.\d{1,2}\.", re.IGNORECASE
+    r"^(" + "|".join(FI_WEEKDAYS) + r")(?:na)?\s+(\d{1,2})\.(\d{1,2})\.(\d{4})?", re.IGNORECASE
 )
 PAATTARI_TAGS_ONLY_RE = re.compile(r"^\(([^)]*)\)$")
 
 
-def paattari_day_paragraphs(soup, today):
+def paattari_week_paragraphs(soup, today):
     """Päättäri's weekly menu (nordrest.fi, Elementor-built) is a run of <p>
     tags: a bold-underlined 'Weekday D.M.YYYY' header, then one <p> per dish
     with the name in <strong> and the tagged description following it as
@@ -265,12 +299,11 @@ def paattari_day_paragraphs(soup, today):
     restaurant), name and tags don't share a text line, so this walks the DOM
     directly instead of flattened text -- flattening would put name and tags
     on separate lines with no reliable way to tell where one dish ends and
-    the next begins (verified by inspecting the actual markup)."""
-    weekday_idx = today.weekday()  # Mon=0 .. Sun=6
-    if weekday_idx > 4:
-        return None
-    fi_name = FI_WEEKDAYS[weekday_idx]
+    the next begins (verified by inspecting the actual markup).
 
+    Unlike Studio10, these headers carry a real date, so days are matched by
+    that date directly rather than by position. Returns {date_iso: [<p>, ...]}
+    for whichever of this week's Mon-Fri dates have a matching header."""
     all_ps = soup.find_all("p")
     header_positions = [
         (i, PAATTARI_HEADER_RE.match(p.get_text(" ", strip=True)))
@@ -278,13 +311,23 @@ def paattari_day_paragraphs(soup, today):
     ]
     header_positions = [(i, m) for i, m in header_positions if m]
     if not header_positions:
-        return None
+        return {}
 
+    targets = {d.isoformat() for d in week_dates(today)}
+    out = {}
     for pos, (i, m) in enumerate(header_positions):
-        if m.group(1).lower() == fi_name.lower():
-            end = header_positions[pos + 1][0] if pos + 1 < len(header_positions) else len(all_ps)
-            return all_ps[i + 1:end]
-    return None
+        day, month = int(m.group(2)), int(m.group(3))
+        year = int(m.group(4)) if m.group(4) else today.year
+        try:
+            hdr_date = date(year, month, day)
+        except ValueError:
+            continue
+        iso = hdr_date.isoformat()
+        if iso not in targets:
+            continue
+        end = header_positions[pos + 1][0] if pos + 1 < len(header_positions) else len(all_ps)
+        out[iso] = all_ps[i + 1:end]
+    return out
 
 
 def _paattari_split_tags(s):
@@ -760,39 +803,43 @@ def translate_all(fi_texts, api_key, cache):
 def main():
     api_key = os.environ.get("DEEPL_API_KEY", "")
     today = datetime.now(timezone(timedelta(hours=3))).date()  # Europe/Helsinki (EEST, UTC+3 in summer)
+    targets = [d.isoformat() for d in week_dates(today)]
 
-    raw_results = {}
+    raw_results = {}  # {rest_key: {date_iso: payload}}
     all_fi_texts = []
     for rest in RESTAURANTS:
-        payload = build_restaurant_payload_pass1(rest, today)
-        raw_results[rest["key"]] = payload
-        for g in payload.get("_groups_raw", []):
-            for it in g["items"]:
-                all_fi_texts.append(it["text"])
+        week_payload = build_restaurant_week_payload(rest, today)
+        raw_results[rest["key"]] = week_payload
+        for iso in targets:
+            for g in week_payload[iso].get("_groups_raw", []):
+                for it in g["items"]:
+                    all_fi_texts.append(it["text"])
 
     cache = load_cache()
     translations = translate_all(all_fi_texts, api_key, cache)
     save_cache(cache)
 
     output = {
-        "date": today.isoformat(),
+        "week_start": targets[0],
         "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "restaurants": {},
+        "days": {iso: {"restaurants": {}} for iso in targets},
     }
     for rest in RESTAURANTS:
-        raw = raw_results[rest["key"]]
-        groups_raw = raw.pop("_groups_raw", [])
-        raw["groups"] = [
-            {
-                "key": g["key"],
-                "items": [
-                    {"name": translations[it["text"]], "tags": it["tags"], "price": it["price"]}
-                    for it in g["items"]
-                ],
-            }
-            for g in groups_raw
-        ]
-        output["restaurants"][rest["key"]] = raw
+        week_payload = raw_results[rest["key"]]
+        for iso in targets:
+            raw = week_payload[iso]
+            groups_raw = raw.pop("_groups_raw", [])
+            raw["groups"] = [
+                {
+                    "key": g["key"],
+                    "items": [
+                        {"name": translations[it["text"]], "tags": it["tags"], "price": it["price"]}
+                        for it in g["items"]
+                    ],
+                }
+                for g in groups_raw
+            ]
+            output["days"][iso]["restaurants"][rest["key"]] = raw
 
     os.makedirs(DOCS_DIR, exist_ok=True)
     with open(MENU_JSON_PATH, "w", encoding="utf-8") as f:
@@ -800,76 +847,105 @@ def main():
     print(f"Wrote {MENU_JSON_PATH}")
 
 
-def build_restaurant_payload_pass1(rest, today):
-    """Fetch + parse only (no translation yet); keeps raw FI groups under
-    _groups_raw so main() can batch-translate everything in one pass."""
+def _empty_day_payload(note):
+    return {"closed": False, "unavailable": True, "note": note, "_groups_raw": []}
+
+
+def build_restaurant_week_payload(rest, today):
+    """Fetch + parse only (no translation yet), for every weekday of this
+    week (Mon-Fri) at once; keeps raw FI groups under _groups_raw so main()
+    can batch-translate everything in one pass.
+
+    Returns {date_iso: {closed, unavailable, note, _groups_raw}} -- one entry
+    per this week's Mon-Fri date, even for days a restaurant's page has
+    nothing for (those come back as an "unavailable" payload, same as the
+    single-day version used to return for "today")."""
+    targets = [d.isoformat() for d in week_dates(today)]
     try:
         if rest["type"] == "paattari":
             soup = fetch_soup(rest["url"])
-            paragraphs = paattari_day_paragraphs(soup, today)
-            if paragraphs is None:
-                return {"closed": False, "unavailable": True, "note": "no_date_header_found", "_groups_raw": []}
-            items = parse_paattari(paragraphs)
+            week_paragraphs = paattari_week_paragraphs(soup, today)
             fixed_price = extract_nordrest_fixed_price(soup.get_text("\n"))
-            for it in items:
-                it["price"] = fixed_price
-            groups = [{"key": "main", "items": items}] if items else []
-            return {
-                "closed": False,
-                "unavailable": len(groups) == 0,
-                "note": None,
-                "_groups_raw": groups,
-            }
+            out = {}
+            for iso in targets:
+                paragraphs = week_paragraphs.get(iso)
+                if paragraphs is None:
+                    out[iso] = _empty_day_payload("no_date_header_found")
+                    continue
+                items = parse_paattari(paragraphs)
+                for it in items:
+                    it["price"] = fixed_price
+                groups = [{"key": "main", "items": items}] if items else []
+                out[iso] = {
+                    "closed": False,
+                    "unavailable": len(groups) == 0,
+                    "note": None,
+                    "_groups_raw": groups,
+                }
+            return out
 
         text = fetch_text(rest["url"])
 
         if rest["type"] == "nordrest":
-            section = nordrest_day_section(text, today)
-            if section is None:
-                return {"closed": False, "unavailable": True, "note": "no_date_header_found", "_groups_raw": []}
-            # Parse dishes first: actual dishes are authoritative over any
-            # "suljettu" text, because these pages keep stale holiday-closure
-            # banners in the markup for weeks after reopening (e.g. a "suljettu
-            # 3.7-4.8" note still shown days after the 5.8 reopening). Only
-            # trust the closed signal when today's section has no dishes.
-            items = parse_nordrest(section)
-            if not items and is_closed_section(section):
-                return {"closed": True, "unavailable": False, "note": None, "_groups_raw": []}
+            week_sections = nordrest_week_sections(text, today)
             fixed_price = extract_nordrest_fixed_price(text)
-            for it in items:
-                it["price"] = fixed_price
-            groups = [{"key": "main", "items": items}] if items else []
-            return {
+            out = {}
+            for iso in targets:
+                section = week_sections.get(iso)
+                if section is None:
+                    out[iso] = _empty_day_payload("no_date_header_found")
+                    continue
+                # Parse dishes first: actual dishes are authoritative over any
+                # "suljettu" text, because these pages keep stale holiday-closure
+                # banners in the markup for weeks after reopening (e.g. a "suljettu
+                # 3.7-4.8" note still shown days after the 5.8 reopening). Only
+                # trust the closed signal when that day's section has no dishes.
+                items = parse_nordrest(section)
+                if not items and is_closed_section(section):
+                    out[iso] = {"closed": True, "unavailable": False, "note": None, "_groups_raw": []}
+                    continue
+                for it in items:
+                    it["price"] = fixed_price
+                groups = [{"key": "main", "items": items}] if items else []
+                out[iso] = {
+                    "closed": False,
+                    "unavailable": len(groups) == 0,
+                    "note": None,
+                    "_groups_raw": groups,
+                }
+            return out
+
+        week_sections = all_day_sections(text, today)  # {date_iso: (section_text, distance)}
+        out = {}
+        for iso in targets:
+            entry = week_sections.get(iso)
+            if entry is None:
+                out[iso] = _empty_day_payload("no_date_header_found")
+                continue
+            section, distance = entry
+            if is_closed_section(section):
+                out[iso] = {"closed": True, "unavailable": False, "note": None, "_groups_raw": []}
+                continue
+
+            if rest["type"] == "akseli":
+                items = parse_akseli(section)
+            elif rest["type"] == "dylan_lounasapp":
+                items = parse_dylan_lounasapp(section)
+            else:
+                items = parse_dylan(section)
+
+            groups = classify_groups(items, merge_main_side=(rest["type"] == "akseli"))
+            note = f"date_mismatch:{distance}d" if distance > 2 else None
+            out[iso] = {
                 "closed": False,
                 "unavailable": len(groups) == 0,
-                "note": None,
+                "note": note,
                 "_groups_raw": groups,
             }
-
-        section, distance = closest_day_section(text, today)
-        if section is None:
-            return {"closed": False, "unavailable": True, "note": "no_date_header_found", "_groups_raw": []}
-        if is_closed_section(section):
-            return {"closed": True, "unavailable": False, "note": None, "_groups_raw": []}
-
-        if rest["type"] == "akseli":
-            items = parse_akseli(section)
-        elif rest["type"] == "dylan_lounasapp":
-            items = parse_dylan_lounasapp(section)
-        else:
-            items = parse_dylan(section)
-
-        groups = classify_groups(items, merge_main_side=(rest["type"] == "akseli"))
-        note = f"date_mismatch:{distance}d" if (distance is not None and distance > 2) else None
-        return {
-            "closed": False,
-            "unavailable": len(groups) == 0,
-            "note": note,
-            "_groups_raw": groups,
-        }
+        return out
     except Exception as e:  # noqa: BLE001
         print(f"ERROR parsing {rest['key']} ({rest['url']}): {e}", file=sys.stderr)
-        return {"closed": False, "unavailable": True, "note": "parse_error", "_groups_raw": []}
+        return {iso: _empty_day_payload("parse_error") for iso in targets}
 
 
 if __name__ == "__main__":
