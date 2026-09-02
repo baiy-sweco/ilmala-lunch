@@ -303,7 +303,16 @@ def paattari_week_paragraphs(soup, today):
 
     Unlike Studio10, these headers carry a real date, so days are matched by
     that date directly rather than by position. Returns {date_iso: [<p>, ...]}
-    for whichever of this week's Mon-Fri dates have a matching header."""
+    for whichever of this week's Mon-Fri dates have a matching header.
+
+    Like Studio10, the whole week's menu appears twice in the page (a
+    duplicate responsive markup block) -- only the *first* occurrence of each
+    weekday is used. Besides avoiding redundant work, this matters for
+    correctness: the very last header in the whole document is always the
+    duplicate block's Friday, and with nothing after it to stop at, using
+    that occurrence would run its "section" off the end of the page and
+    swallow the site footer (address, contact info, opening hours, ...) as
+    if it were dish paragraphs."""
     all_ps = soup.find_all("p")
     header_positions = [
         (i, PAATTARI_HEADER_RE.match(p.get_text(" ", strip=True)))
@@ -323,7 +332,7 @@ def paattari_week_paragraphs(soup, today):
         except ValueError:
             continue
         iso = hdr_date.isoformat()
-        if iso not in targets:
+        if iso not in targets or iso in out:
             continue
         end = header_positions[pos + 1][0] if pos + 1 < len(header_positions) else len(all_ps)
         out[iso] = all_ps[i + 1:end]
