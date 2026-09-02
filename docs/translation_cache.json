@@ -134,6 +134,11 @@
     "es": "Puré de patatas con albahaca / verduras asadas",
     "zh-CN": "罗勒风味土豆泥 / 烤蔬菜"
   },
+  "Basilikalla maustettua tomaattikeittoa": {
+    "en": "Tomato Soup Flavored with Basil",
+    "es": "Sopa de tomate con albahaca",
+    "zh-CN": "罗勒调味番茄汤"
+  },
   "Basmatiriisi": {
     "en": "Basmati rice",
     "es": "Arroz basmati",
@@ -204,6 +209,11 @@
     "es": "Jueves de hamburguesas: panecillos de hamburguesa, pepinillos, cebolla roja marinada y otras delicias para hamburguesas",
     "zh-CN": "汉堡周四：汉堡面包、咸黄瓜、腌红洋葱及其他汉堡美食"
   },
+  "Burgerkeskiviikko! Rapeita ranskalaisia hampparisämpylöitä, marinoitua punasipulia, suolakurkkua, jalapenoja": {
+    "en": "Burger Wednesday! Crispy French fry buns, marinated red onion, pickles, jalapeños",
+    "es": "¡Miércoles de hamburguesas! Panecillos de hamburguesa crujientes, cebolla roja marinada, pepinillos y jalapeños",
+    "zh-CN": "汉堡星期三！酥脆的法式汉堡面包、腌红洋葱、咸黄瓜、墨西哥辣椒"
+  },
   "Butter chicken - kanaa intialaisittain tomaatti-voikastikkeessa": {
     "en": "Butter Chicken - Indian-style chicken in a tomato-butter sauce",
     "es": "Pollo al curry - Pollo al estilo indio con salsa de tomate y mantequilla",
@@ -224,6 +234,11 @@
     "es": "CLASSIG VEGE BURGER: hamburguesa Beyond, queso cheddar, mayonesa de chile, cebolla roja marinada, tomate, pepinillos y lechuga. Además, patatas fritas rústicas.",
     "zh-CN": "经典素汉堡——Beyond素肉饼、切达奶酪、辣椒蛋黄酱、腌红洋葱、番茄、咸黄瓜和生菜。此外还有乡村风味薯条"
   },
+  "Cajun maustettua kirjolohta": {
+    "en": "Cajun-Spiced Rainbow Trout",
+    "es": "Salmón arcoíris al estilo cajún",
+    "zh-CN": "卡津风味鳟鱼"
+  },
   "Cajun maustettua nyhtökauraa, paahdettua paprikaa ja sipulia": {
     "en": "Cajun-seasoned pulled oats, roasted bell peppers, and onions",
     "es": "Copos de avena al estilo cajún, pimiento asado y cebolla",
@@ -233,6 +248,11 @@
     "en": "Cajun-Seasoned Roasted Potatoes",
     "es": "Patatas asadas con especias cajún",
     "zh-CN": "卡真风味烤土豆"
+  },
+  "Cajunmaustetut ranskalaiset": {
+    "en": "Cajun-Seasoned French Fries",
+    "es": "Patatas fritas con especias cajún",
+    "zh-CN": "卡真风味薯条"
   },
   "Cajunpaahdettua lohta sitruskermaviilikastiketta": {
     "en": "Cajun-Roasted Salmon with Citrus Sour Cream Sauce",
@@ -278,6 +298,11 @@
     "en": "Chicken Parmigiana & Lemon Sauce",
     "es": "Pollo a la parmigiana con salsa de limón",
     "zh-CN": "帕尔马干酪鸡配柠檬酱"
+  },
+  "Chili marinoitua kanaa & hummusta": {
+    "en": "Chili-Marinated Chicken & Hummus",
+    "es": "Pollo marinado con chile y hummus",
+    "zh-CN": "辣椒腌鸡肉配鹰嘴豆泥"
   },
   "Chili sin carne – Herkullinen kasvispata chilin kera": {
     "en": "Chili sin carne – A delicious vegetable stew with chili",
@@ -459,6 +484,11 @@
     "es": "Mezcla de patatas fritas",
     "zh-CN": "炸薯条混合包"
   },
+  "Funghi all’aglio – Herkkusieniä valkosipulilla maustettuna": {
+    "en": "Funghi all’aglio – Mushrooms seasoned with garlic",
+    "es": "Setas al ajo – Setas sazonadas con ajo",
+    "zh-CN": "蒜香蘑菇——用大蒜调味的蘑菇"
+  },
   "Funghi trifolati – Herkkusieniä balsamico-kastikkeella": {
     "en": "Funghi trifolati – Mushrooms with Balsamic Sauce",
     "es": "Funghi trifolati – Setas con salsa de vinagre balsámico",
@@ -528,6 +558,11 @@
     "en": "Braised pork belly and shrimp in lemongrass sauce",
     "es": "Haimonnia y gambas estofadas en salsa de limoncillo",
     "zh-CN": "慢炖鲷鱼配虾，佐以香茅酱汁"
+  },
+  "Haudutettua porsasta tummassa olut-kastikkeessa": {
+    "en": "Braised Pork in a Dark Beer Sauce",
+    "es": "Cochinillo estofado en salsa de cerveza oscura",
+    "zh-CN": "用深色啤酒酱汁炖制的猪肉"
   },
   "Haudutettua puna-ahventa hummerikastikkeessa": {
     "en": "Braised Red Perch in Lobster Sauce",
@@ -849,6 +884,16 @@
     "es": "Key Tropical Pie, una delicia",
     "zh-CN": "Key Tropical Pie 美味"
   },
+  "Kinuskista marjoffeeta": {
+    "en": "Caramel Berry Panna Cotta",
+    "es": "Feta de bayas con caramelo",
+    "zh-CN": "焦糖莓果菲塔奶酪"
+  },
+  "Kirkas kanakeitto": {
+    "en": "Clear Chicken Soup",
+    "es": "Sopa clara de pollo",
+    "zh-CN": "清汤鸡汤"
+  },
   "Kirsikka-suklaamousse": {
     "en": "Cherry-Chocolate Mousse",
     "es": "Mousse de chocolate y cereza",
@@ -1009,6 +1054,11 @@
     "es": "Macarrones con jamón y gratinado de queso",
     "zh-CN": "通心粉配火腿和奶酪焗烤"
   },
+  "Maissipaneroitua kananpoikaa ja curry-mangomajoneesi": {
+    "en": "Corn-Breaded Chicken and Curry-Mango Mayonnaise",
+    "es": "Pollo rebozado con maíz y mayonesa de curry y mango",
+    "zh-CN": "玉米面裹炸鸡块配咖喱芒果蛋黄酱"
+  },
   "Maissiriisiä": {
     "en": "Corn Rice",
     "es": "Arroz con maíz",
@@ -1018,6 +1068,11 @@
     "en": "Mom's Berry Pie and Vanilla Whipped Cream",
     "es": "Tarta de frutos rojos de mamá y crema de vainilla",
     "zh-CN": "妈妈的浆果派配香草奶油"
+  },
+  "Mangorahka": {
+    "en": "Mango Puree",
+    "es": "Mangorahka",
+    "zh-CN": "芒果奶酪"
   },
   "Mansikka-mashmallow unelmaa": {
     "en": "A Strawberry-Marshmallow Dream",
@@ -1204,6 +1259,16 @@
     "es": "Albóndigas de ternera con salsa de nata",
     "zh-CN": "奶油酱汁炖牛肉丸"
   },
+  "Naudanlihapihvejä cheddarilla": {
+    "en": "Beef Patties with Cheddar",
+    "es": "Filetes de ternera con queso cheddar",
+    "zh-CN": "切达奶酪牛肉排"
+  },
+  "Naudanlihapullia pippurikermakastikkeessa": {
+    "en": "Beef Meatballs in a Peppery Cream Sauce",
+    "es": "Albóndigas de ternera con salsa de nata y pimienta",
+    "zh-CN": "黑胡椒奶油酱汁炖牛肉丸"
+  },
   "Nyhtökauraa ja kasviksia Red Curry": {
     "en": "Shredded Oats and Vegetables in Red Curry",
     "es": "Copos de avena y verduras al curry rojo",
@@ -1268,6 +1333,11 @@
     "en": "Grilled kebab meat in a spicy tomato sauce",
     "es": "Carne de kebab a la parrilla en salsa de tomate especiada",
     "zh-CN": "香烤烤肉串配香辣番茄酱"
+  },
+  "Paahdettua kesäkurpitsaa ja punasipulia": {
+    "en": "Roasted Zucchini and Red Onion",
+    "es": "Calabacín asado y cebolla roja",
+    "zh-CN": "烤西葫芦和红洋葱"
   },
   "Paahdettua lohta & kermaista-hummerikastiketta": {
     "en": "Seared Salmon & Creamy Lobster Sauce",
@@ -1339,6 +1409,11 @@
     "es": "Patatas asadas / arroz / verduras asadas",
     "zh-CN": "烤土豆 / 米饭 / 烤蔬菜"
   },
+  "Paahdettuja vegelastuja ja kasviksia Sweet&Sour -kastikkeessa": {
+    "en": "Roasted veggie strips and vegetables in Sweet & Sour sauce",
+    "es": "Virutas vegetales tostadas y verduras en salsa agridulce",
+    "zh-CN": "烤素肉片和蔬菜配酸甜酱"
+  },
   "Paahdettuja yrttiperunoita": {
     "en": "Roasted Herbed Potatoes",
     "es": "Patatas asadas con hierbas",
@@ -1389,6 +1464,11 @@
     "es": "Palak paneer: queso paneer con una sabrosa salsa de espinacas",
     "zh-CN": "帕拉克帕尼尔——配以美味菠菜酱的印度奶酪块"
   },
+  "Paneroitua kalaa & chili jättikatkarapu-majoneesia": {
+    "en": "Breaded Fish & Chili Jumbo Shrimp Mayonnaise",
+    "es": "Pescado rebozado y mayonesa de gambas gigantes con chile",
+    "zh-CN": "面包糠炸鱼 & 辣椒巨型虾蛋黄酱"
+  },
   "Paneroitua maalaiskanaa": {
     "en": "Breaded Country-Style Chicken",
     "es": "Pollo de granja empanado",
@@ -1424,6 +1504,11 @@
     "es": "Filetes a la sartén, cebolla frita y salsa para freír",
     "zh-CN": "煎牛排、炒洋葱和煎肉酱"
   },
+  "Pariloitua kananpoikaa ja tuore ananasta Sweet&Sour -kastikkeessa": {
+    "en": "Grilled chicken and fresh pineapple in sweet-and-sour sauce",
+    "es": "Pollo a la plancha y piña fresca con salsa agridulce",
+    "zh-CN": "香煎小鸡块配新鲜菠萝，佐以糖醋酱汁"
+  },
   "Parmesan gratinoitua kananpoikaa ja tuoretta basilikaa": {
     "en": "Chicken with Parmesan Gratin and Fresh Basil",
     "es": "Pollo gratinado con parmesano y albahaca fresca",
@@ -1433,6 +1518,11 @@
     "en": "Parmesan Potatoes / Roasted Root Vegetables",
     "es": "Patatas al parmesano / tubérculos asados",
     "zh-CN": "帕尔马干酪土豆 / 烤根茎蔬菜"
+  },
+  "Parsakaali västerbotten gratiinia & dijon kastiketta": {
+    "en": "Broccoli Västerbotten Gratin & Dijon Sauce",
+    "es": "Gratinado de brócoli de Västerbotten con salsa de Dijon",
+    "zh-CN": "韦斯特博滕风味西兰花焗烤配第戎酱汁"
   },
   "Passion-mangounelmaa": {
     "en": "Passion Mango Dream",
@@ -1568,6 +1658,11 @@
     "en": "Friday's Assortment of Delicacies",
     "es": "Surtido de delicias del viernes",
     "zh-CN": "周五美食拼盘"
+  },
+  "Persico rosso al vino blanco – Puna-ahventa valkoviinikastikkeella": {
+    "en": "Persico rosso al vino blanco – Red Perch with White Wine Sauce",
+    "es": "Persico rosso al vino blanco – Lubina roja con salsa de vino blanco",
+    "zh-CN": "白葡萄酒红鲈鱼——红鲈鱼配白葡萄酒酱汁"
   },
   "Persikkarahka": {
     "en": "Peach Quark",
@@ -1989,6 +2084,11 @@
     "es": "Falafels crujientes y hummus de chile y zanahoria – Falafels fritos y hummus de chile y zanahoria",
     "zh-CN": "酥脆的法拉费 & 辣椒胡萝卜鹰嘴豆泥——油炸法拉费和辣椒胡萝卜鹰嘴豆泥"
   },
+  "Rapeita kasvispihvejä": {
+    "en": "Crispy Veggie Patties",
+    "es": "Hamburguesas crujientes de verduras",
+    "zh-CN": "香脆蔬菜饼"
+  },
   "Rapeita non-chic kasvispihvejä ja wasabi-aioli": {
     "en": "Crispy, down-to-earth veggie patties and wasabi aioli",
     "es": "Crujientes hamburguesas vegetarianas «non-chic» y alioli de wasabi",
@@ -2008,6 +2108,11 @@
     "en": "Ravioli al burro e salvia – Vegetable ravioli with sage butter",
     "es": "Ravioli al burro e salvia – Raviolis vegetarianos con mantequilla y salvia",
     "zh-CN": "黄油鼠尾草意式饺子——配鼠尾草黄油的素饺子"
+  },
+  "Ravioli di ricotta e spinaci al burro e salvia – Pinaatti-ricottaravioleja salviavoilla": {
+    "en": "Ricotta and Spinach Ravioli with Butter and Sage – Spinach and Ricotta Ravioli with Sage Butter",
+    "es": "Raviolis de ricotta y espinacas con mantequilla y salvia",
+    "zh-CN": "黄油鼠尾草酱烩瑞可塔奶酪菠菜意式饺子 – 菠菜瑞可塔奶酪意式饺子配鼠尾草黄油酱"
   },
   "Rigatoni ai formaggi – Rigatoni -pastaa juustokastikkeella": {
     "en": "Rigatoni ai formaggi – Rigatoni with cheese sauce",
@@ -2053,6 +2158,11 @@
     "en": "Chive Mashed Potatoes, Fried Rice",
     "es": "Puré de patatas con cebollino, arroz frito",
     "zh-CN": "香葱土豆泥，炒饭"
+  },
+  "Ruskistetulla voilla maustettua perunamuusia / paahdettua kaalia": {
+    "en": "Mashed potatoes seasoned with browned butter / roasted cabbage",
+    "es": "Puré de patatas sazonado con mantequilla dorada / col asada",
+    "zh-CN": "用焦黄黄油调味的土豆泥 / 烤卷心菜"
   },
   "Ruskistetussa voissa paahdettuja perunoita / belugalinssejä/ kesä kasviksia": {
     "en": "Potatoes sautéed in browned butter / Beluga lentils / summer vegetables",
@@ -2108,6 +2218,11 @@
     "en": "Pork Scaloppes with Pineapple – Hawaiian-Style Cuts",
     "es": "Escalopas de cerdo con piña – Escalopas hawaianas",
     "zh-CN": "菠萝猪里脊片——夏威夷风味"
+  },
+  "Scaloppa di maiale impanata – Paneroituja possun pihvejä": {
+    "en": "Scaloppa di maiale impanata – Breaded pork cutlets",
+    "es": "Scaloppa di maiale impanata – Filetes de cerdo empanados",
+    "zh-CN": "面包屑裹猪排 – 面包屑裹猪排"
   },
   "Schnitzel & anjoviskreemiä – Paneroitua porsaanleikettä ja anjoviskreemiä": {
     "en": "Schnitzel & Anchovy Cream – Breaded pork cutlet with anchovy cream",
@@ -2268,6 +2383,11 @@
     "en": "Tacchino Cordon Bleu – Turkey Cordon Bleu",
     "es": "Tacchino Cordon Bleu – Pavo Cordon Bleu",
     "zh-CN": "Tacchino Cordon Bleu – 蓝带火鸡"
+  },
+  "Talon juustoisia kesäkurpitsa-porkkanapihvejä": {
+    "en": "Homemade Cheesy Zucchini-Carrot Patties",
+    "es": "Hamburguesas caseras de calabacín y zanahoria con queso",
+    "zh-CN": "自制芝士味西葫芦胡萝卜饼"
   },
   "Talon jätti lihabullia ruskeassa kastikkeessa, pulmu puolukkaa ja Myrttisen suolakurkkuja": {
     "en": "The house served meatballs in brown sauce, lingonberry jam, and Myrttinen pickles",
@@ -2523,6 +2643,11 @@
     "en": "Garlic Cream Potatoes",
     "es": "Patatas con nata y ajo",
     "zh-CN": "大蒜奶油土豆"
+  },
+  "Valkosipuliperunoita": {
+    "en": "Garlic Potatoes",
+    "es": "Patatas al ajo",
+    "zh-CN": "蒜香土豆"
   },
   "Valkosulkaamoussea": {
     "en": "White-winged Moss",
@@ -2833,6 +2958,11 @@
     "en": "croutons",
     "es": "picatostes",
     "zh-CN": "面包丁"
+  },
+  "limejogurttia": {
+    "en": "lime yogurt",
+    "es": "yogur de lima",
+    "zh-CN": "青柠酸奶"
   },
   "lisukkeita": {
     "en": "side dishes",
