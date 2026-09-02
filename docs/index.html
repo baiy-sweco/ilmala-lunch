@@ -95,8 +95,21 @@ h1 span{color:var(--lingon);}
   margin:10px 0 0;padding-top:10px;border-top:1px dashed var(--line);display:none;
 }
 
+.datebar{max-width:760px;margin:18px auto 0;padding:0 20px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.date-chip{
+  font-family:'IBM Plex Mono',monospace;background:transparent;color:var(--chalk);
+  border:1px solid var(--line);border-radius:8px;padding:6px 13px;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;gap:2px;min-width:42px;
+  transition:all .15s ease;
+}
+.date-chip:hover{border-color:var(--mustard);}
+.date-chip.active{background:var(--mustard);border-color:var(--mustard);color:#211705;}
+.date-chip.is-today:not(.active){border-color:var(--sage);}
+.dc-day{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;opacity:.75;}
+.dc-num{font-size:15px;font-weight:600;}
+
 .filters{max-width:760px;margin:22px auto 6px;padding:0 20px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
-.filters .label{
+.filters .label,.datebar .label{
   font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
   color:var(--chalk-dim);margin-right:4px;width:100%;
 }
@@ -198,6 +211,8 @@ footer{
   </div>
 </div>
 
+<div class="datebar" id="datebar"></div>
+
 <div class="filters" id="filters"></div>
 <div class="filter-note" id="filterNote"></div>
 
@@ -220,11 +235,18 @@ const TAG_LABEL = {
   "zh-CN": { M:"无乳制品", L:"无乳糖", VL:"低乳糖", G:"无麸质", KM:"无蛋", Veg:"纯素/素食" }
 };
 
+const WEEKDAY_SHORT = {
+  en: ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+  fi: ["su","ma","ti","ke","to","pe","la"],
+  "zh-CN": ["周日","周一","周二","周三","周四","周五","周六"]
+};
+
 const UI = {
   en: {
     eyebrow: "Ilmala · Pasila · Lunch Board",
     headingPre: "What's for ", headingHi: "lunch", headingPost: "?",
     subline: "Today's lunch menus from the nearby restaurants",
+    weekLabel: "This week",
     filterLabel: "Filter (tap to combine)",
     resetChip: "All dishes",
     filterNoteTpl: n => `Showing only dishes matching all selected tags: ${n}`,
@@ -250,6 +272,7 @@ const UI = {
     eyebrow: "Ilmala · Pasila · Lounastaulu",
     headingPre: "Mitä ", headingHi: "lounaaksi", headingPost: "?",
     subline: "Lähiravintoloiden tämän päivän lounaslistat",
+    weekLabel: "Tämä viikko",
     filterLabel: "Suodata (voit yhdistellä)",
     resetChip: "Kaikki ruoat",
     filterNoteTpl: n => `Näytetään vain ruoat, jotka täyttävät kaikki valitut merkinnät: ${n}`,
@@ -275,6 +298,7 @@ const UI = {
     eyebrow: "Ilmala · Pasila · 午餐列表",
     headingPre: "今天中午吃", headingHi: "什么", headingPost: "？",
     subline: "附近餐厅的今日午餐菜单",
+    weekLabel: "本周",
     filterLabel: "筛选（可多选组合）",
     resetChip: "全部菜品",
     filterNoteTpl: n => `仅显示符合所有已选标签的菜品：${n}`,
@@ -321,8 +345,55 @@ const RESTAURANT_META = [
 let selectedTags = new Set();
 let menuData = null;    // populated from menu.json
 let loadFailed = false;
+let selectedDate = null;   // ISO date string, one of menuData.days' keys
 
 const tagClass = t => t === "Veg" ? "veg" : (t === "G" ? "gf" : "");
+
+function availableDates(){
+  return menuData && menuData.days ? Object.keys(menuData.days).sort() : [];
+}
+
+function todayIso(){
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+
+// Defaults to today when this week's menu has it; otherwise falls back to
+// whichever available day is closest (e.g. Friday's menu on a weekend).
+function pickDefaultDate(dates){
+  if (!dates.length) return null;
+  const today = todayIso();
+  if (dates.includes(today)) return today;
+  const todayMs = new Date(today + "T12:00:00Z").getTime();
+  let best = dates[0], bestDiff = Infinity;
+  dates.forEach(iso => {
+    const diff = Math.abs(new Date(iso + "T12:00:00Z").getTime() - todayMs);
+    if (diff < bestDiff) { bestDiff = diff; best = iso; }
+  });
+  return best;
+}
+
+function buildDateBar(){
+  const t = UI[currentLang];
+  const wrap = document.getElementById('datebar');
+  const dates = availableDates();
+  wrap.innerHTML = '';
+  if (!dates.length) { wrap.style.display = 'none'; return; }
+  wrap.style.display = '';
+
+  wrap.innerHTML = `<span class="label">${t.weekLabel}</span>`;
+  const today = todayIso();
+  dates.forEach(iso => {
+    const d = new Date(iso + "T12:00:00Z");
+    const btn = document.createElement('button');
+    btn.className = 'date-chip'
+      + (iso === selectedDate ? ' active' : '')
+      + (iso === today ? ' is-today' : '');
+    btn.innerHTML = `<span class="dc-day">${WEEKDAY_SHORT[currentLang][d.getUTCDay()]}</span><span class="dc-num">${d.getUTCDate()}</span>`;
+    btn.addEventListener('click', () => { selectedDate = iso; renderAll(); });
+    wrap.appendChild(btn);
+  });
+}
 
 function buildLangbar(){
   const bar = document.getElementById('langbar');
@@ -366,16 +437,10 @@ function renderHeader(){
   document.getElementById('heading').innerHTML = `${t.headingPre}<span>${t.headingHi}</span>${t.headingPost}`;
   document.getElementById('subline').textContent = t.subline;
 
-  const days = {
-    en:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
-    fi:["su","ma","ti","ke","to","pe","la"],
-    "zh-CN":["周日","周一","周二","周三","周四","周五","周六"]
-  };
-
-  const dateStr = menuData && menuData.date ? menuData.date : null;
+  const dateStr = selectedDate || null;
   const d = dateStr ? new Date(dateStr + "T12:00:00Z") : new Date();
   document.getElementById('todayLabel').textContent =
-    `${d.getUTCFullYear()}.${d.getUTCMonth()+1}.${d.getUTCDate()} ${days[currentLang][d.getUTCDay()]}`;
+    `${d.getUTCFullYear()}.${d.getUTCMonth()+1}.${d.getUTCDate()} ${WEEKDAY_SHORT[currentLang][d.getUTCDay()]}`;
 
   const staleWarning = document.getElementById('staleWarning');
   if (!menuData) {
@@ -389,10 +454,13 @@ function renderMain(){
   const t = UI[currentLang];
   const main = document.getElementById('main');
   main.innerHTML = '';
-  if (!menuData) return;
+  if (!menuData || !selectedDate) return;
+
+  const dayData = menuData.days && menuData.days[selectedDate];
+  const restaurants = (dayData && dayData.restaurants) || {};
 
   RESTAURANT_META.forEach(meta => {
-    const data = (menuData.restaurants && menuData.restaurants[meta.key]) || { closed:false, unavailable:true, groups:[] };
+    const data = restaurants[meta.key] || { closed:false, unavailable:true, groups:[] };
 
     const section = document.createElement('section');
     section.className = 'resto';
@@ -531,6 +599,7 @@ function applyFilter(){
 
 function renderAll(){
   buildLangbar();
+  buildDateBar();
   renderHeader();
   buildFilters();
 
@@ -551,6 +620,7 @@ async function init(){
     const res = await fetch('./menu.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     menuData = await res.json();
+    selectedDate = pickDefaultDate(availableDates());
   } catch (e) {
     loadFailed = true;
     console.error('Failed to load menu.json', e);

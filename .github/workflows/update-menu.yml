@@ -61,9 +61,9 @@ jobs:
           # so the two agree on what date they're looking for.
           if [ "${{ github.event.schedule }}" = "17 1 * * 1-5" ]; then
             today=$(date -u -d '+3 hours' +%F)
-            existing=$(jq -r '.date // ""' docs/menu.json 2>/dev/null || echo "")
-            if [ "$existing" = "$today" ]; then
-              echo "menu.json is already dated $today -- primary run succeeded, skipping backup."
+            has_today=$(jq -r --arg d "$today" '.days[$d] // empty | "yes"' docs/menu.json 2>/dev/null || echo "")
+            if [ "$has_today" = "yes" ]; then
+              echo "menu.json already has a $today entry -- primary run succeeded, skipping backup."
               echo "skip=true" >> "$GITHUB_OUTPUT"
             fi
           fi
@@ -96,7 +96,8 @@ jobs:
             # either way.
             cutoff=$(( $(date -u +%s) + 4*3600 ))
             while [ "$(date -u +%s)" -lt "$cutoff" ]; do
-              still_missing=$(python -c "import json; d = json.load(open('docs/menu.json', encoding='utf-8')); print(any(v.get('unavailable') for k, v in d['restaurants'].items() if k in ('luft', 'lailma')))")
+              today=$(date -u -d '+3 hours' +%F)
+              still_missing=$(python -c "import json; d = json.load(open('docs/menu.json', encoding='utf-8')); restos = d.get('days', {}).get('$today', {}).get('restaurants', {}); print(any(v.get('unavailable') for k, v in restos.items() if k in ('luft', 'lailma')))")
               if [ "$still_missing" = "False" ]; then
                 echo "Dylan menus are populated, stopping retry loop."
                 break
