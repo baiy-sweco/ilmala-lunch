@@ -7,7 +7,7 @@ on:
     # minute 0, so GitHub dispatches it closer to on-time; the early-morning
     # slot also leaves hours of slack before people check the menu, even if
     # GitHub delays the run. Adjust the hour if you want it earlier/later.
-    - cron: '17 0 * * 1-5'
+    - cron: '17 0 * * 1'
     # Backup run, one hour later, in case GitHub just never delivers the
     # trigger above -- confirmed happening on 2026-08-27 (a Thursday, so not
     # a cron-syntax issue): every other weekday since 2026-08-06 had a
@@ -18,23 +18,7 @@ on:
     # skips doing anything if today's menu.json is already dated today, so
     # this is a no-op (no extra commit) on every normal day where the run
     # above already succeeded.
-    - cron: '17 1 * * 1-5'
-    # Monday-only retry window, starting 04:17 UTC = 07:17 Helsinki (EEST) /
-    # 06:17 (EET). lounaat.info's Dylan restaurants (Luft, La Ilma) publish
-    # each week's fresh Monday menu some time mid-morning, not by the 03:17
-    # run above -- confirmed unavailable as late as 09:47 Helsinki on
-    # 2026-08-10 and still unavailable at 10:14 on 2026-08-24. Rather than
-    # gamble on one fixed time (which is also at the mercy of GitHub's own
-    # scheduling slop), the "Fetch & translate" step below rechecks every
-    # ~25 min for up to 4 hours, committing as soon as Dylan's menu appears
-    # instead of waiting out the full window regardless. This retry behavior
-    # also kicks in for a manual workflow_dispatch run started in the same
-    # Monday-morning window (not just this exact cron) -- on 2026-08-24 this
-    # scheduled run was manually cancelled mid-retry and replaced by a
-    # one-shot manual rerun that landed on the placeholder and overwrote the
-    # in-progress retry with a permanent "unavailable", so a manual rerun
-    # during this window needs to retry too, not just this cron trigger.
-    - cron: '17 4 * * 1'
+    - cron: '17 1 * * 1'
   workflow_dispatch: {}   # lets you trigger a manual run from the Actions tab
 
 permissions:
