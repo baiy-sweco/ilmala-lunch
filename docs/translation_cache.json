@@ -34,15 +34,50 @@
     "es": "Filete de pollo empanado «al estilo sureño»",
     "zh-CN": "“南方风味”面包屑炸鸡里脊"
   },
+  "( Inkiväärinen linssikeitto )": {
+    "en": "(Ginger Lentil Soup)",
+    "es": "( Sopa de lentejas al jengibre )",
+    "zh-CN": "( 生姜扁豆汤 )"
+  },
+  "(Hernistä ja kasviksia teriyakikastikkeessa)": {
+    "en": "(Beans and vegetables in teriyaki sauce)",
+    "es": "(Hernas y verduras con salsa teriyaki)",
+    "zh-CN": "（馅饼和蔬菜配照烧酱）"
+  },
   "(L) Gluteeniton saatavilla keittiöstä": {
     "en": "(L) Gluten-free options available from the kitchen",
     "es": "(L) Sin gluten, disponible en la cocina",
     "zh-CN": "(L) 厨房提供无麸质食品"
   },
+  "(Mausteisia chorizopyöryköitä choronkastikkeessa)": {
+    "en": "(Spicy chorizo meatballs in choron sauce)",
+    "es": "(Bolas de chorizo picantes en salsa de chorón)",
+    "zh-CN": "（香辣香肠丸配香肠酱）"
+  },
+  "(Riisiä)": {
+    "en": "(Rice)",
+    "es": "(Arroz)",
+    "zh-CN": "（大米）"
+  },
+  "(Skånen perunat)": {
+    "en": "(Potatoes from Skåne)",
+    "es": "(Patatas de Skåne)",
+    "zh-CN": "（斯科讷土豆）"
+  },
+  "(Suklaapannacotta)": {
+    "en": "(Chocolate Panna Cotta)",
+    "es": "(Panna cotta de chocolate)",
+    "zh-CN": "（巧克力潘娜科塔）"
+  },
   "(Säävarauksella) Ruisjauhoissa pyöriteltyjä muikkuja tillikermaviilikastike": {
     "en": "(Weather permitting) Vendace coated in rye flour with dill sour cream sauce",
     "es": "(Si el tiempo lo permite) Piqueones rebozados en harina de centeno con salsa de eneldo y crema agria",
     "zh-CN": "（视天气情况而定）裹上黑麦面粉的鲱鱼配莳萝酸奶油酱"
+  },
+  "(Teriyaki kanaa seesaminsiemenillä)": {
+    "en": "(Teriyaki Chicken with Sesame Seeds)",
+    "es": "(Pollo teriyaki con semillas de sésamo)",
+    "zh-CN": "（芝麻照烧鸡）"
   },
   "10 €/kg klo 13.30-13.45": {
     "en": "10 €/kg from 1:30 p.m. to 1:45 p.m.",
@@ -1169,6 +1204,11 @@
     "es": "Sopa de coliflor con gorgonzola",
     "zh-CN": "戈贡佐拉奶酪风味花椰菜汤"
   },
+  "Gorgonzolalla maustettua punajuurikeittoa": {
+    "en": "Beet Soup Flavored with Gorgonzola",
+    "es": "Sopa de remolacha con gorgonzola",
+    "zh-CN": "戈贡佐拉奶酪风味红菜头汤"
+  },
   "Gratinoitua hiillostettua kukkakaalia ja quornia": {
     "en": "Baked Cauliflower with Smoked Quorn",
     "es": "Coliflor asada al horno con queso y Quorn",
@@ -1739,6 +1779,11 @@
     "es": "Kebab de pollo con salsa de tomate al chile",
     "zh-CN": "配以辣椒调味的番茄酱鸡肉烤肉串"
   },
+  "Kanan fileesuikaleita kermaisessa currykastikkeessa": {
+    "en": "Chicken Strips in a Creamy Curry Sauce",
+    "es": "Tiras de filete de pollo en salsa cremosa de curry",
+    "zh-CN": "奶油咖喱酱汁鸡柳条"
+  },
   "Kanan koipinuijia tulisessa kastikkeessa": {
     "en": "Chicken drumsticks in a spicy sauce",
     "es": "Muslos de pollo en salsa picante",
@@ -2158,6 +2203,11 @@
     "en": "Rainbow Trout, Tuscan Style",
     "es": "Trucha arcoíris al estilo toscano",
     "zh-CN": "托斯卡纳风味的虹鳟鱼"
+  },
+  "Kirjolohta yrtti-valkosipuli-chilikastikkeella": {
+    "en": "Rainbow Trout with Herb, Garlic, and Chili Sauce",
+    "es": "Trucha arcoíris con salsa de hierbas, ajo y chile",
+    "zh-CN": "彩虹鳟鱼配香草大蒜辣椒酱"
   },
   "Kirkas kanakeitto": {
     "en": "Clear Chicken Soup",
@@ -3029,6 +3079,11 @@
     "es": "Surtido de mini magdalenas",
     "zh-CN": "迷你松饼拼盘"
   },
+  "Mini mutapalloja, helvetinkastikkeessa": {
+    "en": "Mini mudballs in hell sauce",
+    "es": "Mini bolas de barro, en salsa picante",
+    "zh-CN": "迷你泥球，配地狱酱汁"
+  },
   "Mini suklaapullia(-)": {
     "en": "Mini chocolate buns(-)",
     "es": "Mini bollos de chocolate(-)",
@@ -3318,6 +3373,11 @@
     "en": "Inclusivity, openness, and transparency are matters close to our hearts—especially when it comes to sustainability. We welcome your views and opinions on how we can further improve our sustainability efforts.",
     "es": "La participación, la apertura y la transparencia son cuestiones que nos importan mucho, especialmente en lo que se refiere a la sostenibilidad. Nos encantaría recibir tus puntos de vista y opiniones sobre cómo podríamos mejorar aún más nuestra responsabilidad social.",
     "zh-CN": "参与性、开放性和透明度是我们最为重视的核心价值——特别是在可持续发展方面。我们非常乐意听取各方关于如何进一步提升企业社会责任的见解和意见。"
+  },
+  "PELOTTAVAN PAHA HALLOWEEN LOUNAS": {
+    "en": "A SCARY AND EVIL HALLOWEEN LUNCH",
+    "es": "UNA ALMUERZO DE HALLOWEEN TERRIBLEMENTE ESPELUZNANTE",
+    "zh-CN": "令人毛骨悚然的万圣节午餐"
   },
   "PIZZAPERJANTAI! – Päättärin omalla pizzapohjareseptillä leivoittua": {
     "en": "PIZZA FRIDAY! – Baked using Päättärin’s own pizza crust recipe",
@@ -3618,6 +3678,11 @@
     "en": "Roasted Potatoes",
     "es": "Patatas asadas",
     "zh-CN": "烤土豆"
+  },
+  "Paahteinen valkosipulikeitto": {
+    "en": "Roasted Garlic Soup",
+    "es": "Sopa de ajo tostado",
+    "zh-CN": "香浓大蒜汤"
   },
   "Page load link": {
     "en": "Page Load Link",
@@ -4113,6 +4178,11 @@
     "en": "Peperonata soup with croutons",
     "es": "Sopa de peperonata con picatostes",
     "zh-CN": "意式甜椒汤配面包丁"
+  },
+  "Perinteinen Makkarakeitto": {
+    "en": "Traditional Sausage Soup",
+    "es": "Sopa tradicional de salchichas",
+    "zh-CN": "传统香肠汤"
   },
   "Perinteinen hernekeitto": {
     "en": "Traditional Pea Soup",
@@ -4779,6 +4849,11 @@
     "es": "Perca roja y beurre blanc de calabaza",
     "zh-CN": "红鲈鱼配南瓜白酱"
   },
+  "Puna-ahventa paprikaisessa Mojo Rojo -kastikkeessa": {
+    "en": "Red Perch in a Paprika-Flavored Mojo Rojo Sauce",
+    "es": "Perca roja en salsa «Mojo Rojo» con pimiento",
+    "zh-CN": "红鲈鱼配辣椒莫霍罗霍酱"
+  },
   "Puna-ahventa sitruunavoikastikkeella": {
     "en": "Red Perch with Lemon Butter Sauce",
     "es": "Perca roja con salsa de mantequilla al limón",
@@ -4908,6 +4983,11 @@
     "en": "Headless chicken in fiery hell broth / The Devil's Chicken “El Diablo” and goat cheese cream",
     "es": "Pollo sin cabeza en un caldo picante del infierno / Pollo del Diablo «El Diablo» y crema de queso de cabra",
     "zh-CN": "在滚烫的地狱汤中烹煮的无头鸡 / “El Diablo”恶魔鸡配山羊奶酪酱"
+  },
+  "Päätöntä kanaa tummassa muurahaismunakastikkeessa": {
+    "en": "Headless Chicken in Dark Ant Egg Sauce",
+    "es": "Pollo sin cabeza en salsa oscura de huevos de hormiga",
+    "zh-CN": "无头鸡配浓郁蚂蚁蛋酱"
   },
   "Quinoa-kasvispata & avocadojogurttikastiketta": {
     "en": "Quinoa Vegetable Stew & Avocado Yogurt Sauce",
@@ -5079,6 +5159,11 @@
     "es": "Pollo crujiente con salsa choron",
     "zh-CN": "香脆炸鸡配乔隆酱"
   },
+  "Rapeaa kanan sisäfilettä": {
+    "en": "Crispy Chicken Tenderloin",
+    "es": "Filete de pollo crujiente",
+    "zh-CN": "香脆鸡里脊肉"
+  },
   "Rapeaa kievin kanaa (-) sekä habanero-majoneesia": {
     "en": "Crispy Kiev chicken (-) and habanero mayonnaise",
     "es": "Pollo crujiente al estilo Kiev (-) y mayonesa de habanero",
@@ -5153,6 +5238,11 @@
     "en": "Crispy Red Perch & Tartar Sauce – Breaded Red Perch & Tartar Sauce",
     "es": "Perca roja crujiente con salsa tártara – Perca roja empanada con salsa tártara",
     "zh-CN": "香脆红鲈鱼配塔塔酱——面包糠裹红鲈鱼配塔塔酱"
+  },
+  "Rapeita churroja sekä suklaakastiketta (-)": {
+    "en": "Crispy churros and chocolate sauce (-)",
+    "es": "Churros crujientes y salsa de chocolate (-)",
+    "zh-CN": "酥脆的丘罗和巧克力酱 (-)"
   },
   "Rapeita falafelaja & punajuurihummusta": {
     "en": "Crispy Falafel & Beet Hummus",
@@ -5389,6 +5479,11 @@
     "es": "Patatas con mantequilla y cebollino",
     "zh-CN": "香葱黄油土豆"
   },
+  "Ruskea makea yllätys": {
+    "en": "A Brown, Sweet Surprise",
+    "es": "Una dulce sorpresa marrón",
+    "zh-CN": "棕色的甜蜜惊喜"
+  },
   "Ruskistetulla voilla maustettua perunamuusia / paahdettua kaalia": {
     "en": "Mashed potatoes seasoned with browned butter / roasted cabbage",
     "es": "Puré de patatas sazonado con mantequilla dorada / col asada",
@@ -5403,6 +5498,11 @@
     "en": "Potatoes sautéed in browned butter / Beluga lentils / summer vegetables",
     "es": "Patatas salteadas en mantequilla dorada / lentejas beluga / verduras de verano",
     "zh-CN": "用焦黄黄油煎制的土豆 / 贝卢加扁豆 / 夏季时蔬"
+  },
+  "Röstiperunoita": {
+    "en": "Potato pancakes",
+    "es": "Patatas asadas",
+    "zh-CN": "土豆泥"
   },
   "Saatavana myös vegaanisena": {
     "en": "Also available in a vegan version",
@@ -5658,6 +5758,11 @@
     "en": "Cabbage Rolls Glazed with Syrup",
     "es": "Rollitos de col bañados en sirope",
     "zh-CN": "淋上糖浆的卷心菜卷"
+  },
+  "Silmämunakeitto": {
+    "en": "Egg Soup",
+    "es": "Sopa de huevo",
+    "zh-CN": "水煮蛋汤"
   },
   "Sinappia": {
     "en": "Mustard",
@@ -6099,6 +6204,11 @@
     "es": "Pollo teriyaki con semillas de sésamo",
     "zh-CN": "芝麻照烧鸡"
   },
+  "Teriyaki toukkia ja kasviksia": {
+    "en": "Teriyaki Worms and Vegetables",
+    "es": "Larvas y verduras al teriyaki",
+    "zh-CN": "照烧虫蛹配蔬菜"
+  },
   "Teriyakikastikkeella glaseerattua lohta": {
     "en": "Salmon Glazed with Teriyaki Sauce",
     "es": "Salmón glaseado con salsa teriyaki",
@@ -6238,6 +6348,11 @@
     "en": "Tofu and Vegetables in Satay Sauce",
     "es": "Tofu y verduras con salsa satay",
     "zh-CN": "豆腐和蔬菜配沙嗲酱"
+  },
+  "Tofua ja kasviksia yrtti-valkosipuli-chilikastikkeella": {
+    "en": "Tofu and Vegetables with Herb, Garlic, and Chili Sauce",
+    "es": "Tofu y verduras con salsa de hierbas, ajo y chile",
+    "zh-CN": "豆腐配蔬菜，佐以香草大蒜辣椒酱"
   },
   "Tofua ja sieniä cashew-chilikastikkeessa": {
     "en": "Tofu and Mushrooms in Cashew-Chili Sauce",
@@ -6623,6 +6738,16 @@
     "en": "A selection of different sausages – & a dip buffet",
     "es": "Surtido de salchichas variadas – y bufé de salsas",
     "zh-CN": "各式香肠精选——及蘸酱自助餐"
+  },
+  "Valkoisia matoja": {
+    "en": "White worms",
+    "es": "Gusanos blancos",
+    "zh-CN": "白蠕虫"
+  },
+  "Valkoista mössöä": {
+    "en": "White goo",
+    "es": "Pasta blanca",
+    "zh-CN": "白色糊状物"
   },
   "Valkoista mössöä / Maukasta Perunamuusia": {
     "en": "White Mushy Stuff / Delicious Mashed Potatoes",
@@ -7128,6 +7253,11 @@
     "en": "chili remoulade",
     "es": "remoulade de chile",
     "zh-CN": "辣椒雷穆拉德酱"
+  },
+  "chilimajoneesi": {
+    "en": "chili mayonnaise",
+    "es": "mayonesa de chile",
+    "zh-CN": "辣椒蛋黄酱"
   },
   "chilimajoneesia": {
     "en": "chili mayonnaise",
@@ -7908,6 +8038,11 @@
     "en": "vegan crème fraîche",
     "es": "fraiche vegana",
     "zh-CN": "纯素酸奶油"
+  },
+  "vegaanista limejugurttia": {
+    "en": "vegan lime yogurt",
+    "es": "yogur vegano de lima",
+    "zh-CN": "纯素青柠酸奶"
   },
   "wasabi coleslaw": {
     "en": "wasabi coleslaw",
