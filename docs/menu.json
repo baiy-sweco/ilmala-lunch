@@ -1,6 +1,6 @@
 {
   "week_start": "2026-11-09",
-  "generated_at_utc": "2026-11-09T06:43:53+00:00",
+  "generated_at_utc": "2026-11-09T08:02:04+00:00",
   "days": {
     "2026-11-09": {
       "restaurants": {
@@ -1633,11 +1633,11 @@
                 },
                 {
                   "name": {
-                    "fi": "Pesche impanato e salsa tartara – Paneroitua kalaa & tartar-kastiketta",
-                    "en": "Pesce impanato e salsa tartara – Breaded fish & tartar sauce",
-                    "es": "Pesche impanato e salsa tartara – Pescado empanado y salsa tártara",
-                    "zh-CN": "面包屑炸鲈鱼配塔塔酱 – 面包屑炸鱼 & 塔塔酱",
-                    "zh-TW": "麵包屑炸鱸魚配塔塔醬 – 麵包屑炸魚 & 塔塔醬"
+                    "fi": "Pesce impanato e salsa tartara – Paneroitua kalaa & tartar-kastiketta",
+                    "en": "Pesce impanato e salsa tartara – Breaded Fish & Tartar Sauce",
+                    "es": "Pesce impanato e salsa tartara – Pescado empanado y salsa tártara",
+                    "zh-CN": "面包屑炸鱼配塔塔酱 – 面包屑炸鱼 & 塔塔酱",
+                    "zh-TW": "麵包屑炸魚配塔塔醬 – 麵包屑炸魚 & 塔塔醬"
                   },
                   "tags": [
                     "M"
